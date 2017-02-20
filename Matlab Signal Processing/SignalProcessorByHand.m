@@ -2,7 +2,7 @@ clear variables
 close all
 
 %% Configuration Details
-fileNum = 3;      %2-5
+fileNum = 2;      %2-5
 numSecondsBeginning = 5; %Number of seconds to eliminate from beginning of signal
 numSecondsEnd = 5;       %Number of seconds to eliminate from end of signal
 cutoffFreq = 5;          %Highest Frequency to display (Hz)
