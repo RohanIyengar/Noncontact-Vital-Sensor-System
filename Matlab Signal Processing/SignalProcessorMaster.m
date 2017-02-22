@@ -2,7 +2,7 @@ clear variables
 close all
 
 %% Configuration Details
-fileNum = 2;      %2-5
+fileNum = 3;      %2-5
 numSecondsBeginning = 5; %Number of seconds to eliminate from beginning of signal
 numSecondsEnd = 5;       %Number of seconds to eliminate from end of signal
 cutoffFreq = 5;          %Highest Frequency to display (Hz)
@@ -10,10 +10,11 @@ fPassResp = .2;          %Beginning of passband for respiration rate (Hz)
 fStopResp = .9;          %End of passpand for respiration rate (Hz)
 fPassHeart = 1;          %Beginning of passband for heart rate (Hz)
 fStopHeart = 2;          %End of passband for heart rate (Hz)
+fHeartWidth = 1;         %Width of heartrate fdesign.bandpass filter
 combWidth = .05;         %width of band to cancel in comb filter
-numHarmonics = 5;        %number of harmonics to cancel in comb filter
-respFilterOrder = 2;
-heartFilterOrder = 2;
+numHarmonics = 5;        %Number of harmonics to cancel in comb filter
+respFilterOrder = 2;     %Order of respiration bandpass filter
+heartFilterOrder = 2;    %Order of heart rate bandpass filter
 
 %% Read in raw data and save as time, I, and Q channels
 fileName = ['tek000' num2str(fileNum) 'ALL.csv'];
@@ -123,7 +124,7 @@ if(maxCombinedHeart > maxIHeart && maxCombinedHeart > maxQHeart)
     heartChoice = 'Combined channels';
 end
 
-%% Use fdesign to plot respiration rate transient
+%% Use fdesign to filter out respiration rate transient
 respBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
     respFilterOrder,fPassResp/fNorm, fStopResp/fNorm);
 respBandpass = design(respBandpassDesign);
@@ -131,9 +132,9 @@ iChannelRespFDesign = filter(respBandpass,iChannel);
 qChannelRespFDesign = filter(respBandpass,qChannel);
 combinedChannelRespFDesign = filter(respBandpass,combinedChannel);
 
-%% Use fdesign to plot heart rate transient
+%% Use fdesign to filter out heart rate transient
 heartBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
-    heartFilterOrder,fPassHeart/fNorm, fStopHeart/fNorm);
+    heartFilterOrder,(heartRate - fHeartWidth)/fNorm, (heartRate + fHeartWidth)/fNorm);
 heartBandpass = design(heartBandpassDesign);
 iChannelHeartFDesign = filter(heartBandpass,iChannel);
 qChannelHeartFDesign = filter(heartBandpass,qChannel);
