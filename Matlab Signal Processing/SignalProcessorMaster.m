@@ -43,6 +43,29 @@ iChannel(end:-1:(end-numSamplesEnd)) = [];
 qChannel(end:-1:(end-numSamplesEnd)) = [];
 combinedChannel(end:-1:(end-numSamplesEnd)) = [];
 
+%% Plot raw signals
+figure
+subplot(3,1,1)
+plot(t,iChannel)
+xlabel('Time (s)')
+ylabel('|i(t)|')
+title('I Channel in Time Domain')
+subplot(3,1,2)
+plot(t,qChannel)
+xlabel('Time (s)')
+ylabel('|q(t)|')
+title('Q Channel in Time Domain')
+subplot(3,1,3)
+plot(t,abs(combinedChannel))
+xlabel('Time (s)')
+ylabel('|c(t)|')
+title('Combined Signals in Time Domain')
+
+%% Eliminate Linear Shift in Data
+iChannel = detrend(iChannel);
+qChannel = detrend(qChannel);
+combinedChannel = detrend(combinedChannel);
+
 %% Take one sided FFT
 fftI = fft(iChannel,NFFT)/L;                %FFT of I channel
 fftQ = fft(qChannel,NFFT)/L;                %FFT of Q channel
