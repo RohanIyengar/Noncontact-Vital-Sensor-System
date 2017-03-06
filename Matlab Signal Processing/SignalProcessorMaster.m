@@ -10,11 +10,12 @@ fPassResp = .2;          %Beginning of passband for respiration rate (Hz)
 fStopResp = .9;          %End of passpand for respiration rate (Hz)
 fPassHeart = 1;          %Beginning of passband for heart rate (Hz)
 fStopHeart = 2;          %End of passband for heart rate (Hz)
-fHeartWidth = 1;         %Width of heartrate fdesign.bandpass filter
+fRespWidth = .2;         %Width of respiration fdesign.bandpass filter
+fHeartWidth = .5;        %Width of heartrate fdesign.bandpass filter
 combWidth = .05;         %width of band to cancel in comb filter
 numHarmonics = 5;        %Number of harmonics to cancel in comb filter
-respFilterOrder = 2;     %Order of respiration bandpass filter
-heartFilterOrder = 2;    %Order of heart rate bandpass filter
+respFilterOrder = 8;     %Order of respiration bandpass filter
+heartFilterOrder = 8;    %Order of heart rate bandpass filter
 
 %% Read in raw data and save as time, I, and Q channels
 fileName = ['tek000' num2str(fileNum) 'ALL.csv'];
@@ -149,7 +150,7 @@ end
 
 %% Use fdesign to filter out respiration rate transient
 respBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
-    respFilterOrder,fPassResp/fNorm, fStopResp/fNorm);
+    respFilterOrder,(respirationRate - fRespWidth)/fNorm, (respirationRate + fRespWidth)/fNorm);
 respBandpass = design(respBandpassDesign);
 iChannelRespFDesign = filter(respBandpass,iChannel);
 qChannelRespFDesign = filter(respBandpass,qChannel);
