@@ -12,8 +12,6 @@ fPassHeart = 1;          %Beginning of passband for heart rate (Hz)
 fStopHeart = 2;          %End of passband for heart rate (Hz)
 fRespWidth = .2;         %Width of respiration fdesign.bandpass filter
 fHeartWidth = .5;        %Width of heartrate fdesign.bandpass filter
-combWidth = .05;         %width of band to cancel in comb filter
-numHarmonics = 5;        %Number of harmonics to cancel in comb filter
 respFilterOrder = 8;     %Order of respiration bandpass filter
 heartFilterOrder = 8;    %Order of heart rate bandpass filter
 
@@ -43,24 +41,6 @@ t(end:-1:(end-numSamplesEnd)) = [];
 iChannel(end:-1:(end-numSamplesEnd)) = [];
 qChannel(end:-1:(end-numSamplesEnd)) = [];
 combinedChannel(end:-1:(end-numSamplesEnd)) = [];
-
-%% Plot raw signals
-figure
-subplot(3,1,1)
-plot(t,iChannel)
-xlabel('Time (s)')
-ylabel('|i(t)|')
-title('I Channel in Time Domain')
-subplot(3,1,2)
-plot(t,qChannel)
-xlabel('Time (s)')
-ylabel('|q(t)|')
-title('Q Channel in Time Domain')
-subplot(3,1,3)
-plot(t,abs(combinedChannel))
-xlabel('Time (s)')
-ylabel('|c(t)|')
-title('Combined Signals in Time Domain')
 
 %% Eliminate Linear Shift in Data
 iChannel = detrend(iChannel);
@@ -109,44 +89,10 @@ if(maxQResp > maxIResp && maxQResp > maxCombinedResp)
     respChoice = 'Q channel';
 end
 
-%% Bandpass filter for heart rate
-heartMask = f>fPassHeart & f<fStopHeart;
-iChannelHeartDFT = oneSidedIDFT;
-qChannelHeartDFT = oneSidedQDFT;
-combinedHeartDFT = oneSidedQDFT;
-iChannelHeartDFT(~heartMask) = 0;
-qChannelHeartDFT(~heartMask) = 0;
-combinedHeartDFT(~heartMask) = 0;
-
-%% Comb filter to eliminate respiration Harmonics
-for n = 1:numHarmonics
-    combMask = (f < (n*respirationRate + combWidth)) & ...
-               (f > (n*respirationRate - combWidth));
-    iChannelHeartDFT(combMask) = 0;
-    qChannelHeartDFT(combMask) = 0;
-    combinedHeartDFT(combMask) = 0;
-end
-
-%% Determine Heart Rate
-[maxIHeart , iHeartLoc] = max(iChannelHeartDFT);
-[maxQHeart , qHeartLoc] = max(qChannelHeartDFT);
-[maxCombinedHeart , combinedHeartLoc] = max(combinedHeartDFT);
-
-heartRate = f(combinedHeartLoc);
-heartChoice = 'Combined Channel';
-
-if(maxIHeart > maxQHeart && maxIHeart > maxCombinedHeart)
-    heartRate = f(iHeartLoc);
-    heartChoice = 'I channel';
-end
-if(maxQHeart > maxIHeart && maxQHeart > maxCombinedHeart)
-    heartRate = f(qHeartLoc);
-    heartChoice = 'Q channel';
-end
-if(maxCombinedHeart > maxIHeart && maxCombinedHeart > maxQHeart)
-    heartRate = f(combinedHeartLoc);
-    heartChoice = 'Combined channels';
-end
+%% Determine Heartrate using combined channel
+[hrValCombined] = SignalProcessorPeakFinding(oneSidedCombinedDFT, f, .25, .1); 
+heartRate = hrValCombined(1);
+heartChoice = 'combined channels';
 
 %% Use fdesign to filter out respiration rate transient
 respBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
@@ -197,42 +143,6 @@ ylabel('|Q(f)|')
 subplot(3,1,3)
 plot(f,oneSidedCombinedDFT) 
 title('Single-Sided Amplitude Spectrum of Combined channels FFT')
-xlabel('Frequency (Hz)')
-ylabel('|C(f)|')
-
-%% Plot respiration bandpass filtered signals
-figure
-subplot(3,1,1)
-plot(f,iChannelRespDFT) 
-title('I Channel Bandpass for Respiration Rate')
-xlabel('Frequency (Hz)')
-ylabel('|I(f)|')
-subplot(3,1,2)
-plot(f,qChannelRespDFT) 
-title('Q Channel Bandpass for Respiration Rate')
-xlabel('Frequency (Hz)')
-ylabel('|Q(f)|')
-subplot(3,1,3)
-plot(f,combinedRespDFT) 
-title('Combined Channels Bandpass for Respiration Rate')
-xlabel('Frequency (Hz)')
-ylabel('|C(f)|')
-
-%% Plot heart rate bandpass filtered signals
-figure
-subplot(3,1,1)
-plot(f,iChannelHeartDFT) 
-title('I Channel Bandpass for Heart Rate')
-xlabel('Frequency (Hz)')
-ylabel('|I(f)|')
-subplot(3,1,2)
-plot(f,qChannelHeartDFT) 
-title('Q Channel Bandpass for Heart Rate')
-xlabel('Frequency (Hz)')
-ylabel('|Q(f)|')
-subplot(3,1,3)
-plot(f,combinedHeartDFT) 
-title('Combined Channels Bandpass for Heart Rate')
 xlabel('Frequency (Hz)')
 ylabel('|C(f)|')
 
