@@ -1,4 +1,4 @@
-import serial
+import serial, time
 global ser
 ser = None
 
@@ -44,15 +44,18 @@ def send(ser=None, input='Hello World'):
     else:
         print "serial port is not open"
 
-def receive():
-    global ser
+def receive(ser=None, input='Hello World'):
     if ser == None:
         ser = initializeSerial()
     try:
-        ser.open()
+        ser.close()
     except Exception as e:
-        print "error opening serial port" + str(e)
-        exit()
+        print "error closing serial port" + str(e)
+    # try:
+    #     ser.open()
+    # except Exception as e:
+    #     print "error opening serial port" + str(e)
+    #     exit()
     if ser.isOpen():
         try:
             #Only receive 5 lines for now -- fix this based on scheme later
@@ -78,5 +81,10 @@ def receive():
     else:
         print "serial port is not open"
 
-while 1:
-    receive()
+i = 0;
+while  i < 10000:
+    time.sleep(.5)
+    try:
+        receive()
+    except Exception as e1:
+        i = i + 1
