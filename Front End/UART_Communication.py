@@ -1,13 +1,14 @@
-import serial, time
+import serial
 global ser
 ser = None
 
-def initializeSerial(in_port='COM7'):
-    return serial.serial(port=in_port,
-        baudrate=9600,
+def initializeSerial(in_port='COM4'):
+    return serial.Serial(port=in_port,
+        baudrate=115200,
         parity=serial.PARITY_ODD,
         stopbits=serial.STOPBITS_TWO,
-        bytesize=serial.SEVENBITS
+        bytesize=serial.SEVENBITS,
+        timeout=1
     )
 
 def send(ser=None, input='Hello World'):
@@ -44,6 +45,7 @@ def send(ser=None, input='Hello World'):
         print "serial port is not open"
 
 def receive():
+    global ser
     if ser == None:
         ser = initializeSerial()
     try:
@@ -56,6 +58,7 @@ def receive():
             #Only receive 5 lines for now -- fix this based on scheme later
             numOfLines = 0
             exceededLines = True
+            print("Trying to read data")
             while exceededLines:
                 bytesToRead = ser.inWaiting()
                 response = ser.read(bytesToRead)
@@ -74,3 +77,6 @@ def receive():
 
     else:
         print "serial port is not open"
+
+while 1:
+    receive()
