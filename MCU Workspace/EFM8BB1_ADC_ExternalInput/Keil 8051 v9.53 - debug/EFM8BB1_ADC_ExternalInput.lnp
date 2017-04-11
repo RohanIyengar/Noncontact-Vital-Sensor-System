@@ -1,0 +1,7 @@
+"./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))

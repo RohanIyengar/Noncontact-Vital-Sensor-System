@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.silabs.ss.framework.ide.project.core.cdtMbsProjectType">
+		<item value="com.silabs.ss.framework.ide.project.ui.emptyCProjectWizard" key="projectTypeId"/>
+		<item value="LINK_LIBRARIES" key="settingImportModeOption"/>
+		<item value="LINK" key="importOption"/>
+		<list key="fileLocationHistory">
+			<item value="C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\SPI\Master\EFM8BB1_SPI_Master.slsproj"/>
+			<item value="C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\EFM8BB1_ADC_ExternalInput.slsproj"/>
+		</list>
+		<list key="fileLocations">
+			<item value="C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\SPI\Master\EFM8BB1_SPI_Master.slsproj"/>
+		</list>
+	</section>
+</section>

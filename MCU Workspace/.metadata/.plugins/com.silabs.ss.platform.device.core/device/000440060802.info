@@ -1,0 +1,4 @@
+protectFromDetectionUpdates=false
+label=J-Link Silicon Labs (440060802)
+boardOverrides {
+}

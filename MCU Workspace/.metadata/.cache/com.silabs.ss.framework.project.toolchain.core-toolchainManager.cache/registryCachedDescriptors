@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:MDescriptors xmlns:model="http://www.silabs.com/ss/Studio.ecore">
+  <descriptors name="com.silabs.ss.tool.ide.c8051.toolchain.keil.cdt" label="Keil 8051 v9.53" description="&lt;p>Keil's 8051 build tools&lt;/p>&lt;p>&lt;tt>C51 COMPILER V9.53.0.0 - SN: Eval Version&lt;/tt>&lt;/p>&lt;p>&lt;tt>CX51 COMPILER V9.53.0.0 - SN: Eval Version&lt;/tt>&lt;/p>&lt;p>&lt;tt>A51 MACRO ASSEMBLER V8.02b - SN: Eval Version&lt;/tt>&lt;/p>&lt;p>&lt;tt>LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version&lt;/tt>&lt;/p>&lt;p>&lt;tt>BL51 BANKED LINKER/LOCATER V6.22 - SN: Eval Version&lt;/tt>&lt;/p>&lt;p>&lt;tt>LIB51 LIBRARY MANAGER V4.30.0.2&lt;/tt>&lt;/p>">
+    <properties key="core.category" value="8051 (8-bit)"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.bundled" value="true"/>
+    <properties key="toolchain.cdtToolchainId" value="com.silabs.ide.si8051.keil.toolchain.exe.default"/>
+    <properties key="toolchain.cdtExeProjectTypeId" value="com.silabs.ide.si8051.keil.exe"/>
+    <properties key="toolchain.cdtStaticLibProjectTypeId" value="com.silabs.ide.si8051.keil.lib"/>
+    <properties key="toolchain.cdtSupportsParallelBuild" value="false"/>
+    <properties key="core.partCompatibility" value="mcu.8051"/>
+    <properties key="core.preferred" value="true"/>
+    <properties key="core.autoEnable" value="true"/>
+    <properties key="hardware.name" value="keil"/>
+    <properties key="core.version" value="9.53"/>
+    <properties key="core.installationPath" value="file:/C:/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/"/>
+    <properties key="core.detected" value="true"/>
+  </descriptors>
+</model:MDescriptors>
