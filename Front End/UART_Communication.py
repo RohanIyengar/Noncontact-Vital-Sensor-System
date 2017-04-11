@@ -47,15 +47,15 @@ def send(ser=None, input='Hello World'):
 def receive(ser=None, input='Hello World'):
     if ser == None:
         ser = initializeSerial()
+    #try:
+    #    ser.close()
+    #except Exception as e:
+    #    print "error closing serial port" + str(e)
     try:
-        ser.close()
+        ser.open()
     except Exception as e:
-        print "error closing serial port" + str(e)
-    # try:
-    #     ser.open()
-    # except Exception as e:
-    #     print "error opening serial port" + str(e)
-    #     exit()
+        print "error opening serial port" + str(e)
+        exit()
     if ser.isOpen():
         try:
             #Only receive 5 lines for now -- fix this based on scheme later
@@ -77,14 +77,14 @@ def receive(ser=None, input='Hello World'):
             ser.close()
         except Exception as e1:
             print "error communicating...: " + str(e1)
-
     else:
         print "serial port is not open"
 
 i = 0;
 while  i < 10000:
-    time.sleep(.5)
+    time.sleep(.1)
     try:
         receive()
     except Exception as e1:
+        print("Error: ") + str(e1)
         i = i + 1
