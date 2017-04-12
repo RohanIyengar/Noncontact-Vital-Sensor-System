@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_92" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>com.silabs.sdk.8051:4.0.3._-963069520</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.silabs.ss.platform.internal.launcher.ui.docs.CategoryPref">
+      <void property="categoryName">
+       <string>Uncategorized Documents</string>
+      </void>
+      <void property="showCategoryDocs">
+       <boolean>true</boolean>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.silabs.ss.platform.internal.launcher.ui.docs.CategoryPref">
+      <void property="categoryName">
+       <string>Application Notes</string>
+      </void>
+      <void property="showCategoryDocs">
+       <boolean>true</boolean>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

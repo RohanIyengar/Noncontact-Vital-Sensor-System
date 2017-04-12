@@ -1,0 +1,247 @@
+16:33:03 **** Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** WARNING C206 IN LINE 135 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\EFM8BB1_ADC_ExternalInput.c: 'enter_DefaultMode_from_RESET': missing function-prototype
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
+Invoking: Keil 8051 Compiler
+C51 "@src/InitDevice.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** WARNING C206 IN LINE 24 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 25 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 26 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 27 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 28 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 29 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 30 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 31 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 32 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 33 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 34 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 35 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** ERROR C231 IN LINE 43 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 50 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 115 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 120 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 180 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 185 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 216 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 221 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 284 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 289 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 301 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 306 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 315 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 320 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 352 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 357 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 401 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 406 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 443 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 448 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 456 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
+make: *** [src/InitDevice.OBJ] Error 1
+*** ERROR C231 IN LINE 461 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 500 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
+
+C51 COMPILATION COMPLETE.  12 WARNING(S),  24 ERROR(S)
+16:33:57 **** Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_SPI_Master ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/EFM8BB1_SPI0_Master.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_SPI0_Master.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/EFM8BB1_SPI0_Master.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/InitDevice.c
+Invoking: Keil 8051 Compiler
+C51 "@src/InitDevice.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/InitDevice.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/Interrupts.c
+ 
+Building target: EFM8BB1_SPI_Master.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_SPI_Master.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_SPI_Master.lnp "./src/EFM8BB1_SPI0_Master.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ"
+TO "EFM8BB1_SPI_MASTER.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_SPI_Master.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 022FH BYTE (27%) *
+******************************************************************************
+
+Program Size: data=26.1 xdata=0 const=0 code=615
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_SPI_Master.omf
+16:36:10 **** Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
+Invoking: Keil 8051 Compiler
+C51 "@src/InitDevice.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** WARNING C206 IN LINE 24 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 25 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 26 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 27 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 28 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 29 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 30 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 31 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 32 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 33 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 34 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** WARNING C206 IN LINE 35 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': missing function-prototype
+*** ERROR C231 IN LINE 43 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 50 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 115 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 120 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 180 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 185 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 216 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 221 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 284 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 289 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 301 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 306 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 315 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 320 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 352 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 357 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 401 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 406 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 443 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 448 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 456 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
+*** ERROR C231 IN LINE 461 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
+make: *** [src/InitDevice.OBJ] Error 1
+*** ERROR C231 IN LINE 500 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
+
+C51 COMPILATION COMPLETE.  12 WARNING(S),  24 ERROR(S)
+16:38:11 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
+Invoking: Keil 8051 Compiler
+C51 "@src/InitDevice.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/SILABS_STARTUP.A51
+Invoking: Keil 8051 Assembler
+AX51 "@src/SILABS_STARTUP.__ia" || test $? -lt 2
+
+MACRO ASSEMBLER AX51 V3.12.0.0
+COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2013
+"c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\AX51.exe" "C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\SILABS_STARTUP.A51" ERRORPRINT SET (SMALL) DEBUG MACRO NOMOD51 INCDIR(C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_retargetserial;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB1/inc) PRINT(.\src\SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src\SILABS_STARTUP.OBJ)
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
+
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/SILABS_STARTUP.A51
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetio.c
+Invoking: Keil 8051 Compiler
+C51 "@lib/bsp/efm8_retargetserial/retargetio.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetio.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetserial.c
+Invoking: Keil 8051 Compiler
+C51 "@lib/bsp/efm8_retargetserial/retargetserial.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetserial.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02A1H BYTE (32%) *
+******************************************************************************
+
+Program Size: data=112.0 xdata=0 const=0 code=1039
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf

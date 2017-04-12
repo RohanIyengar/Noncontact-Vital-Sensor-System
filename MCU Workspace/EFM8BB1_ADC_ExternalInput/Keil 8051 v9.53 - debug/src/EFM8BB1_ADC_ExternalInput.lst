@@ -1,0 +1,211 @@
+C51 COMPILER V9.53.0.0   EFM8BB1_ADC_EXTERNALINPUT                                         04/11/2017 16:38:12 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE EFM8BB1_ADC_EXTERNALINPUT
+OBJECT MODULE PLACED IN .\src\EFM8BB1_ADC_ExternalInput.OBJ
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\SiliconLabs\S
+                    -implicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\EFM8BB1_ADC_ExternalInpu
+                    -t.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0
+                    -X0000) INTPROMOTE INCDIR(C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\E
+                    -xternalInput\inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_retargetserial;
+                    -C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/
+                    -v4/developer/sdks/8051/v4.0.3//Device/EFM8BB1/inc) PRINT(.\src\EFM8BB1_ADC_ExternalInput.lst) COND PAGEWIDTH(120) PAGELE
+                    -NGTH(65) OBJECT(.\src\EFM8BB1_ADC_ExternalInput.OBJ)
+
+line level    source
+
+   1          //-----------------------------------------------------------------------------
+   2          // EFM8BB1_ADC_ExternalInput.c
+   3          //-----------------------------------------------------------------------------
+   4          // Copyright 2014 Silicon Laboratories, Inc.
+   5          // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreement.txt
+   6          //
+   7          // Program Description:
+   8          //
+   9          // This example code takes and averages 2048 analog measurements from input
+  10          // P1.7 using ADC0, then prints the results to a terminal window via the UART.
+  11          //
+  12          // The system is clocked by the internal 24.5 MHz oscillator divided by 1.
+  13          // Timer 2 triggers a conversion on ADC0 on each overflow.  The completion of
+  14          // this conversionin turn triggers an interrupt service routine (ISR).  The ISR
+  15          // averages 2048 measurements, then prints the value to the terminal via printf
+  16          // before starting another average cycle.
+  17          //
+  18          // The analog multiplexer selects P1.7 (ADC0.15) as the positive ADC0 input.
+  19          // This pin is configured as an analog input in the port initialization
+  20          // routine. The negative ADC0 input is connected via mux to ground, which
+  21          // provides for a single-ended ADC input.
+  22          //
+  23          // An analog joystick is connected to P1.7. Each joystick position corresponds
+  24          // to a unique voltage.
+  25          //
+  26          // Terminal output is done via printf, which directs the characters to
+  27          // UART0.  A UART initialization routine is therefore necessary.
+  28          //
+  29          // ADC Settling Time Requirements, Sampling Rate:
+  30          // ----------------------------------------------
+  31          //
+  32          // The total sample time per input is comprised of an input setting time
+  33          // (Tsettle), followed by a conversion time (Tconvert):
+  34          //
+  35          // Tsample  = Tsettle + Tconvert
+  36          //
+  37          // |--------Settling-------|==Conversion==|----Settling--- . . .
+  38          // Timer 2 overflow        ^
+  39          // ADC0 ISR                               ^
+  40          //
+  41          // The ADC input voltage must be allowed adequate time to settle before the
+  42          // conversion is made.  This settling depends on the external source
+  43          // impedance, internal mux impedance, and internal capacitance.
+  44          // Settling time is given by:
+  45          //
+  46          //                   | 2^n |
+  47          //    Tsettle =   ln | --- | * Rtotal * Csample
+  48          //                   | SA  |
+  49          //
+C51 COMPILER V9.53.0.0   EFM8BB1_ADC_EXTERNALINPUT                                         04/11/2017 16:38:12 PAGE 2   
+
+  50          // For example, assume Rtotal = 100 kohm. The expression evaluates to:
+  51          //
+  52          //                   | 2^10 |
+  53          //    Tsettle =   ln | ---- | * 105e3 * 5e-12 = 4.4 us
+  54          //                   | 0.25 |
+  55          //
+  56          // In addition, one must allow at least 1.5uS after changing analog mux
+  57          // inputs or PGA settings.  The settling time in this example, then, is
+  58          // dictated by the large external source resistance.
+  59          //
+  60          // The conversion is given in the datasheet (10-bit mode, SAR clock 12.25 MHz)
+  61          // as 1 us.
+  62          //
+  63          // Tsample, minimum  = Tsettle + Tconvert
+  64          //                   = 4.4 us + 1 us
+  65          //                   = 5.4 us
+  66          //
+  67          // Timer2 is set to start a conversion every 100 us, which is far longer
+  68          // than the minimum required.
+  69          //
+  70          // Resources:
+  71          //   SYSCLK - 24.5 MHz HFOSC / 1
+  72          //   ADC    - 10-bit, VREF = VDD (3.3V)
+  73          //   UART0  - 115200 baud, 8-N-1
+  74          //   Timer1 - UART0 clock source
+  75          //   Timer2 - ADC start of conversion source
+  76          //   P0.0   - Display enable
+  77          //   P0.4   - UART0 TX
+  78          //   P0.5   - UART0 RX
+  79          //   P2.1   - Board Controller enable
+  80          //
+  81          //-----------------------------------------------------------------------------
+  82          // How To Test: EFM8BB1 STK
+  83          //-----------------------------------------------------------------------------
+  84          // 1) Place the switch in "AEM" mode.
+  85          // 2) Connect the EFM8BB1 STK board to a PC using a mini USB cable.
+  86          // 3) Compile and download code to the EFM8BB1 STK board.
+  87          //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
+  88          //    click the Debug button in the quick menu, or press F11.
+  89          // 4) On the PC, open HyperTerminal (or any other terminal program) and connect
+  90          //    to the JLink CDC UART Port at 115200 baud rate and 8-N-1.
+  91          // 5) Run the code.
+  92          //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
+  93          //    click the Resume button in the quick menu, or press F8.
+  94          // 6) Move the joystick. The terminal program will print the voltage for
+  95          //    each joystick position.
+  96          //
+  97          // Target:         EFM8BB1
+  98          // Tool chain:     Generic
+  99          //
+ 100          // Release 0.1 (ST)
+ 101          //    - Initial Revision
+ 102          //    - 10 OCT 2014
+ 103          //
+ 104          
+ 105          //-----------------------------------------------------------------------------
+ 106          // Includes
+ 107          //-----------------------------------------------------------------------------
+ 108          #include <SI_EFM8BB1_Register_Enums.h>
+ 109          #include "retargetserial.h"
+ 110          #include "InitDevice.h"
+ 111          
+ 112          //-----------------------------------------------------------------------------
+C51 COMPILER V9.53.0.0   EFM8BB1_ADC_EXTERNALINPUT                                         04/11/2017 16:38:12 PAGE 3   
+
+ 113          // Pin Definitions
+ 114          //-----------------------------------------------------------------------------
+ 115          SI_SBIT (DISP_EN, SFR_P0, 0);          // Display Enable
+ 116          #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
+ 117          #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
+ 118          
+ 119          SI_SBIT (BC_EN, SFR_P2, 1);            // Board Controller Enable
+ 120          #define BC_DISCONNECTED 0              // 0 = Board Controller disconnected
+ 121                                                 //     to EFM8 UART pins
+ 122          #define BC_CONNECTED    1              // 1 = Board Controller connected
+ 123                                                 //     to EFM8 UART pins
+ 124          
+ 125          uint32_t counter = 0;
+ 126          extern uint8_t UART_Buffer_Size;
+ 127          extern uint8_t TX_Ready;
+ 128          extern uint8_t Byte;
+ 129          uint32_t count;
+ 130          //-----------------------------------------------------------------------------
+ 131          // Main Routine
+ 132          //-----------------------------------------------------------------------------
+ 133          void main (void)
+ 134          {
+ 135   1         enter_DefaultMode_from_RESET();
+ 136   1      
+ 137   1        // SCON0_TI = 1;                       // This STDIO library requires TI to
+ 138   1                                             // be set for prints to occur
+ 139   1      
+ 140   1         DISP_EN = DISP_BC_DRIVEN;           // EFM8 does not drive display
+ 141   1      
+ 142   1         BC_EN = BC_CONNECTED;                           // Board controller connected to EFM8
+ 143   1                                             // UART pins
+ 144   1      
+ 145   1         IE_EA = 1;                          // Enable global interrupts
+ 146   1      
+ 147   1         while (1)
+ 148   1         {
+ 149   2                /* if((TX_Ready == 1) && (UART_Buffer_Size != 0) && ((Byte == '\r') || (Byte == '\n') || (Byte == '~'))
+             -)
+ 150   2                                    {
+ 151   2                                       TX_Ready = 0;                 // Set the flag to zero
+ 152   2                                       SCON0_TI = 1;                 // Set transmit flag to 1
+ 153   2                                    }
+ 154   2                                    */
+ 155   2                 if(TX_Ready == 1)
+ 156   2                 {
+ 157   3                         TX_Ready = 0;                 // Set the flag to zero
+ 158   3                         SCON0_TI = 1;                 // Set transmit flag to 1
+ 159   3                 }
+ 160   2      
+ 161   2      
+ 162   2                    for (count = 200000; count > 0; count--);
+ 163   2      
+ 164   2                if(counter > 1)
+ 165   2                        SCON0_REN = SCON0_REN__RECEIVE_DISABLED;
+ 166   2                else
+ 167   2                        counter++;
+ 168   2      
+ 169   2         }
+ 170   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    123    ----
+C51 COMPILER V9.53.0.0   EFM8BB1_ADC_EXTERNALINPUT                                         04/11/2017 16:38:12 PAGE 4   
+
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      8    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

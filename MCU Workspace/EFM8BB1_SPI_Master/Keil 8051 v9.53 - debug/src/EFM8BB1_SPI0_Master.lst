@@ -1,0 +1,530 @@
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE EFM8BB1_SPI0_MASTER
+OBJECT MODULE PLACED IN .\src\EFM8BB1_SPI0_Master.OBJ
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\SiliconLabs\S
+                    -implicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\SPI\Master\src\EFM8BB1_SPI0_Master.c OMF2 SMAL
+                    -L DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPRO
+                    -MOTE INCDIR(C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\SPI\Master\inc;C:/
+                    -SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/
+                    -developer/sdks/8051/v4.0.3//Device/EFM8BB1/inc) PRINT(.\src\EFM8BB1_SPI0_Master.lst) COND PAGEWIDTH(120) PAGELENGTH(65) 
+                    -OBJECT(.\src\EFM8BB1_SPI0_Master.OBJ)
+
+line level    source
+
+   1          //-----------------------------------------------------------------------------
+   2          // EFM8BB1_SPI0_Master.c
+   3          //-----------------------------------------------------------------------------
+   4          // Copyright 2014 Silicon Laboratories, Inc.
+   5          // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreement.txt
+   6          //
+   7          // Program Description:
+   8          //
+   9          // This example demonstrates the SPI interface in 4-wire, master mode. This
+  10          // example is intended to be used with the SPI_Slave example.
+  11          //
+  12          // The SPI clock in this example is limited to 1 MHz when used with the
+  13          // SPI0_Slave code example. During a SPI_Read, the slave needs some time to
+  14          // interpret the command and write the appropriate data to the SPI0DAT
+  15          // register, and the slave no longer has enough time to complete the
+  16          // SPI_READ_BUFFER command with a clock greater than 1 MHz. For faster SPI
+  17          // clocks, a dummy byte between the command and the first byte of Read data
+  18          // will be required.
+  19          //
+  20          // Resources:
+  21          //   SYSCLK - 24.5 MHz HFOSC / 1
+  22          //   SPI    - Master
+  23          //   P0.0   - Display enable
+  24          //   P0.6   - SPI SCK
+  25          //   P0.7   - SPI MISO
+  26          //   P1.0   - SPI MOSI
+  27          //   P1.1   - SPI NSS
+  28          //   P1.4   - LED
+  29          //
+  30          //-----------------------------------------------------------------------------
+  31          // How To Test: EFM8BB1 STK (SPI Master) + EFM8BB1 STK (SPI Slave)
+  32          //-----------------------------------------------------------------------------
+  33          // 1) Connect the device first EFM8BB1 STK to second EFM8BB1 STK running the
+  34          //    corresponding SPI_Slave code.
+  35          // 2) Place the switch in "AEM" mode.
+  36          // 3) Connect the EFM8BB1 STK board to a PC using a mini USB cable.
+  37          // 4) Compile and download code to the first EFM8BB1 STK board.
+  38          //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
+  39          //    click the Debug button in the quick menu, or press F11.
+  40          // 5) Run the code.
+  41          //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
+  42          //    click the Resume button in the quick menu, or press F8.
+  43          // 6) If the communication passes, the LEDs on both the Master
+  44          //    and Slave boards will blink slowly. If it fails, the LEDs will be off.
+  45          //
+  46          // Target:         EFM8BB1
+  47          // Tool chain:     Generic
+  48          //
+  49          // Release 0.1 (ST)
+  50          //    - Initial Revision
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 2   
+
+  51          //    - 10 OCT 2014
+  52          //
+  53          
+  54          //-----------------------------------------------------------------------------
+  55          // Includes
+  56          //-----------------------------------------------------------------------------
+  57          #include <SI_EFM8BB1_Register_Enums.h>
+  58          #include "InitDevice.h"
+  59          #include "EFM8BB1_SPI0_Master.h"
+  60          #include "stdbool.h"
+  61          
+  62          //-----------------------------------------------------------------------------
+  63          // Pin Definitions
+  64          //-----------------------------------------------------------------------------
+  65          SI_SBIT (DISP_EN, SFR_P0, 0);          // Display Enable
+  66          #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
+  67          #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
+  68          
+  69          SI_SBIT (LED0, SFR_P1, 4);             // P1.4 LED Green
+  70          #define LED_ON  0
+  71          #define LED_OFF 1
+  72          
+  73          //-----------------------------------------------------------------------------
+  74          // Global Variables
+  75          //-----------------------------------------------------------------------------
+  76          uint8_t SPI_Data = 0xA5;
+  77          uint8_t SPI_Data_Array[MAX_BUFFER_SIZE] = {0};
+  78          bool Error_Flag = 0;
+  79          uint8_t Command = 0x00;
+  80          uint8_t r = 0x0;
+  81          //-----------------------------------------------------------------------------
+  82          // Function Prototypes
+  83          //-----------------------------------------------------------------------------
+  84          void SPI_LED_On (void);
+  85          void SPI_LED_Off (void);
+  86          void SPI_Byte_Write (void);
+  87          void SPI_Byte_Read (void);
+  88          void SPI_Array_Write (void);
+  89          void SPI_Array_Read (void);
+  90          void Delay(void);
+  91          
+  92          void sendData(uint8_t);
+  93          uint8_t receiveData(void);
+  94          
+  95          //-----------------------------------------------------------------------------
+  96          // Main Routine
+  97          //-----------------------------------------------------------------------------
+  98          void main(void)
+  99          {
+ 100   1        /* uint8_t test_value = 0x55;
+ 101   1         uint8_t test_array[MAX_BUFFER_SIZE] = {1,2,3,4,5,6,7,8};
+ 102   1      
+ 103   1         enter_DefaultMode_from_RESET();
+ 104   1      
+ 105   1         DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
+ 106   1      
+ 107   1         IE_EA = 1;                          // Enable global interrupts
+ 108   1      
+ 109   1         LED0 = LED_ON;
+ 110   1      
+ 111   1      /*   // Begin Test --------------------------------------------------------------
+ 112   1      
+ 113   1         SPI_Data = test_value;
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 3   
+
+ 114   1      
+ 115   1         // Write a value
+ 116   1         SPI_Byte_Write();
+ 117   1      
+ 118   1         while(!SPI0CN0_NSSMD0);             // Wait until the Write transfer has
+ 119   1                                             // finished
+ 120   1      
+ 121   1         // Read the same value back
+ 122   1         SPI_Data = 0x00;
+ 123   1         SPI_Byte_Read ();
+ 124   1      
+ 125   1         while(!SPI0CN0_NSSMD0);             // Wait until the Read transfer has
+ 126   1                                             // finished
+ 127   1      
+ 128   1         // Check if the sent value and returned value match
+ 129   1         if(SPI_Data != test_value)
+ 130   1         {
+ 131   1            Error_Flag = 1;
+ 132   1         }
+ 133   1      
+ 134   1         // Copy test_array into SPI_Data_Array
+ 135   1         for(i = 0; i < MAX_BUFFER_SIZE; i++)
+ 136   1         {
+ 137   1            SPI_Data_Array[i] = test_array[i];
+ 138   1         }
+ 139   1      
+ 140   1         // Send the array to the slave
+ 141   1         SPI_Array_Write();
+ 142   1      
+ 143   1         while(!SPI0CN0_NSSMD0);             // Wait until the Write transfer has
+ 144   1                                             // finished
+ 145   1      
+ 146   1         // Clear SPI_Data_Array for the SPI_Buffer_Read function
+ 147   1         for(i = 0; i < MAX_BUFFER_SIZE; i++)
+ 148   1         {
+ 149   1            SPI_Data_Array[i] = 0;
+ 150   1         }
+ 151   1      
+ 152   1         // Read the array back from the slave
+ 153   1         SPI_Array_Read();
+ 154   1      
+ 155   1         while(!SPI0CN0_NSSMD0);             // Wait until the Read transfer has
+ 156   1                                             // finished
+ 157   1      
+ 158   1         // Check if the received array matches the sent array
+ 159   1         for(i = 0; i < MAX_BUFFER_SIZE; i++)
+ 160   1         {
+ 161   1            if(SPI_Data_Array[i] != test_array[i])
+ 162   1            {
+ 163   1               Error_Flag = 1;
+ 164   1            }
+ 165   1         }
+ 166   1      
+ 167   1         // End of Test -------------------------------------------------------------
+ 168   1      
+ 169   1         //Initialize ADC command registers
+ 170   1          SPI_Data = 0x00; //CH0_CONFIG address
+ 171   1          SPI_Byte_Write();
+ 172   1          SPI_Data = 0x00; //CH0_CONFIG data
+ 173   1          SPI_Byte_Write();
+ 174   1          Delay();
+ 175   1      
+ 176   1              SPI_Data = 0x01; //CH1_CONFIG address
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 4   
+
+ 177   1              SPI_Byte_Write();
+ 178   1              SPI_Data = 0x00; //CH1_CONFIG data
+ 179   1              SPI_Byte_Write();
+ 180   1      
+ 181   1              SPI_Data = 0x08; //CH_DISABLE address
+ 182   1              SPI_Byte_Write();
+ 183   1              SPI_Data = 0xFC; //CH_DISABLE data
+ 184   1              SPI_Byte_Write();
+ 185   1      
+ 186   1              SPI_Data = 0x12; //GENERAL_USER_CONFIG_2 address
+ 187   1              SPI_Byte_Write();
+ 188   1              SPI_Data = 0x00; //GENERAL_USER_CONFIG_2 data
+ 189   1              SPI_Byte_Write();
+ 190   1      
+ 191   1              SPI_Data = 0x13; //GENERAL_USER_CONFIG_3 address
+ 192   1              SPI_Byte_Write();
+ 193   1              SPI_Data = 0x10; //GENERAL_USER_CONFIG_3 data
+ 194   1              SPI_Byte_Write();
+ 195   1      
+ 196   1              SPI_Data = 0x14; //DOUT_FORMAT address
+ 197   1              SPI_Byte_Write();
+ 198   1              SPI_Data = 0x00; //DOUT_FORMAT data
+ 199   1              SPI_Byte_Write();
+ 200   1      */
+ 201   1              //Initialize ADC command registers
+ 202   1              enter_DefaultMode_from_RESET();
+ 203   1      
+ 204   1                 DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
+ 205   1      
+ 206   1                 IE_EA = 1;                          // Enable global interrupts
+ 207   1      
+ 208   1                 sendData(0x00);  //CH0_CONFIG address
+ 209   1                 sendData(0x00);       //CH0_CONFIG data
+ 210   1                 Delay();
+ 211   1      
+ 212   1                 sendData(0x01);  //CH1_CONFIG address
+ 213   1                 sendData(0x00);       //CH1_CONFIG data
+ 214   1                 Delay();
+ 215   1      
+ 216   1                 sendData(0x08);  //CH_DISABLE address
+ 217   1                 sendData(0xFC);       //CH_DISABLE data
+ 218   1                 Delay();
+ 219   1      
+ 220   1                 sendData(0x12);  //GENERAL_USER_CONFIG_2 address
+ 221   1                 sendData(0x00);       //GENERAL_USER_CONFIG_2 data
+ 222   1                 Delay();
+ 223   1      
+ 224   1                 sendData(0x13);  //GENERAL_USER_CONFIG_3 address
+ 225   1                 sendData(0x10);       //GENERAL_USER_CONFIG_3 data
+ 226   1                 Delay();
+ 227   1      
+ 228   1                 sendData(0x14);  //DOUT_FORMAT address
+ 229   1                 sendData(0x00);       //DOUT_FORMAT data
+ 230   1                 Delay();
+ 231   1      
+ 232   1         while (1)
+ 233   1                 {
+ 234   2                 r = receiveData();
+ 235   2                 SPI0CN0_NSSMD0 = 1;
+ 236   2                 sendData(0x00);
+ 237   2                 }
+ 238   1      }
+ 239          
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 5   
+
+ 240          //-----------------------------------------------------------------------------
+ 241          // Support Routines
+ 242          //-----------------------------------------------------------------------------
+ 243          
+ 244          //-----------------------------------------------------------------------------
+ 245          // SPI_LED_On
+ 246          //-----------------------------------------------------------------------------
+ 247          //
+ 248          // Return Value : None
+ 249          // Parameters   : None
+ 250          //
+ 251          // Turns the LED on the SPI Slave on.  The slave does not respond to this
+ 252          // command, so the command consists of:
+ 253          //
+ 254          // Command = SLAVE_LED_ON
+ 255          // Length = 1 byte (the command itself)
+ 256          //
+ 257          //-----------------------------------------------------------------------------
+ 258          void sendData(uint8_t x)
+ 259          {
+ 260   1              while(!SPI0CN0_NSSMD0);
+ 261   1              SPI0CN0_NSSMD0 = 0;
+ 262   1              SPI0DAT = x;
+ 263   1              SPI0CN0_NSSMD0 = 1;
+ 264   1      }
+ 265          
+ 266          uint8_t receiveData(void)
+ 267          {
+ 268   1              while(!SPI0CN0_NSSMD0);
+ 269   1              sendData(0x80);
+ 270   1              sendData(0x00);
+ 271   1              SPI0CN0_NSSMD0 = 0;
+ 272   1              return SPI0DAT;
+ 273   1      }
+ 274          
+ 275          void SPI_LED_On(void)
+ 276          {
+ 277   1         while(!SPI0CN0_NSSMD0);             // Wait until the SPI is free, in case
+ 278   1                                             // it's already busy
+ 279   1      
+ 280   1         SPI0CN0_NSSMD0 = 0;
+ 281   1      
+ 282   1         Command = SLAVE_LED_ON;
+ 283   1      
+ 284   1         SPI0DAT = Command;
+ 285   1      
+ 286   1         // The rest of this command will be handled by the SPI ISR, which will
+ 287   1         // trigger when SPI0CN0_SPIF is set from sending the Command
+ 288   1      }
+ 289          
+ 290          //-----------------------------------------------------------------------------
+ 291          // SPI_LED_Off
+ 292          //-----------------------------------------------------------------------------
+ 293          //
+ 294          // Return Value : None
+ 295          // Parameters   : None
+ 296          //
+ 297          // Turns the LED on the SPI Slave off.  The slave does not respond to this
+ 298          // command, so the command consists of:
+ 299          //
+ 300          // Command = SLAVE_LED_OFF
+ 301          // Length = 1 byte (the command itself)
+ 302          //
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 6   
+
+ 303          //-----------------------------------------------------------------------------
+ 304          void SPI_LED_Off(void)
+ 305          {
+ 306   1         while(!SPI0CN0_NSSMD0);             // Wait until the SPI is free, in case
+ 307   1                                             // it's already busy
+ 308   1      
+ 309   1         SPI0CN0_NSSMD0 = 0;
+ 310   1      
+ 311   1         Command = SLAVE_LED_OFF;
+ 312   1      
+ 313   1         SPI0DAT = Command;
+ 314   1      
+ 315   1         // The rest of this command will be handled by the SPI ISR, which will
+ 316   1         // trigger when SPI0CN0_SPIF is set from sending the Command
+ 317   1      }
+ 318          
+ 319          //-----------------------------------------------------------------------------
+ 320          // SPI_Byte_Write
+ 321          //-----------------------------------------------------------------------------
+ 322          //
+ 323          // Return Value : None
+ 324          // Parameters   : None
+ 325          //
+ 326          // Note: SPI_Data must contain the data to be sent before calling this
+ 327          // function.
+ 328          //
+ 329          // Writes a single byte to the SPI Slave.  The slave does not respond to this
+ 330          // command, so the command consists of:
+ 331          //
+ 332          // Command = SPI_WRITE
+ 333          // Length = 1 byte of command, 1 byte of data
+ 334          //
+ 335          //-----------------------------------------------------------------------------
+ 336          void SPI_Byte_Write(void)
+ 337          {
+ 338   1         while(!SPI0CN0_NSSMD0);             // Wait until the SPI is free, in case
+ 339   1                                             // it's already busy
+ 340   1      
+ 341   1         SPI0CN0_NSSMD0 = 0;
+ 342   1      
+ 343   1         Command = SPI_WRITE;
+ 344   1      
+ 345   1         SPI0DAT = Command;
+ 346   1      
+ 347   1         // The rest of this command will be handled by the SPI ISR, which will
+ 348   1         // trigger when SPI0CN0_SPIF is set from sending the Command
+ 349   1      }
+ 350          
+ 351          //-----------------------------------------------------------------------------
+ 352          // SPI_Byte_Read
+ 353          //-----------------------------------------------------------------------------
+ 354          //
+ 355          // Return Value : None
+ 356          // Parameters   : None
+ 357          //
+ 358          // Note: SPI_Data will contain the data received after calling this function.
+ 359          //
+ 360          // Reads a single byte from the SPI Slave.  The command consists of:
+ 361          //
+ 362          // Command = SPI_READ
+ 363          // Length = 1 byte of command, 1 byte of data
+ 364          //
+ 365          //-----------------------------------------------------------------------------
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 7   
+
+ 366          void SPI_Byte_Read(void)
+ 367          {
+ 368   1         while(!SPI0CN0_NSSMD0);             // Wait until the SPI is free, in case
+ 369   1                                             // it's already busy
+ 370   1      
+ 371   1         SPI0CN0_NSSMD0 = 0;
+ 372   1      
+ 373   1         Command = SPI_READ;
+ 374   1      
+ 375   1         SPI0DAT = Command;
+ 376   1      
+ 377   1         // The rest of this command will be handled by the SPI ISR, which will
+ 378   1         // trigger when SPI0CN0_SPIF is set from sending the Command
+ 379   1      }
+ 380          
+ 381          //-----------------------------------------------------------------------------
+ 382          // SPI_Array_Write
+ 383          //-----------------------------------------------------------------------------
+ 384          //
+ 385          // Return Value : None
+ 386          // Parameters   : None
+ 387          //
+ 388          // Note: SPI_Data_Array must contain the data to be sent before calling this
+ 389          // function.
+ 390          //
+ 391          // Writes an array of values of size MAX_BUFFER_SIZE to the SPI Slave.  The
+ 392          // command consists of:
+ 393          //
+ 394          // Command = SPI_WRITE_BUFFER
+ 395          // Length = 1 byte of command, MAX_BUFFER_SIZE bytes of data
+ 396          //
+ 397          // Note: Polled mode is used for this function in order to buffer the data
+ 398          // being sent using the SPI0CN0_TXBMT flag.
+ 399          //
+ 400          //-----------------------------------------------------------------------------
+ 401          void SPI_Array_Write(void)
+ 402          {
+ 403   1         uint8_t array_index;
+ 404   1      
+ 405   1         while(!SPI0CN0_NSSMD0);             // Wait until the SPI is free, in case
+ 406   1                                             // it's already busy
+ 407   1      
+ 408   1         IE_ESPI0 = 0;                       // Disable SPI interrupts
+ 409   1      
+ 410   1         SPI0CN0_NSSMD0 = 0;
+ 411   1      
+ 412   1         SPI0DAT = SPI_WRITE_BUFFER;         // Load the XMIT register
+ 413   1         while(SPI0CN0_TXBMT != 1)           // Wait until the command is moved into
+ 414   1         {                                   // the XMIT buffer
+ 415   2         }
+ 416   1      
+ 417   1         for(array_index = 0; array_index < MAX_BUFFER_SIZE; array_index++)
+ 418   1         {
+ 419   2            SPI0DAT = SPI_Data_Array[array_index]; // Load the data into the buffer
+ 420   2            while(SPI0CN0_TXBMT != 1)        // Wait until the data is moved into
+ 421   2            {                                // the XMIT buffer
+ 422   3            }
+ 423   2         }
+ 424   1         SPI0CN0_SPIF = 0;
+ 425   1         while(SPI0CN0_SPIF != 1)            // Wait until the last byte of the
+ 426   1         {                                   // data reaches the Slave
+ 427   2         }
+ 428   1         SPI0CN0_SPIF = 0;
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 8   
+
+ 429   1      
+ 430   1         SPI0CN0_NSSMD0 = 1;                 // Disable the Slave
+ 431   1      
+ 432   1         IE_ESPI0 = 1;                       // Re-enable SPI interrupts
+ 433   1      }
+ 434          
+ 435          //-----------------------------------------------------------------------------
+ 436          // SPI_Array_Read
+ 437          //-----------------------------------------------------------------------------
+ 438          //
+ 439          // Return Value : None
+ 440          // Parameters   : None
+ 441          //
+ 442          // Note: SPI_Data_Array will contain the data received after calling this
+ 443          // function.
+ 444          //
+ 445          // Reads a single byte from the SPI Slave.  The command consists of:
+ 446          //
+ 447          // Command = SPI_READ_BUFFER
+ 448          // Length = 1 byte of command, MAX_BUFFER_SIZE bytes of data
+ 449          //
+ 450          //-----------------------------------------------------------------------------
+ 451          void SPI_Array_Read(void)
+ 452          {
+ 453   1         while(!SPI0CN0_NSSMD0);             // Wait until the SPI is free, in case
+ 454   1                                             // it's already busy
+ 455   1      
+ 456   1         SPI0CN0_NSSMD0 = 0;
+ 457   1      
+ 458   1         Command = SPI_READ_BUFFER;
+ 459   1      
+ 460   1         SPI0DAT = Command;
+ 461   1      
+ 462   1         // The rest of this command will be handled by the SPI ISR, which will
+ 463   1         // trigger when SPI0CN0_SPIF is set from sending the Command
+ 464   1      }
+ 465          
+ 466          //-----------------------------------------------------------------------------
+ 467          // Delay
+ 468          //-----------------------------------------------------------------------------
+ 469          //
+ 470          // Return Value : None
+ 471          // Parameters   : None
+ 472          //
+ 473          // Delay for little while (used for blinking the LEDs)
+ 474          //
+ 475          //-----------------------------------------------------------------------------
+ 476          void Delay(void)
+ 477          {
+ 478   1         uint32_t count;
+ 479   1      
+ 480   1         for (count = 200000; count > 0; count--);
+ 481   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    286    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     11       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+C51 COMPILER V9.53.0.0   EFM8BB1_SPI0_MASTER                                               04/11/2017 16:33:57 PAGE 9   
+
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
