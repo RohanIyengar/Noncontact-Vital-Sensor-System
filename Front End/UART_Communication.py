@@ -80,11 +80,28 @@ def receive(ser=None, input='Hello World'):
     else:
         print "serial port is not open"
 
-i = 0;
-while  i < 10000:
-    time.sleep(.1)
-    try:
-        receive()
-    except Exception as e1:
-        print("Error: ") + str(e1)
-        i = i + 1
+def recv_without_open():
+    ser_obj = initializeSerial()
+    print "Initialized object to " + ser.portstr
+    done = False
+    line = []
+    while not done:
+        for c in ser.read():
+            line.append(c)
+            if len(line) != 0:
+                print "Got the line: " + line
+                line = []
+                done = True
+# i = 0;
+# while  i < 10000:
+#     time.sleep(.1)
+#     try:
+#         receive()
+#     except Exception as e1:
+#         print("Error: ") + str(e1)
+#         i = i + 1
+
+try:
+    recv_without_open()
+except Exception as e1:
+    print("Error: ") + str(e1)
