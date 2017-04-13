@@ -2,7 +2,7 @@ import serial, time
 global ser
 ser = None
 
-def initializeSerial(in_port='COM4'):
+def initializeSerial(in_port='COM3'):
     return serial.Serial(port=in_port,
         baudrate=115200,
         parity=serial.PARITY_ODD,

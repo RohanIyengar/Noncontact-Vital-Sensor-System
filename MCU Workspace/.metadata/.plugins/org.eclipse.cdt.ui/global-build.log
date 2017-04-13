@@ -1,4 +1,13 @@
-16:33:03 **** Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+16:00:49 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:01:19 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:01:29 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:02:27 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
 make all 
 PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
  
@@ -8,9 +17,709 @@ C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
 
 C51 COMPILER V9.53.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
-*** WARNING C206 IN LINE 135 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\EFM8BB1_ADC_ExternalInput.c: 'enter_DefaultMode_from_RESET': missing function-prototype
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02DCH BYTE (35%) *
+******************************************************************************
+
+Program Size: data=116.1 xdata=0 const=0 code=1111
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:02:36 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:04:11 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  count
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./src/EFM8BB1_ADC_ExternalInput.OBJ (EFM8BB1_ADC_EXTERNALINPUT)
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0304H BYTE (37%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1151
+LX51 RUN COMPLETE.  0 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+16:05:15 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0304H BYTE (37%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1151
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:05:18 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:06:12 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0304H BYTE (37%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1151
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:06:16 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:06:36 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0319H BYTE (38%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1172
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:06:41 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:08:00 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02E2H BYTE (36%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1117
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:08:05 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:08:50 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02E2H BYTE (36%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1117
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:08:55 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:09:49 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02E2H BYTE (36%) *
+******************************************************************************
+
+Program Size: data=120.1 xdata=0 const=0 code=1117
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:09:54 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:50:44 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 115 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'SBUF0'
+*** ERROR C141 IN LINE 119 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'SBUF0'
+*** ERROR C141 IN LINE 123 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'SBUF0'
+*** ERROR C141 IN LINE 127 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'SBUF0'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  4 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+16:51:56 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 116 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'b'
+*** ERROR C141 IN LINE 120 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'b'
+*** ERROR C141 IN LINE 124 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'b'
+*** ERROR C141 IN LINE 128 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'b'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  4 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+16:52:30 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** WARNING C294 IN LINE 131 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: unreachable code
 
 C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/SILABS_STARTUP.OBJ (?C_STARTUP)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 035DH BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1298
+LX51 RUN COMPLETE.  2 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+16:52:54 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/SILABS_STARTUP.OBJ (?C_STARTUP)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0360H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1301
+LX51 RUN COMPLETE.  2 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+16:54:37 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/SILABS_STARTUP.OBJ (?C_STARTUP)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0360H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1301
+LX51 RUN COMPLETE.  2 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+16:55:23 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/Interrupts.OBJ (INTERRUPTS)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+*** WARNING L46: SFR SYMBOL HAS DIFFERENT VALUES
+    SYMBOL:  B
+    MODULE:  ./src/SILABS_STARTUP.OBJ (?C_STARTUP)
+   DEFINED:  ./lib/bsp/efm8_retargetserial/retargetserial.OBJ (RETARGETSERIAL)
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0360H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1301
+LX51 RUN COMPLETE.  2 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+16:57:35 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0360H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1301
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:57:55 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+16:59:18 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0360H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1301
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+16:59:22 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:02:26 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0385H BYTE (43%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1338
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+17:02:34 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:04:05 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0393H BYTE (44%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1352
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+17:04:14 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:08:58 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:09:04 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:12:09 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:13:37 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
 Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
  
 Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
@@ -19,146 +728,34 @@ C51 "@src/InitDevice.__i" || test $? -lt 2
 
 C51 COMPILER V9.53.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
-*** WARNING C206 IN LINE 24 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 25 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 26 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 27 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 28 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 29 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 30 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 31 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 32 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 33 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 34 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 35 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** ERROR C231 IN LINE 43 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 50 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 115 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 120 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 180 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 185 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 216 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 221 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 284 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 289 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 301 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 306 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 315 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 320 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 352 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 357 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 401 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 406 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 443 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 448 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 456 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
-make: *** [src/InitDevice.OBJ] Error 1
-*** ERROR C231 IN LINE 461 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 500 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
-
-C51 COMPILATION COMPLETE.  12 WARNING(S),  24 ERROR(S)
-16:33:57 **** Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_SPI_Master ****
-make all 
-PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
- 
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/EFM8BB1_SPI0_Master.c
-Invoking: Keil 8051 Compiler
-C51 "@src/EFM8BB1_SPI0_Master.__i" || test $? -lt 2
-
-C51 COMPILER V9.53.0.0 - SN: Eval Version
-COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/EFM8BB1_SPI0_Master.c
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
  
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/InitDevice.c
-Invoking: Keil 8051 Compiler
-C51 "@src/InitDevice.__i" || test $? -lt 2
-
-C51 COMPILER V9.53.0.0 - SN: Eval Version
-COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
-
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/InitDevice.c
- 
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/Interrupts.c
-Invoking: Keil 8051 Compiler
-C51 "@src/Interrupts.__i" || test $? -lt 2
-
-C51 COMPILER V9.53.0.0 - SN: Eval Version
-COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
-
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/SPI/Master/src/Interrupts.c
- 
-Building target: EFM8BB1_SPI_Master.omf
+Building target: EFM8BB1_ADC_ExternalInput.omf
 Invoking: Keil 8051 Linker
-LX51 "@EFM8BB1_SPI_Master.lnp" || test $? -lt 2
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
 
 LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
 COPYRIGHT ARM Germany GmbH 1995 - 2014
-@EFM8BB1_SPI_Master.lnp "./src/EFM8BB1_SPI0_Master.OBJ",
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
 "./src/InitDevice.OBJ",
-"./src/Interrupts.OBJ"
-TO "EFM8BB1_SPI_MASTER.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_SPI_Master.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 022FH BYTE (27%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 038BH BYTE (44%) *
 ******************************************************************************
 
-Program Size: data=26.1 xdata=0 const=0 code=615
+Program Size: data=117.1 xdata=0 const=0 code=1355
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building target: EFM8BB1_SPI_Master.omf
-16:36:10 **** Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+17:13:42 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
 make all 
-PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
- 
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/InitDevice.c
-Invoking: Keil 8051 Compiler
-C51 "@src/InitDevice.__i" || test $? -lt 2
-
-C51 COMPILER V9.53.0.0 - SN: Eval Version
-COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
-*** WARNING C206 IN LINE 24 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 25 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 26 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 27 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 28 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 29 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 30 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 31 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 32 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 33 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 34 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** WARNING C206 IN LINE 35 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': missing function-prototype
-*** ERROR C231 IN LINE 43 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 50 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'WDT_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 115 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 120 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 180 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PORTS_1_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 185 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 216 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'PBCFG_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 221 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 284 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'ADC_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 289 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 301 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'VREF_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 306 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 315 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'CLOCK_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 320 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 352 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER01_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 357 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 401 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER16_2_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 406 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 443 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'TIMER_SETUP_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 448 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 456 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'UART_0_enter_DefaultMode_from_RESET': redefinition
-*** ERROR C231 IN LINE 461 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
-make: *** [src/InitDevice.OBJ] Error 1
-*** ERROR C231 IN LINE 500 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\InitDevice.c: 'INTERRUPT_0_enter_DefaultMode_from_RESET': redefinition
-
-C51 COMPILATION COMPLETE.  12 WARNING(S),  24 ERROR(S)
-16:38:11 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make: Nothing to be done for `all'.
+17:27:15 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
 make all 
 PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
  
@@ -192,38 +789,39 @@ COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights res
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
 Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
  
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/SILABS_STARTUP.A51
-Invoking: Keil 8051 Assembler
-AX51 "@src/SILABS_STARTUP.__ia" || test $? -lt 2
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
 
-MACRO ASSEMBLER AX51 V3.12.0.0
-COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2013
-"c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\AX51.exe" "C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\SILABS_STARTUP.A51" ERRORPRINT SET (SMALL) DEBUG MACRO NOMOD51 INCDIR(C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_retargetserial;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB1/inc) PRINT(.\src\SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src\SILABS_STARTUP.OBJ)
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0332H BYTE (39%) *
+******************************************************************************
 
-
-ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
-
-Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/SILABS_STARTUP.A51
+Program Size: data=117.1 xdata=0 const=0 code=1208
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+17:28:07 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
  
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetio.c
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
 Invoking: Keil 8051 Compiler
-C51 "@lib/bsp/efm8_retargetserial/retargetio.__i" || test $? -lt 2
+C51 "@src/Interrupts.__i" || test $? -lt 2
 
 C51 COMPILER V9.53.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetio.c
- 
-Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetserial.c
-Invoking: Keil 8051 Compiler
-C51 "@lib/bsp/efm8_retargetserial/retargetserial.__i" || test $? -lt 2
-
-C51 COMPILER V9.53.0.0 - SN: Eval Version
-COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
-
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/kits/common/drivers/efm8_retargetserial/retargetserial.c
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
  
 Building target: EFM8BB1_ADC_ExternalInput.omf
 Invoking: Keil 8051 Linker
@@ -239,9 +837,1261 @@ COPYRIGHT ARM Germany GmbH 1995 - 2014
 "./src/SILABS_STARTUP.OBJ"
 TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02A1H BYTE (32%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0310H BYTE (38%) *
 ******************************************************************************
 
-Program Size: data=112.0 xdata=0 const=0 code=1039
+Program Size: data=117.1 xdata=0 const=0 code=1174
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
 Finished building target: EFM8BB1_ADC_ExternalInput.omf
+17:31:54 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+17:32:02 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:20:59 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  000024H   
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0388H BYTE (44%) *
+******************************************************************************
+
+Program Size: data=138.2 xdata=0 const=0 code=2377
+LX51 RUN COMPLETE.  0 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+13:21:57 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0363H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1315
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:30:37 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** WARNING C206 IN LINE 162 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'pow': missing function-prototype
+*** ERROR C267 IN LINE 162 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'pow': requires ANSI-style prototype
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+13:31:54 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 039FH BYTE (45%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1375
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:32:15 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:32:35 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:33:02 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:34:16 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0368H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1303
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:34:20 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:35:05 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0305H BYTE (37%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1204
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:35:09 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:36:51 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0359H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1288
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:36:55 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:40:53 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  000024H   
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0323H BYTE (39%) *
+******************************************************************************
+
+Program Size: data=138.2 xdata=0 const=0 code=2259
+LX51 RUN COMPLETE.  0 WARNING(S),  1 ERROR(S)
+make: *** [EFM8BB1_ADC_ExternalInput.omf] Error 1
+13:43:49 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02FBH BYTE (37%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1194
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:47:10 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0359H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1288
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:47:13 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:48:49 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:48:53 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:51:48 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0349H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1272
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:51:51 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:53:17 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0349H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1272
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:53:20 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+13:59:09 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C300 IN LINE 157 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\EFM8BB1_ADC_ExternalInput.c: unterminated comment
+make: *** [src/EFM8BB1_ADC_ExternalInput.OBJ] Error 1
+*** ERROR C141 IN LINE 157 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\EFM8BB1_ADC_ExternalInput.c: syntax error near ''
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  2 ERROR(S)
+13:59:48 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0356H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1285
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+13:59:52 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:03:53 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 038FH BYTE (44%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1359
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:03:57 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:05:07 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 032CH BYTE (39%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1260
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:05:14 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:07:29 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0343H BYTE (40%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1283
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:07:32 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:08:50 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C101 IN LINE 167 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: ''A': invalid character constant
+*** ERROR C141 IN LINE 167 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'LEC'
+*** ERROR C101 IN LINE 167 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: '';': invalid character constant
+*** ERROR C202 IN LINE 167 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'LEC': undefined identifier
+*** ERROR C141 IN LINE 168 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near '}'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  5 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:09:12 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0343H BYTE (40%) *
+******************************************************************************
+
+Program Size: data=117.1 xdata=0 const=0 code=1283
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:09:25 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:11:36 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 164 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'default'
+*** ERROR C101 IN LINE 165 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: '''': invalid character constant
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  2 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:12:06 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C101 IN LINE 165 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: '''': invalid character constant
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:13:34 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0356H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1302
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:13:37 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:16:41 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0359H BYTE (41%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1305
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:16:48 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:17:11 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0322H BYTE (39%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1233
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:17:16 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:23:36 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 033FH BYTE (40%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1262
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:23:39 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:25:25 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+Invoking: Keil 8051 Compiler
+C51 "@src/EFM8BB1_ADC_ExternalInput.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/EFM8BB1_ADC_ExternalInput.c
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 177 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near '/'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:25:35 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 039CH BYTE (45%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1355
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:25:40 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:28:02 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0394H BYTE (44%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1347
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:28:06 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:29:06 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 039EH BYTE (45%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1357
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:30:04 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:30:46 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 039EH BYTE (45%) *
+******************************************************************************
+
+Program Size: data=117.2 xdata=0 const=0 code=1357
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:30:52 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:34:56 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 46 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'void'
+*** ERROR C141 IN LINE 46 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'interrupt'
+*** ERROR C247 IN LINE 49 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C231 IN LINE 52 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'ADC0CN0_ADINT': redefinition
+*** ERROR C231 IN LINE 52 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'ADC0CN0_ADINT': redefinition
+*** ERROR C231 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'high': redefinition
+*** ERROR C247 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C231 IN LINE 56 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'low': redefinition
+*** ERROR C247 IN LINE 56 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C231 IN LINE 57 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'total': redefinition
+*** ERROR C247 IN LINE 57 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C129 IN LINE 58 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: missing ';' before '+='
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  12 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:35:07 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 46 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'void'
+*** ERROR C141 IN LINE 46 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: syntax error near 'interrupt'
+*** ERROR C247 IN LINE 49 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C231 IN LINE 52 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'ADC0CN0_ADINT': redefinition
+*** ERROR C231 IN LINE 52 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'ADC0CN0_ADINT': redefinition
+*** ERROR C231 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'high': redefinition
+*** ERROR C247 IN LINE 55 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C231 IN LINE 56 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'low': redefinition
+*** ERROR C247 IN LINE 56 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C231 IN LINE 57 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: 'total': redefinition
+*** ERROR C247 IN LINE 57 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+*** ERROR C129 IN LINE 58 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: missing ';' before '+='
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  12 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:43:46 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C247 IN LINE 49 OF C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\8051\v4.0.3\examples\EFM8BB1_SLSTK2020A\ADC\ExternalInput\src\Interrupts.c: non-address/-constant initializer
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
+make: *** [src/Interrupts.OBJ] Error 1
+14:44:00 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 044AH BYTE (53%) *
+******************************************************************************
+
+Program Size: data=121.2 xdata=0 const=0 code=1546
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:44:03 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:45:41 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0464H BYTE (54%) *
+******************************************************************************
+
+Program Size: data=121.2 xdata=0 const=0 code=1572
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:45:44 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:49:21 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 046AH BYTE (55%) *
+******************************************************************************
+
+Program Size: data=121.2 xdata=0 const=0 code=1578
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:49:24 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:51:22 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.
+14:57:20 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+PATH=/c/SiliconLabs/SimplicityStudio/v4/developer/toolchains/keil_8051/9.53/BIN:/c/SiliconLabs/SimplicityStudio/v4/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin/client:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/bin:/c/SiliconLabs/SimplicityStudio/v4/features/com.silabs.external.java.windows.x86.feature_1.8.0.92/jre/lib/i386:/c/Python27:/c/Users/Alec/AppData/Local/atom/bin:%USERPROFILE%/AppData/Local/Microsoft/WindowsApps:.:/c/SiliconLabs/SimplicityStudio/v4
+ 
+Building file: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+Invoking: Keil 8051 Compiler
+C51 "@src/Interrupts.__i" || test $? -lt 2
+
+C51 COMPILER V9.53.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3/examples/EFM8BB1_SLSTK2020A/ADC/ExternalInput/src/Interrupts.c
+ 
+Building target: EFM8BB1_ADC_ExternalInput.omf
+Invoking: Keil 8051 Linker
+LX51 "@EFM8BB1_ADC_ExternalInput.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.30.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2014
+@EFM8BB1_ADC_ExternalInput.lnp "./lib/bsp/efm8_retargetserial/retargetio.OBJ",
+"./lib/bsp/efm8_retargetserial/retargetserial.OBJ",
+"./src/EFM8BB1_ADC_ExternalInput.OBJ",
+"./src/InitDevice.OBJ",
+"./src/Interrupts.OBJ",
+"./src/SILABS_STARTUP.OBJ"
+TO "EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD" REMOVEUNUSED PRINT(.\EFM8BB1_ADC_ExternalInput.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( CODE(C:0x0 - C:0x1ffe), CONST(C:0x0 - C:0x1ffe), ECODE(C:0x0 - C:0x1ffe), HCONST(C:0x0 - C:0x1ffe), XDATA(X:0x0 - X:0xff), HDATA(X:0x0 - X:0xff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 03B7H BYTE (46%) *
+******************************************************************************
+
+Program Size: data=121.2 xdata=0 const=0 code=1399
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: EFM8BB1_ADC_ExternalInput.omf
+14:57:24 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+make all 
+make: Nothing to be done for `all'.

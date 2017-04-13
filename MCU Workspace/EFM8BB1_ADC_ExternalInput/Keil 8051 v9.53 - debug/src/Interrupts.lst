@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:38:12 PAGE 1   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE INTERRUPTS
@@ -32,237 +32,311 @@ line level    source
   16          // Global CONSTANTS
   17          //-----------------------------------------------------------------------------
   18          #define UART_BUFFERSIZE        64
-  19          //-----------------------------------------------------------------------------
-  20          // Global Variables
-  21          //-----------------------------------------------------------------------------
-  22          uint8_t UART_Buffer[UART_BUFFERSIZE];
-  23          uint8_t UART_Buffer_Size = 0;
-  24          uint8_t UART_Input_First = 0;
-  25          uint8_t UART_Output_First = 0;
-  26          uint8_t TX_Ready =1;
-  27          uint8_t Byte = 0;
-  28          
-  29          uint32_t mV;// Measured voltage in mV
-  30          
-  31          //-----------------------------------------------------------------------------
-  32          // ADC0EOC_ISR
-  33          //-----------------------------------------------------------------------------
-  34          //
-  35          // ADC0EOC ISR Content goes here. Remember to clear flag bits:
-  36          // ADC0CN0::ADINT (Conversion Complete Interrupt Flag)
-  37          //
-  38          // This ISR averages 2048 samples then prints the result to the terminal.  The
-  39          // ISR is called after each ADC conversion which is triggered by Timer2.
-  40          //
-  41          //-----------------------------------------------------------------------------
-  42          SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
-  43          {
-  44   1              static uint32_t accumulator = 0;     // Accumulator for averaging
-  45   1              static uint16_t measurements = 2048;// Measurement counter
-  46   1              uint32_t result = 0;
-  47   1              uint32_t high,low,total;
-  48   1              ADC0CN0_ADINT = 0;// Clear ADC0 conv. complete flag
-  49   1      
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:38:12 PAGE 2   
+  19          #define NOT_SENDING                     8
+  20          //-----------------------------------------------------------------------------
+  21          // Global Variables
+  22          //-----------------------------------------------------------------------------
+  23          uint8_t UART_Buffer[UART_BUFFERSIZE];
+  24          uint8_t UART_Buffer_Size = 0;
+  25          uint8_t UART_Input_First = 0;
+  26          uint8_t UART_Output_First = 0;
+  27          uint8_t TX_Ready =1;
+  28          uint8_t Byte = 0;
+  29          
+  30          uint32_t mV;// Measured voltage in mV
+  31          uint32_t i = 6;
+  32          uint8_t byteToBeSent = 0;
+  33          bool sendByte = false;
+  34          uint32_t numMeasurements = 2048;
+  35          
+  36          //-----------------------------------------------------------------------------
+  37          // ADC0EOC_ISR
+  38          //-----------------------------------------------------------------------------
+  39          //
+  40          // ADC0EOC ISR Content goes here. Remember to clear flag bits:
+  41          // ADC0CN0::ADINT (Conversion Complete Interrupt Flag)
+  42          //
+  43          // This ISR averages 2048 samples then prints the result to the terminal.  The
+  44          // ISR is called after each ADC conversion which is triggered by Timer2.
+  45          //
+  46          //-----------------------------------------------------------------------------
+  47          SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
+  48          {
+  49   1              static uint32_t accumulator = 0;     // Accumulator for averaging
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 2   
 
-  50   1              //accumulator += ADC0;
-  51   1              high = ADC0H;
-  52   1              low = ADC0L;
-  53   1              total = ADC0;
-  54   1              accumulator += (high*256) + ADC0L;
-  55   1              measurements--;
-  56   1      
-  57   1              if(measurements == 0)
-  58   1              {
-  59   2                      measurements = 2048;
-  60   2                      result = accumulator / 2048;
-  61   2                      accumulator = 0;
-  62   2      
-  63   2                      // The 12-bit ADC value is averaged across 2048 measurements.
-  64   2                      // The measured voltage applied to P0.0 is then:
-  65   2                      //
-  66   2                      //                           Vref (mV)
-  67   2                      //   measurement (mV) =   --------------- * result (bits)
-  68   2                      //                       (2^12)-1 (bits)
-  69   2      
-  70   2                      mV = (result * 3300) / 4092;
-  71   2                      //RETARGET_PRINTF ("\nP0.0 voltage: %ld mV\n", mV);
-  72   2                      TX_Ready = 1;
-  73   2              }
-  74   1      
-  75   1      }
-  76          
-  77          //-----------------------------------------------------------------------------
-  78          // TIMER2_ISR
-  79          //-----------------------------------------------------------------------------
-  80          //
-  81          // TIMER2 ISR Content goes here. Remember to clear flag bits:
-  82          // TMR2CN0::TF2H (Timer # High Byte Overflow Flag)
-  83          // TMR2CN0::TF2L (Timer # Low Byte Overflow Flag)
-  84          //
-  85          //-----------------------------------------------------------------------------
-  86          SI_INTERRUPT (TIMER2_ISR, TIMER2_IRQn)
-  87          {
-  88   1      
-  89   1      }
-  90          
-  91          //-----------------------------------------------------------------------------
-  92          // UART0_ISR
-  93          //-----------------------------------------------------------------------------
-  94          //
-  95          // UART0 ISR Content goes here. Remember to clear flag bits:
-  96          // SCON0::RI (Receive Interrupt Flag)
-  97          // SCON0::TI (Transmit Interrupt Flag)
-  98          //
-  99          //-----------------------------------------------------------------------------
- 100          SI_INTERRUPT (UART0_ISR, UART0_IRQn)
- 101          {
- 102   1                 if (SCON0_RI == 1)
- 103   1                 {
- 104   2                       SCON0_RI = 0;
- 105   2                       Byte = SBUF0;
- 106   2                 }
- 107   1      
- 108   1                 if (SCON0_TI == 1)                        // Check if transmit flag is set
- 109   1                 {
- 110   2                    SCON0_TI = 0;               // Clear interrupt flag
- 111   2                    SBUF0 = 52;                 // Transmit to Hyperterminal
- 112   2                 }
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:38:12 PAGE 3   
+  50   1              static uint16_t measurements = 2048; // Measurement counter
+  51   1              uint32_t result = 0;
+  52   1              uint32_t high,low,total;
+  53   1              ADC0CN0_ADINT = 0;// Clear ADC0 conv. complete flag
+  54   1      
+  55   1              //accumulator += ADC0;
+  56   1              high = ADC0H;
+  57   1              low = ADC0L;
+  58   1              total = ADC0;
+  59   1              accumulator += (high*256) + ADC0L;
+  60   1              measurements--;
+  61   1      
+  62   1              if(measurements == 0)
+  63   1              {
+  64   2                      measurements = numMeasurements;
+  65   2                      result = accumulator / numMeasurements;
+  66   2                      accumulator = 0;
+  67   2      
+  68   2                      // The 12-bit ADC value is averaged across 2048 measurements.
+  69   2                      // The measured voltage applied to P0.0 is then:
+  70   2                      //
+  71   2                      //                           Vref (mV)
+  72   2                      //   measurement (mV) =   --------------- * result (bits)
+  73   2                      //                       (2^12)-1 (bits)
+  74   2      
+  75   2                      mV = (result * 3300) / 4092;
+  76   2                      //RETARGET_PRINTF ("\nP0.0 voltage: %ld mV\n", mV);
+  77   2              }
+  78   1      
+  79   1              //Print MSB
+  80   1              if(measurements == numMeasurements)
+  81   1              {
+  82   2                      i = 3;
+  83   2                      TX_Ready = 1;
+  84   2              }
+  85   1              //Print second MSB
+  86   1              if(measurements == 1792)
+  87   1              {
+  88   2                      i = 2;
+  89   2                      TX_Ready = 1;
+  90   2              }
+  91   1              //Print third MSB
+  92   1              if(measurements == 1536)
+  93   1              {
+  94   2                      i = 1;
+  95   2                      TX_Ready = 1;
+  96   2              }
+  97   1              //Print LSB
+  98   1              if(measurements == 1280)
+  99   1              {
+ 100   2                      i = 0;
+ 101   2                      TX_Ready = 1;
+ 102   2              }
+ 103   1              //Print comma
+ 104   1              if(measurements == 1024)
+ 105   1              {
+ 106   2                      i = 4;
+ 107   2                      TX_Ready = 1;
+ 108   2              }
+ 109   1              if(measurements < 1024)
+ 110   1              {
+ 111   2                      i = NOT_SENDING;
+ 112   2                      TX_Ready = 0;
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 3   
 
- 113   1      }
- 114          
+ 113   2              }
+ 114   1      }
  115          
- 116          
- 117          
- 118          
- 119          
- 120          
- 121          
- 122          
- 123          
- 124          /*
- 125          
- 126          
- 127          
- 128          
+ 116          //-----------------------------------------------------------------------------
+ 117          // TIMER2_ISR
+ 118          //-----------------------------------------------------------------------------
+ 119          //
+ 120          // TIMER2 ISR Content goes here. Remember to clear flag bits:
+ 121          // TMR2CN0::TF2H (Timer # High Byte Overflow Flag)
+ 122          // TMR2CN0::TF2L (Timer # Low Byte Overflow Flag)
+ 123          //
+ 124          //-----------------------------------------------------------------------------
+ 125          SI_INTERRUPT (TIMER2_ISR, TIMER2_IRQn)
+ 126          {
+ 127   1      
+ 128   1      }
  129          
- 130          
- 131          
- 132          
- 133          //=========================================================
- 134          // src/Interrupts.c: generated by Hardware Configurator
- 135          //
- 136          // This file will be regenerated when saving a document.
- 137          // leave the sections inside the "$[...]" comment tags alone
- 138          // or they will be overwritten!
- 139          //=========================================================
- 140          
- 141          
- 142          // USER INCLUDES
- 143          #include <SI_EFM8BB1_Register_Enums.h>
- 144          
- 145          //-----------------------------------------------------------------------------
- 146          // Global CONSTANTS
- 147          //-----------------------------------------------------------------------------
- 148          #define UART_BUFFERSIZE        64
- 149          
- 150          //-----------------------------------------------------------------------------
- 151          // Global Variables
- 152          //-----------------------------------------------------------------------------
- 153          uint8_t UART_Buffer[UART_BUFFERSIZE];
- 154          uint8_t UART_Buffer_Size = 0;
- 155          uint8_t UART_Input_First = 0;
- 156          uint8_t UART_Output_First = 0;
- 157          uint8_t TX_Ready =1;
- 158          uint8_t Byte = 0;
- 159          
- 160          //-----------------------------------------------------------------------------
- 161          // UART0_ISR
- 162          //-----------------------------------------------------------------------------
- 163          //
- 164          // UART0 ISR Content goes here. Remember to clear flag bits:
- 165          // SCON0::RI (Receive Interrupt Flag)
- 166          // SCON0::TI (Transmit Interrupt Flag)
- 167          //
- 168          // This routine is invoked whenever a character is entered or displayed on the
- 169          // Hyperterminal.
- 170          //
- 171          //-----------------------------------------------------------------------------
- 172          SI_INTERRUPT (UART0_ISR, UART0_IRQn)
- 173          {
- 174                     if (SCON0_RI == 1)
- 175                     {
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:38:12 PAGE 4   
+ 130          //-----------------------------------------------------------------------------
+ 131          // UART0_ISR
+ 132          //-----------------------------------------------------------------------------
+ 133          //
+ 134          // UART0 ISR Content goes here. Remember to clear flag bits:
+ 135          // SCON0::RI (Receive Interrupt Flag)
+ 136          // SCON0::TI (Transmit Interrupt Flag)
+ 137          //
+ 138          //-----------------------------------------------------------------------------
+ 139          SI_INTERRUPT (UART0_ISR, UART0_IRQn)
+ 140          {
+ 141   1                 if (SCON0_RI == 1)
+ 142   1                 {
+ 143   2                       SCON0_RI = 0;
+ 144   2                       Byte = SBUF0;
+ 145   2                 }
+ 146   1      
+ 147   1                 if (SCON0_TI == 1)             // Check if transmit flag is set
+ 148   1                 {
+ 149   2                    SCON0_TI = 0;               // Clear interrupt flag
+ 150   2                    switch (i)
+ 151   2                    {
+ 152   3                                case 0:
+ 153   3                                      byteToBeSent = 48 + (mV % 10);
+ 154   3                                      sendByte = true;
+ 155   3                                      i = NOT_SENDING;
+ 156   3                                      break;
+ 157   3                                case 1:
+ 158   3                                      byteToBeSent = 48 + (mV/10)%10;
+ 159   3                                      sendByte = true;
+ 160   3                                      i = NOT_SENDING;
+ 161   3                                      break;
+ 162   3                                case 2:
+ 163   3                                      byteToBeSent = 48 + (mV/100)%10;
+ 164   3                                      sendByte = true;
+ 165   3                                      i = NOT_SENDING;
+ 166   3                                      break;
+ 167   3                                case 3:
+ 168   3                                      byteToBeSent = 48 + (mV/1000)%10;
+ 169   3                                      sendByte = true;
+ 170   3                                      i = NOT_SENDING;
+ 171   3                                      break;
+ 172   3                                case 4:
+ 173   3                                      byteToBeSent = ',';
+ 174   3                                      sendByte = true;
+ 175   3                                      i = NOT_SENDING;
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 4   
 
- 176                        if( UART_Buffer_Size == 0)  {    // If new word is entered
- 177                           UART_Input_First = 0;    }
- 178          
- 179                        SCON0_RI = 0;                          // Clear interrupt flag
- 180          
- 181                        Byte = SBUF0;                    // Read a character from UART
- 182          
- 183                        if (UART_Buffer_Size < UART_BUFFERSIZE)
- 184                        {
- 185                           UART_Buffer[UART_Input_First] = Byte; // Store in array
+ 176   3                                      break;
+ 177   3                                case NOT_SENDING:
+ 178   3                                      sendByte = false;
+ 179   3                                      break;
+ 180   3                    }
+ 181   2                    if(sendByte)
+ 182   2                        SBUF0 = byteToBeSent;
+ 183   2                 }
+ 184   1      
+ 185   1      }
  186          
- 187                           UART_Buffer_Size++;           // Update array's size
+ 187          
  188          
- 189                           UART_Input_First++;           // Update counter
- 190                        }
- 191                     }
+ 189          
+ 190          
+ 191          
  192          
- 193                     if (SCON0_TI == 1)                        // Check if transmit flag is set
- 194                     {
- 195                        SCON0_TI = 0;                          // Clear interrupt flag
- 196          
- 197                        if (UART_Buffer_Size != 1)       // If buffer not empty
- 198                        {
- 199                           // If a new word is being output
- 200                           if ( UART_Buffer_Size == UART_Input_First ) {
- 201                                UART_Output_First = 0;  }
+ 193          
+ 194          
+ 195          
+ 196          /*
+ 197          
+ 198          
+ 199          
+ 200          
+ 201          
  202          
- 203                           // Store a character in the variable byte
- 204                           Byte = UART_Buffer[UART_Output_First];
- 205          
- 206                           if ((Byte >= 0x61) && (Byte <= 0x7A)) { // If upper case letter
- 207                              Byte -= 32; }
- 208          
- 209                           SBUF0 = Byte;                 // Transmit to Hyperterminal
- 210          
- 211                           UART_Output_First++;          // Update counter
+ 203          
+ 204          
+ 205          //=========================================================
+ 206          // src/Interrupts.c: generated by Hardware Configurator
+ 207          //
+ 208          // This file will be regenerated when saving a document.
+ 209          // leave the sections inside the "$[...]" comment tags alone
+ 210          // or they will be overwritten!
+ 211          //=========================================================
  212          
- 213                           UART_Buffer_Size--;           // Decrease array size
- 214          
- 215                        }
- 216                        else
- 217                        {
- 218                           UART_Buffer_Size = 0;         // Set the array size to 0
- 219                           TX_Ready = 1;                 // Indicate transmission complete
- 220                        }
- 221                     }
- 222          }
- 223          
- 224          SI_INTERRUPT (TIMER2_ISR, TIMER2_IRQn)
- 225          {
- 226          
- 227          }
- 228          
- 229          SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
- 230          {}
- 231          */
+ 213          
+ 214          // USER INCLUDES
+ 215          #include <SI_EFM8BB1_Register_Enums.h>
+ 216          
+ 217          //-----------------------------------------------------------------------------
+ 218          // Global CONSTANTS
+ 219          //-----------------------------------------------------------------------------
+ 220          #define UART_BUFFERSIZE        64
+ 221          
+ 222          //-----------------------------------------------------------------------------
+ 223          // Global Variables
+ 224          //-----------------------------------------------------------------------------
+ 225          uint8_t UART_Buffer[UART_BUFFERSIZE];
+ 226          uint8_t UART_Buffer_Size = 0;
+ 227          uint8_t UART_Input_First = 0;
+ 228          uint8_t UART_Output_First = 0;
+ 229          uint8_t TX_Ready =1;
+ 230          uint8_t Byte = 0;
+ 231          
+ 232          //-----------------------------------------------------------------------------
+ 233          // UART0_ISR
+ 234          //-----------------------------------------------------------------------------
+ 235          //
+ 236          // UART0 ISR Content goes here. Remember to clear flag bits:
+ 237          // SCON0::RI (Receive Interrupt Flag)
+ 238          // SCON0::TI (Transmit Interrupt Flag)
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 5   
+
+ 239          //
+ 240          // This routine is invoked whenever a character is entered or displayed on the
+ 241          // Hyperterminal.
+ 242          //
+ 243          //-----------------------------------------------------------------------------
+ 244          SI_INTERRUPT (UART0_ISR, UART0_IRQn)
+ 245          {
+ 246                     if (SCON0_RI == 1)
+ 247                     {
+ 248                        if( UART_Buffer_Size == 0)  {    // If new word is entered
+ 249                           UART_Input_First = 0;    }
+ 250          
+ 251                        SCON0_RI = 0;                          // Clear interrupt flag
+ 252          
+ 253                        Byte = SBUF0;                    // Read a character from UART
+ 254          
+ 255                        if (UART_Buffer_Size < UART_BUFFERSIZE)
+ 256                        {
+ 257                           UART_Buffer[UART_Input_First] = Byte; // Store in array
+ 258          
+ 259                           UART_Buffer_Size++;           // Update array's size
+ 260          
+ 261                           UART_Input_First++;           // Update counter
+ 262                        }
+ 263                     }
+ 264          
+ 265                     if (SCON0_TI == 1)                        // Check if transmit flag is set
+ 266                     {
+ 267                        SCON0_TI = 0;                          // Clear interrupt flag
+ 268          
+ 269                        if (UART_Buffer_Size != 1)       // If buffer not empty
+ 270                        {
+ 271                           // If a new word is being output
+ 272                           if ( UART_Buffer_Size == UART_Input_First ) {
+ 273                                UART_Output_First = 0;  }
+ 274          
+ 275                           // Store a character in the variable byte
+ 276                           Byte = UART_Buffer[UART_Output_First];
+ 277          
+ 278                           if ((Byte >= 0x61) && (Byte <= 0x7A)) { // If upper case letter
+ 279                              Byte -= 32; }
+ 280          
+ 281                           SBUF0 = Byte;                 // Transmit to Hyperterminal
+ 282          
+ 283                           UART_Output_First++;          // Update counter
+ 284          
+ 285                           UART_Buffer_Size--;           // Decrease array size
+ 286          
+ 287                        }
+ 288                        else
+ 289                        {
+ 290                           UART_Buffer_Size = 0;         // Set the array size to 0
+ 291                           TX_Ready = 1;                 // Indicate transmission complete
+ 292                        }
+ 293                     }
+ 294          }
+ 295          
+ 296          SI_INTERRUPT (TIMER2_ISR, TIMER2_IRQn)
+ 297          {
+ 298          
+ 299          }
+ 300          
+ 301          SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 6   
+
+ 302          {}
+ 303          */
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    286    ----
+   CODE SIZE        =    671    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:38:12 PAGE 5   
-
-   DATA SIZE        =     79      16
+   DATA SIZE        =     88      16
    IDATA SIZE       =   ----    ----
-   BIT SIZE         =   ----    ----
+   BIT SIZE         =      1    ----
    EDATA SIZE       =   ----    ----
    HDATA SIZE       =   ----    ----
    XDATA CONST SIZE =   ----    ----

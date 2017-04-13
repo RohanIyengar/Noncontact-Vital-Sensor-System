@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.30.0                                                          04/11/2017  16:33:58  PAGE 1
+LX51 LINKER/LOCATER V4.66.30.0                                                          04/12/2017  15:57:01  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.30.0, INVOKED BY:
@@ -31,13 +31,13 @@ ACTIVE MEMORY CLASSES OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_M
 
 BASE        START       END         USED      MEMORY CLASS
 ==========================================================
-C:000000H   C:000000H   C:001FFEH   000267H   CODE
+C:000000H   C:000000H   C:001FFEH   0001C9H   CODE
 C:000000H   C:000000H   C:001FFEH             CONST
 C:000000H   C:000000H   C:001FFEH             ECODE
 B00:0000H   C:000000H   C:001FFEH             HCONST
 X:000000H   X:000000H   X:0000FFH             XDATA
 X:000000H   X:000000H   X:0000FFH             HDATA
-I:000000H   I:000000H   I:00007FH   000019H   DATA
+I:000000H   I:000000H   I:00007FH   000015H   DATA
 I:000020H.0 I:000020H.0 I:00002FH.7 000000H.1 BIT
 I:000000H   I:000000H   I:0000FFH   000001H   IDATA
 
@@ -51,9 +51,8 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 * * * * * * * * * * *   D A T A   M E M O R Y   * * * * * * * * * * * * *
 000000H   000007H   000008H   ---    AT..     DATA           "REG BANK 0"
 000008H   000012H   00000BH   BYTE   UNIT     DATA           ?DT?EFM8BB1_SPI0_MASTER
-000013H   000016H   000004H   BYTE   UNIT     DATA           _DATA_GROUP_
-000017H   000018H   000002H   BYTE   UNIT     DATA           ?DT?INTERRUPTS
-000019H.0 00001FH.7 000007H.0 ---    ---      **GAP**
+000013H   000014H   000002H   BYTE   UNIT     DATA           ?DT?INTERRUPTS
+000015H.0 00001FH.7 00000BH.0 ---    ---      **GAP**
 000020H.0 000020H.0 000000H.1 BIT    UNIT     BIT            ?BI?EFM8BB1_SPI0_MASTER
 000020H.1 000020H   000000H.7 ---    ---      **GAP**
 000021H   000021H   000001H   BYTE   UNIT     IDATA          ?STACK
@@ -64,33 +63,34 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 000033H   000035H   000003H   BYTE   OFFS..   CODE           ?INTERRUPTS?00033
 000036H   0007FFH   0007CAH   ---    ---      **GAP**
 000800H   00089EH   00009FH   BYTE   UNIT     CODE           ?PR?SPI0_ISR?INTERRUPTS
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 2
-
-
 00089FH   00092AH   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
-00092BH   00098DH   000063H   BYTE   UNIT     CODE           ?PR?MAIN?EFM8BB1_SPI0_MASTER
-00098EH   0009C7H   00003AH   BYTE   UNIT     CODE           ?PR?DELAY?EFM8BB1_SPI0_MASTER
-0009C8H   0009E3H   00001CH   BYTE   UNIT     CODE           ?C_INITSEG
-0009E4H   0009FBH   000018H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-0009FCH   000A0DH   000012H   BYTE   UNIT     CODE           ?PR?RECEIVEDATA?EFM8BB1_SPI0_MASTER
-000A0EH   000A1EH   000011H   BYTE   UNIT     CODE           ?C?LIB_CODE
-000A1FH   000A28H   00000AH   BYTE   UNIT     CODE           ?PR?_SENDDATA?EFM8BB1_SPI0_MASTER
-000A29H   000A32H   00000AH   BYTE   UNIT     CODE           ?PR?SPI_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A33H   000A3CH   00000AH   BYTE   UNIT     CODE           ?PR?TIMER_SETUP_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A3DH   000A43H   000007H   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A44H   000A4AH   000007H   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A4BH   000A51H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A52H   000A58H   000007H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A59H   000A5CH   000004H   BYTE   UNIT     CODE           ?PR?CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000A5DH   000A60H   000004H   BYTE   UNIT     CODE           ?PR?UART_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 2
+
+
+00092BH   000946H   00001CH   BYTE   UNIT     CODE           ?C_INITSEG
+000947H   00095EH   000018H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+00095FH   00096FH   000011H   BYTE   UNIT     CODE           ?C?LIB_CODE
+000970H   00097DH   00000EH   BYTE   UNIT     CODE           ?PR?MAIN?EFM8BB1_SPI0_MASTER
+00097EH   00098AH   00000DH   BYTE   UNIT     CODE           ?PR?_SENDDATA?EFM8BB1_SPI0_MASTER
+00098BH   000994H   00000AH   BYTE   UNIT     CODE           ?PR?SPI_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000995H   00099EH   00000AH   BYTE   UNIT     CODE           ?PR?TIMER_SETUP_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+00099FH   0009A5H   000007H   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+0009A6H   0009ACH   000007H   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+0009ADH   0009B3H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+0009B4H   0009BAH   000007H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+0009BBH   0009BEH   000004H   BYTE   UNIT     CODE           ?PR?CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+0009BFH   0009C2H   000004H   BYTE   UNIT     CODE           ?PR?UART_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
 
 * * * * * * * * *   R E M O V E D     S E G M E N T S   * * * * * * * *
+   *DEL*:           000012H   BYTE   UNIT     CODE           ?PR?RECEIVEDATA?EFM8BB1_SPI0_MASTER
    *DEL*:           00000CH   BYTE   UNIT     CODE           ?PR?SPI_LED_ON?EFM8BB1_SPI0_MASTER
    *DEL*:           00000CH   BYTE   UNIT     CODE           ?PR?SPI_LED_OFF?EFM8BB1_SPI0_MASTER
    *DEL*:           00000CH   BYTE   UNIT     CODE           ?PR?SPI_BYTE_WRITE?EFM8BB1_SPI0_MASTER
    *DEL*:           00000CH   BYTE   UNIT     CODE           ?PR?SPI_BYTE_READ?EFM8BB1_SPI0_MASTER
    *DEL*:           000029H   BYTE   UNIT     CODE           ?PR?SPI_ARRAY_WRITE?EFM8BB1_SPI0_MASTER
    *DEL*:           00000CH   BYTE   UNIT     CODE           ?PR?SPI_ARRAY_READ?EFM8BB1_SPI0_MASTER
+   *DEL*:           00003AH   BYTE   UNIT     CODE           ?PR?DELAY?EFM8BB1_SPI0_MASTER
+   *DEL*:           000004H   BYTE   UNIT     DATA           ?DT?DELAY?EFM8BB1_SPI0_MASTER
    *DEL*:           000004H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
 
 
@@ -112,8 +112,6 @@ SPI0_ISR/INTERRUPTS                           ----- -----  ----- -----
 MAIN/EFM8BB1_SPI0_MASTER                      ----- -----  ----- -----
   +--> ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> _SENDDATA/EFM8BB1_SPI0_MASTER
-  +--> DELAY/EFM8BB1_SPI0_MASTER
-  +--> RECEIVEDATA/EFM8BB1_SPI0_MASTER
 
 ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE       ----- -----  ----- -----
   +--> WDT_0_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
@@ -129,10 +127,10 @@ WDT_0_ENTER_DEFAULTMODE_FROM_RESET/INITD+     ----- -----  ----- -----
 ... EVICE
 
 PORTS_0_ENTER_DEFAULTMODE_FROM_RESET/INI+     ----- -----  ----- -----
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 3
-
-
 ... TDEVICE
+
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 3
+
 
 PORTS_1_ENTER_DEFAULTMODE_FROM_RESET/INI+     ----- -----  ----- -----
 ... TDEVICE
@@ -154,11 +152,6 @@ UART_0_ENTER_DEFAULTMODE_FROM_RESET/INIT+     ----- -----  ----- -----
 
 _SENDDATA/EFM8BB1_SPI0_MASTER                 ----- -----  ----- -----
 
-DELAY/EFM8BB1_SPI0_MASTER                     ----- -----  0013H 0016H
-
-RECEIVEDATA/EFM8BB1_SPI0_MASTER               ----- -----  ----- -----
-  +--> _SENDDATA/EFM8BB1_SPI0_MASTER
-
 ?C_INITSEG                                    ----- -----  ----- -----
 
 
@@ -169,11 +162,11 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       VALUE       CLASS    TYPE      PUBLIC SYMBOL NAME
       =================================================
       00000000H   NUMBER   ---       ?C?CODESEG
-      01000A0EH   CODE     ---       ?C?ULCMP
+      0100095FH   CODE     ---       ?C?ULCMP
       00000000H   NUMBER   ---       ?C?XDATASEG
       010008E6H   CODE     ---       ?C_START
       01000000H   CODE     ---       ?C_STARTUP
-      01000A1FH   CODE     ---       _sendData
+      0100097EH   CODE     ---       _sendData
 *SFR* 000000E0H   DATA     BYTE      ACC
 *SFR* 000000E0H   DATA     BIT       ACC_ACC0
 *SFR* 000000E0H.1 DATA     BIT       ACC_ACC1
@@ -194,9 +187,6 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000E8H.2 DATA     BIT       ADC0CN0_ADCM2
 *SFR* 000000E8H.7 DATA     BIT       ADC0CN0_ADEN
 *SFR* 000000E8H.5 DATA     BIT       ADC0CN0_ADINT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 4
-
-
 *SFR* 000000E8H.3 DATA     BIT       ADC0CN0_ADWINT
 *SFR* 000000B2H   DATA     BYTE      ADC0CN1
 *SFR* 000000C3H   DATA     WORD      ADC0GT
@@ -204,6 +194,9 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000C3H   DATA     BYTE      ADC0GTL
 *SFR* 000000BEH   DATA     BYTE      ADC0H
 *SFR* 000000BDH   DATA     BYTE      ADC0L
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 4
+
+
 *SFR* 000000C5H   DATA     WORD      ADC0LT
 *SFR* 000000C6H   DATA     BYTE      ADC0LTH
 *SFR* 000000C5H   DATA     BYTE      ADC0LTL
@@ -221,7 +214,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000F0H.7 DATA     BIT       B_B7
 *SFR* 0000008EH   DATA     BYTE      CKCON0
 *SFR* 000000A9H   DATA     BYTE      CLKSEL
-      01000A59H   CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
+      010009BBH   CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
 *SFR* 0000009BH   DATA     BYTE      CMP0CN0
 *SFR* 0000009DH   DATA     BYTE      CMP0MD
 *SFR* 0000009FH   DATA     BYTE      CMP0MX
@@ -235,7 +228,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000DEH   DATA     BYTE      CRC0DAT
 *SFR* 000000CFH   DATA     BYTE      CRC0FLIP
 *SFR* 000000DDH   DATA     BYTE      CRC0IN
-      0100098EH   CODE     ---       Delay
+*DEL*:00000000H   CODE     ---       Delay
 *SFR* 000000ADH   DATA     BYTE      DERIVID
 *SFR* 000000B5H   DATA     BYTE      DEVICEID
 *SFR* 00000080H   DATA     BIT       DISP_EN
@@ -244,7 +237,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 00000082H   DATA     BYTE      DPL
 *SFR* 000000E6H   DATA     BYTE      EIE1
 *SFR* 000000F3H   DATA     BYTE      EIP1
-      010009E4H   CODE     ---       enter_DefaultMode_from_RESET
+      01000947H   CODE     ---       enter_DefaultMode_from_RESET
       00000020H.0 BIT      BIT       Error_Flag
 *SFR* 000000B7H   DATA     BYTE      FLKEY
 *SFR* 000000C7H   DATA     BYTE      HFO0CAL
@@ -259,9 +252,6 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000A8H.2 DATA     BIT       IE_EX1
 *DEL*:00000000H   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
 *SFR* 000000B8H   DATA     BYTE      IP
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 5
-
-
 *SFR* 000000B8H.4 DATA     BIT       IP_PS0
 *SFR* 000000B8H.6 DATA     BIT       IP_PSPI0
 *SFR* 000000B8H.1 DATA     BIT       IP_PT0
@@ -269,10 +259,13 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000B8H.5 DATA     BIT       IP_PT2
 *SFR* 000000B8H   DATA     BIT       IP_PX0
 *SFR* 000000B8H.2 DATA     BIT       IP_PX1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 5
+
+
 *SFR* 000000E4H   DATA     BYTE      IT01CF
 *SFR* 00000090H.4 DATA     BIT       LED0
 *SFR* 000000B1H   DATA     BYTE      LFO0CN
-      0100092BH   CODE     ---       main
+      01000970H   CODE     ---       main
 *SFR* 00000080H   DATA     BYTE      P0
 *SFR* 00000080H   DATA     BIT       P0_B0
 *SFR* 00000080H.1 DATA     BIT       P0_B1
@@ -305,7 +298,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000A0H   DATA     BIT       P2_B0
 *SFR* 000000A0H.1 DATA     BIT       P2_B1
 *SFR* 000000A6H   DATA     BYTE      P2MDOUT
-      01000A52H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      010009B4H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
 *SFR* 000000F9H   DATA     WORD      PCA0
 *SFR* 0000009EH   DATA     BYTE      PCA0CENT
 *SFR* 0000009CH   DATA     BYTE      PCA0CLR
@@ -324,9 +317,6 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000FBH   DATA     BYTE      PCA0CPL0
 *SFR* 000000E9H   DATA     BYTE      PCA0CPL1
 *SFR* 000000EBH   DATA     BYTE      PCA0CPL2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 6
-
-
 *SFR* 000000DAH   DATA     BYTE      PCA0CPM0
 *SFR* 000000DBH   DATA     BYTE      PCA0CPM1
 *SFR* 000000DCH   DATA     BYTE      PCA0CPM2
@@ -334,10 +324,13 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000F9H   DATA     BYTE      PCA0L
 *SFR* 000000D9H   DATA     BYTE      PCA0MD
 *SFR* 00000096H   DATA     BYTE      PCA0POL
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 6
+
+
 *SFR* 000000F7H   DATA     BYTE      PCA0PWM
 *SFR* 00000087H   DATA     BYTE      PCON0
-      01000A44H   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000A4BH   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      010009A6H   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      010009ADH   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
 *SFR* 000000F6H   DATA     BYTE      PRTDRV
 *SFR* 0000008FH   DATA     BYTE      PSCTL
 *SFR* 000000D0H   DATA     BYTE      PSW
@@ -350,7 +343,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000D0H.3 DATA     BIT       PSW_RS0
 *SFR* 000000D0H.4 DATA     BIT       PSW_RS1
       00000012H   DATA     BYTE      r
-      010009FCH   CODE     ---       receiveData
+*DEL*:00000000H   CODE     ---       receiveData
 *SFR* 000000D1H   DATA     BYTE      REF0CN
 *SFR* 000000C9H   DATA     BYTE      REG0CN
 *SFR* 000000B6H   DATA     BYTE      REVID
@@ -389,16 +382,16 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 000000F8H.4 DATA     BIT       SPI0CN0_RXOVRN
 *SFR* 000000F8H   DATA     BIT       SPI0CN0_SPIEN
 *SFR* 000000F8H.7 DATA     BIT       SPI0CN0_SPIF
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 7
-
-
 *SFR* 000000F8H.1 DATA     BIT       SPI0CN0_TXBMT
 *SFR* 000000F8H.6 DATA     BIT       SPI0CN0_WCOL
 *SFR* 000000A3H   DATA     BYTE      SPI0DAT
-      01000A29H   CODE     ---       SPI_0_enter_DefaultMode_from_RESET
+      0100098BH   CODE     ---       SPI_0_enter_DefaultMode_from_RESET
 *DEL*:00000000H   CODE     ---       SPI_Array_Read
 *DEL*:00000000H   CODE     ---       SPI_Array_Write
 *DEL*:00000000H   CODE     ---       SPI_Byte_Read
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 7
+
+
 *DEL*:00000000H   CODE     ---       SPI_Byte_Write
       00000011H   DATA     BYTE      SPI_Data
       00000008H   DATA     ---       SPI_Data_Array
@@ -415,7 +408,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 00000088H.6 DATA     BIT       TCON_TR1
 *SFR* 0000008CH   DATA     BYTE      TH0
 *SFR* 0000008DH   DATA     BYTE      TH1
-      01000A33H   CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
+      01000995H   CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
 *SFR* 0000008AH   DATA     BYTE      TL0
 *SFR* 0000008BH   DATA     BYTE      TL1
 *SFR* 00000089H   DATA     BYTE      TMOD
@@ -440,9 +433,9 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 *SFR* 00000092H   DATA     WORD      TMR3RL
 *SFR* 00000093H   DATA     BYTE      TMR3RLH
 *SFR* 00000092H   DATA     BYTE      TMR3RLL
-      01000A5DH   CODE     ---       UART_0_enter_DefaultMode_from_RESET
+      010009BFH   CODE     ---       UART_0_enter_DefaultMode_from_RESET
 *SFR* 000000FFH   DATA     BYTE      VDM0CN
-      01000A3DH   CODE     ---       WDT_0_enter_DefaultMode_from_RESET
+      0100099FH   CODE     ---       WDT_0_enter_DefaultMode_from_RESET
 *SFR* 00000097H   DATA     BYTE      WDTCN
 *SFR* 000000E1H   DATA     BYTE      XBR0
 *SFR* 000000E2H   DATA     BYTE      XBR1
@@ -454,19 +447,17 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 
       VALUE       REP       CLASS    TYPE      SYMBOL NAME
       ====================================================
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 8
-
-
       ---         MODULE    ---      ---       EFM8BB1_SPI0_MASTER
       00000012H   PUBLIC    DATA     BYTE      r
       00000020H.0 PUBLIC    BIT      BIT       Error_Flag
       00000011H   PUBLIC    DATA     BYTE      SPI_Data
       00000010H   PUBLIC    DATA     BYTE      Command
       00000008H   PUBLIC    DATA     ---       SPI_Data_Array
-      0100098EH   PUBLIC    CODE     ---       Delay
-      010009FCH   PUBLIC    CODE     ---       receiveData
-      01000A1FH   PUBLIC    CODE     ---       _sendData
-      0100092BH   PUBLIC    CODE     ---       main
+      0100097EH   PUBLIC    CODE     ---       _sendData
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 8
+
+
+      01000970H   PUBLIC    CODE     ---       main
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
@@ -519,9 +510,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000F0H.6 SFRSYM    DATA     BIT       B_B6
       000000C5H   SFRSYM    DATA     WORD      ADC0LT
       00000098H.5 SFRSYM    DATA     BIT       SCON0_MCE
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 9
-
-
       000000F0H.7 SFRSYM    DATA     BIT       B_B7
       000000E1H   SFRSYM    DATA     BYTE      XBR0
       000000C1H   SFRSYM    DATA     BYTE      SMB0CF
@@ -531,6 +519,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000BBH   SFRSYM    DATA     BYTE      ADC0MX
       000000E0H   SFRSYM    DATA     BIT       ACC_ACC0
       000000D1H   SFRSYM    DATA     BYTE      REF0CN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 9
+
+
       0000008EH   SFRSYM    DATA     BYTE      CKCON0
       000000E0H.1 SFRSYM    DATA     BIT       ACC_ACC1
       000000C9H   SFRSYM    DATA     BYTE      REG0CN
@@ -584,9 +575,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000B2H   SFRSYM    DATA     BYTE      ADC0CN1
       000000D8H.6 SFRSYM    DATA     BIT       PCA0CN0_CR
       000000A8H.2 SFRSYM    DATA     BIT       IE_EX1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 10
-
-
       00000098H.7 SFRSYM    DATA     BIT       SCON0_SMODE
       000000B5H   SFRSYM    DATA     BYTE      DEVICEID
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
@@ -596,6 +584,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000D2H   SFRSYM    DATA     BYTE      CRC0AUTO
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_ADBMEN
       000000CAH   SFRSYM    DATA     WORD      TMR2RL
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 10
+
+
       000000BDH   SFRSYM    DATA     BYTE      ADC0L
       00000092H   SFRSYM    DATA     WORD      TMR3RL
       000000D8H   SFRSYM    DATA     BYTE      PCA0CN0
@@ -649,9 +640,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000C4H   SFRSYM    DATA     BYTE      ADC0GTH
       000000C8H.7 SFRSYM    DATA     BIT       TMR2CN0_TF2H
       000000C8H.3 SFRSYM    DATA     BIT       TMR2CN0_T2SPLIT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 11
-
-
       000000D0H.6 SFRSYM    DATA     BIT       PSW_AC
       000000F8H   SFRSYM    DATA     BYTE      SPI0CN0
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
@@ -661,6 +649,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       00000088H.7 SFRSYM    DATA     BIT       TCON_TF1
       00000099H   SFRSYM    DATA     BYTE      SBUF0
       00000087H   SFRSYM    DATA     BYTE      PCON0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 11
+
+
       000000C3H   SFRSYM    DATA     BYTE      ADC0GTL
       000000C8H.6 SFRSYM    DATA     BIT       TMR2CN0_TF2L
       00000098H.1 SFRSYM    DATA     BIT       SCON0_TI
@@ -713,87 +704,44 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
       000000B3H   SFRSYM    DATA     BYTE      ADC0AC
 
-      0100092BH   BLOCK     CODE     ---       LVL=0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 12
+      01000970H   BLOCK     CODE     ---       LVL=0
+      01000970H   LINE      CODE     ---       #98
+      01000970H   LINE      CODE     ---       #99
+      01000970H   LINE      CODE     ---       #101
+      01000973H   LINE      CODE     ---       #103
+      01000975H   LINE      CODE     ---       #105
+      01000977H   LINE      CODE     ---       #135
+      01000977H   LINE      CODE     ---       #136
+      01000977H   LINE      CODE     ---       #137
+      0100097CH   LINE      CODE     ---       #141
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 12
 
 
-      0100092BH   LINE      CODE     ---       #98
-      0100092BH   LINE      CODE     ---       #99
-      0100092BH   LINE      CODE     ---       #202
-      0100092EH   LINE      CODE     ---       #204
-      01000930H   LINE      CODE     ---       #206
-      01000932H   LINE      CODE     ---       #208
-      01000937H   LINE      CODE     ---       #209
-      0100093CH   LINE      CODE     ---       #210
-      0100093FH   LINE      CODE     ---       #212
-      01000944H   LINE      CODE     ---       #213
-      01000949H   LINE      CODE     ---       #214
-      0100094CH   LINE      CODE     ---       #216
-      01000951H   LINE      CODE     ---       #217
-      01000956H   LINE      CODE     ---       #218
-      01000959H   LINE      CODE     ---       #220
-      0100095EH   LINE      CODE     ---       #221
-      01000963H   LINE      CODE     ---       #222
-      01000966H   LINE      CODE     ---       #224
-      0100096BH   LINE      CODE     ---       #225
-      01000970H   LINE      CODE     ---       #226
-      01000973H   LINE      CODE     ---       #228
-      01000978H   LINE      CODE     ---       #229
-      0100097DH   LINE      CODE     ---       #230
-      01000980H   LINE      CODE     ---       #232
-      01000980H   LINE      CODE     ---       #233
-      01000980H   LINE      CODE     ---       #234
-      01000985H   LINE      CODE     ---       #235
-      01000987H   LINE      CODE     ---       #236
-      0100098CH   LINE      CODE     ---       #237
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A1FH   BLOCK     CODE     ---       LVL=0
+      0100097EH   BLOCK     CODE     ---       LVL=0
       00000007H   SYMBOL    DATA     BYTE      x
-      01000A1FH   LINE      CODE     ---       #258
-      01000A1FH   LINE      CODE     ---       #259
-      01000A1FH   LINE      CODE     ---       #260
-      01000A22H   LINE      CODE     ---       #261
-      01000A24H   LINE      CODE     ---       #262
-      01000A26H   LINE      CODE     ---       #263
-      01000A28H   LINE      CODE     ---       #264
-      ---         BLOCKEND  ---      ---       LVL=0
-
-      010009FCH   BLOCK     CODE     ---       LVL=0
-      010009FCH   LINE      CODE     ---       #266
-      010009FCH   LINE      CODE     ---       #267
-      010009FCH   LINE      CODE     ---       #268
-      010009FFH   LINE      CODE     ---       #269
-      01000A04H   LINE      CODE     ---       #270
-      01000A09H   LINE      CODE     ---       #271
-      01000A0BH   LINE      CODE     ---       #272
-      01000A0DH   LINE      CODE     ---       #273
+      0100097EH   LINE      CODE     ---       #162
+      0100097EH   LINE      CODE     ---       #163
+      0100097EH   LINE      CODE     ---       #164
+      01000981H   LINE      CODE     ---       #165
+      01000983H   LINE      CODE     ---       #166
+      01000985H   LINE      CODE     ---       #167
+      01000988H   LINE      CODE     ---       #168
+      0100098AH   LINE      CODE     ---       #170
       ---         BLOCKEND  ---      ---       LVL=0
       00000007H   SYMBOL    DATA     BYTE      array_index
 
-      0100098EH   BLOCK     CODE     ---       LVL=0
-      0100098EH   BLOCK     CODE     NEAR LAB  LVL=1
-      00000013H   SYMBOL    DATA     DWORD     count
-      ---         BLOCKEND  ---      ---       LVL=1
-      0100098EH   LINE      CODE     ---       #476
-      0100098EH   LINE      CODE     ---       #477
-      0100098EH   LINE      CODE     ---       #480
-      010009C7H   LINE      CODE     ---       #481
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 13
-
-
-      ---         BLOCKEND  ---      ---       LVL=0
-
       ---         MODULE    ---      ---       INITDEVICE
-      01000A5DH   PUBLIC    CODE     ---       UART_0_enter_DefaultMode_from_RESET
-      01000A33H   PUBLIC    CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
-      01000A29H   PUBLIC    CODE     ---       SPI_0_enter_DefaultMode_from_RESET
-      01000A59H   PUBLIC    CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
-      01000A52H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
-      01000A4BH   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
-      01000A44H   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000A3DH   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
-      010009E4H   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
+      010009BFH   PUBLIC    CODE     ---       UART_0_enter_DefaultMode_from_RESET
+      01000995H   PUBLIC    CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
+      0100098BH   PUBLIC    CODE     ---       SPI_0_enter_DefaultMode_from_RESET
+      010009BBH   PUBLIC    CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
+      010009B4H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      010009ADH   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      010009A6H   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      0100099FH   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
+      01000947H   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
@@ -831,6 +779,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000C3H   SFRSYM    DATA     WORD      ADC0GT
       000000F0H.2 SFRSYM    DATA     BIT       B_B2
       000000FBH   SFRSYM    DATA     BYTE      PCA0CPL0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 13
+
+
       000000F0H.3 SFRSYM    DATA     BIT       B_B3
       000000D9H   SFRSYM    DATA     BYTE      PCA0MD
       000000DAH   SFRSYM    DATA     BYTE      PCA0CPM0
@@ -844,9 +795,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000B9H   SFRSYM    DATA     BYTE      ADC0TK
       000000F0H.6 SFRSYM    DATA     BIT       B_B6
       000000C5H   SFRSYM    DATA     WORD      ADC0LT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 14
-
-
       00000098H.5 SFRSYM    DATA     BIT       SCON0_MCE
       000000F0H.7 SFRSYM    DATA     BIT       B_B7
       000000E1H   SFRSYM    DATA     BYTE      XBR0
@@ -896,6 +844,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       00000088H   SFRSYM    DATA     BYTE      TCON
       000000CFH   SFRSYM    DATA     BYTE      CRC0FLIP
       000000D0H   SFRSYM    DATA     BIT       PSW_PARITY
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 14
+
+
       000000A8H.4 SFRSYM    DATA     BIT       IE_ES0
       0000009FH   SFRSYM    DATA     BYTE      CMP0MX
       000000A8H.1 SFRSYM    DATA     BIT       IE_ET0
@@ -909,9 +860,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000B2H   SFRSYM    DATA     BYTE      ADC0CN1
       000000D8H.6 SFRSYM    DATA     BIT       PCA0CN0_CR
       000000A8H.2 SFRSYM    DATA     BIT       IE_EX1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 15
-
-
       00000098H.7 SFRSYM    DATA     BIT       SCON0_SMODE
       000000B5H   SFRSYM    DATA     BYTE      DEVICEID
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
@@ -961,6 +909,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       00000090H.2 SFRSYM    DATA     BIT       P1_B2
       00000080H.3 SFRSYM    DATA     BIT       P0_B3
       000000C0H   SFRSYM    DATA     BYTE      SMB0CN0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 15
+
+
       00000090H.3 SFRSYM    DATA     BIT       P1_B3
       00000080H.4 SFRSYM    DATA     BIT       P0_B4
       00000090H.4 SFRSYM    DATA     BIT       P1_B4
@@ -974,9 +925,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000C4H   SFRSYM    DATA     BYTE      ADC0GTH
       000000C8H.7 SFRSYM    DATA     BIT       TMR2CN0_TF2H
       000000C8H.3 SFRSYM    DATA     BIT       TMR2CN0_T2SPLIT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 16
-
-
       000000D0H.6 SFRSYM    DATA     BIT       PSW_AC
       000000F8H   SFRSYM    DATA     BYTE      SPI0CN0
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
@@ -1026,6 +974,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000DFH   SFRSYM    DATA     BYTE      ADC0PWR
       000000A8H.7 SFRSYM    DATA     BIT       IE_EA
       000000C8H.5 SFRSYM    DATA     BIT       TMR2CN0_TF2LEN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 16
+
+
       000000F8H.6 SFRSYM    DATA     BIT       SPI0CN0_WCOL
       000000F8H.2 SFRSYM    DATA     BIT       SPI0CN0_NSSMD0
       000000D0H.7 SFRSYM    DATA     BIT       PSW_CY
@@ -1038,78 +989,75 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
       000000B3H   SFRSYM    DATA     BYTE      ADC0AC
 
-      010009E4H   BLOCK     CODE     ---       LVL=0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 17
-
-
-      010009E4H   LINE      CODE     ---       #22
-      010009E4H   LINE      CODE     ---       #24
-      010009E7H   LINE      CODE     ---       #25
-      010009EAH   LINE      CODE     ---       #26
-      010009EDH   LINE      CODE     ---       #27
-      010009F0H   LINE      CODE     ---       #28
-      010009F3H   LINE      CODE     ---       #29
-      010009F6H   LINE      CODE     ---       #30
-      010009F9H   LINE      CODE     ---       #31
+      01000947H   BLOCK     CODE     ---       LVL=0
+      01000947H   LINE      CODE     ---       #22
+      01000947H   LINE      CODE     ---       #24
+      0100094AH   LINE      CODE     ---       #25
+      0100094DH   LINE      CODE     ---       #26
+      01000950H   LINE      CODE     ---       #27
+      01000953H   LINE      CODE     ---       #28
+      01000956H   LINE      CODE     ---       #29
+      01000959H   LINE      CODE     ---       #30
+      0100095CH   LINE      CODE     ---       #31
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A3DH   BLOCK     CODE     ---       LVL=0
-      01000A3DH   LINE      CODE     ---       #39
-      01000A3DH   LINE      CODE     ---       #42
-      01000A40H   LINE      CODE     ---       #43
-      01000A43H   LINE      CODE     ---       #46
+      0100099FH   BLOCK     CODE     ---       LVL=0
+      0100099FH   LINE      CODE     ---       #39
+      0100099FH   LINE      CODE     ---       #42
+      010009A2H   LINE      CODE     ---       #43
+      010009A5H   LINE      CODE     ---       #46
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A44H   BLOCK     CODE     ---       LVL=0
-      01000A44H   LINE      CODE     ---       #51
-      01000A44H   LINE      CODE     ---       #66
-      01000A47H   LINE      CODE     ---       #86
-      01000A4AH   LINE      CODE     ---       #98
+      010009A6H   BLOCK     CODE     ---       LVL=0
+      010009A6H   LINE      CODE     ---       #51
+      010009A6H   LINE      CODE     ---       #66
+      010009A9H   LINE      CODE     ---       #86
+      010009ACH   LINE      CODE     ---       #98
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A4BH   BLOCK     CODE     ---       LVL=0
-      01000A4BH   LINE      CODE     ---       #103
-      01000A4BH   LINE      CODE     ---       #118
-      01000A4EH   LINE      CODE     ---       #138
-      01000A51H   LINE      CODE     ---       #150
+      010009ADH   BLOCK     CODE     ---       LVL=0
+      010009ADH   LINE      CODE     ---       #103
+      010009ADH   LINE      CODE     ---       #118
+      010009B0H   LINE      CODE     ---       #138
+      010009B3H   LINE      CODE     ---       #150
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A52H   BLOCK     CODE     ---       LVL=0
-      01000A52H   LINE      CODE     ---       #155
-      01000A52H   LINE      CODE     ---       #161
-      01000A55H   LINE      CODE     ---       #178
-      01000A58H   LINE      CODE     ---       #186
+      010009B4H   BLOCK     CODE     ---       LVL=0
+      010009B4H   LINE      CODE     ---       #155
+      010009B4H   LINE      CODE     ---       #161
+      010009B7H   LINE      CODE     ---       #178
+      010009BAH   LINE      CODE     ---       #186
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A59H   BLOCK     CODE     ---       LVL=0
-      01000A59H   LINE      CODE     ---       #191
-      01000A59H   LINE      CODE     ---       #197
-      01000A5CH   LINE      CODE     ---       #200
+      010009BBH   BLOCK     CODE     ---       LVL=0
+      010009BBH   LINE      CODE     ---       #191
+      010009BBH   LINE      CODE     ---       #197
+      010009BEH   LINE      CODE     ---       #200
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A29H   BLOCK     CODE     ---       LVL=0
-      01000A29H   LINE      CODE     ---       #205
-      01000A29H   LINE      CODE     ---       #210
-      01000A2CH   LINE      CODE     ---       #217
-      01000A2FH   LINE      CODE     ---       #225
-      01000A32H   LINE      CODE     ---       #228
+      0100098BH   BLOCK     CODE     ---       LVL=0
+      0100098BH   LINE      CODE     ---       #205
+      0100098BH   LINE      CODE     ---       #210
+      0100098EH   LINE      CODE     ---       #217
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 17
+
+
+      01000991H   LINE      CODE     ---       #225
+      01000994H   LINE      CODE     ---       #228
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A33H   BLOCK     CODE     ---       LVL=0
-      01000A33H   LINE      CODE     ---       #261
-      01000A33H   LINE      CODE     ---       #272
-      01000A36H   LINE      CODE     ---       #287
-      01000A39H   LINE      CODE     ---       #295
-      01000A3CH   LINE      CODE     ---       #298
+      01000995H   BLOCK     CODE     ---       LVL=0
+      01000995H   LINE      CODE     ---       #261
+      01000995H   LINE      CODE     ---       #272
+      01000998H   LINE      CODE     ---       #287
+      0100099BH   LINE      CODE     ---       #295
+      0100099EH   LINE      CODE     ---       #298
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000A5DH   BLOCK     CODE     ---       LVL=0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 18
-
-
-      01000A5DH   LINE      CODE     ---       #300
-      01000A5DH   LINE      CODE     ---       #306
-      01000A60H   LINE      CODE     ---       #309
+      010009BFH   BLOCK     CODE     ---       LVL=0
+      010009BFH   LINE      CODE     ---       #300
+      010009BFH   LINE      CODE     ---       #306
+      010009C2H   LINE      CODE     ---       #309
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       INTERRUPTS
@@ -1156,6 +1104,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000DAH   SFRSYM    DATA     BYTE      PCA0CPM0
       000000E9H   SFRSYM    DATA     BYTE      PCA0CPL1
       000000F0H.4 SFRSYM    DATA     BIT       B_B4
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 18
+
+
       000000DBH   SFRSYM    DATA     BYTE      PCA0CPM1
       000000EBH   SFRSYM    DATA     BYTE      PCA0CPL2
       000000F0H.5 SFRSYM    DATA     BIT       B_B5
@@ -1169,9 +1120,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000E1H   SFRSYM    DATA     BYTE      XBR0
       000000C1H   SFRSYM    DATA     BYTE      SMB0CF
       000000E2H   SFRSYM    DATA     BYTE      XBR1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 19
-
-
       000000C0H.5 SFRSYM    DATA     BIT       SMB0CN0_STA
       000000E3H   SFRSYM    DATA     BYTE      XBR2
       000000BBH   SFRSYM    DATA     BYTE      ADC0MX
@@ -1221,6 +1169,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000A8H.1 SFRSYM    DATA     BIT       IE_ET0
       000000AAH   SFRSYM    DATA     BYTE      CMP1MX
       000000A8H.3 SFRSYM    DATA     BIT       IE_ET1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 19
+
+
       000000D4H   SFRSYM    DATA     BYTE      P0SKIP
       000000A8H.5 SFRSYM    DATA     BIT       IE_ET2
       000000D5H   SFRSYM    DATA     BYTE      P1SKIP
@@ -1234,9 +1185,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
       000000F8H   SFRSYM    DATA     BIT       SPI0CN0_SPIEN
       000000F0H   SFRSYM    DATA     BYTE      B
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 20
-
-
       000000BEH   SFRSYM    DATA     BYTE      ADC0H
       000000D2H   SFRSYM    DATA     BYTE      CRC0AUTO
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_ADBMEN
@@ -1286,6 +1234,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       00000090H.4 SFRSYM    DATA     BIT       P1_B4
       00000080H.5 SFRSYM    DATA     BIT       P0_B5
       00000090H.5 SFRSYM    DATA     BIT       P1_B5
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 20
+
+
       00000080H.6 SFRSYM    DATA     BIT       P0_B6
       00000090H.6 SFRSYM    DATA     BIT       P1_B6
       00000080H.7 SFRSYM    DATA     BIT       P0_B7
@@ -1299,9 +1250,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
       00000088H.5 SFRSYM    DATA     BIT       TCON_TF0
       00000098H   SFRSYM    DATA     BIT       SCON0_RI
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 21
-
-
       00000082H   SFRSYM    DATA     BYTE      DPL
       00000088H.7 SFRSYM    DATA     BIT       TCON_TF1
       00000099H   SFRSYM    DATA     BYTE      SBUF0
@@ -1351,6 +1299,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       000000D0H.7 SFRSYM    DATA     BIT       PSW_CY
       000000A3H   SFRSYM    DATA     BYTE      SPI0DAT
       000000F8H.3 SFRSYM    DATA     BIT       SPI0CN0_NSSMD1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 21
+
+
       000000BDH   SFRSYM    DATA     WORD      ADC0
       000000D0H   SFRSYM    DATA     BYTE      PSW
       000000F7H   SFRSYM    DATA     BYTE      PCA0PWM
@@ -1360,13 +1311,10 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
 
       01000800H   BLOCK     CODE     ---       LVL=0
       01000809H   BLOCK     CODE     NEAR LAB  LVL=1
-      00000017H   SYMBOL    DATA     BYTE      array_index
-      00000018H   SYMBOL    DATA     CHAR      state
+      00000013H   SYMBOL    DATA     BYTE      array_index
+      00000014H   SYMBOL    DATA     CHAR      state
       ---         BLOCKEND  ---      ---       LVL=1
       01000800H   LINE      CODE     ---       #47
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 22
-
-
       01000809H   LINE      CODE     ---       #52
       0100080CH   LINE      CODE     ---       #53
       0100080CH   LINE      CODE     ---       #55
@@ -1416,6 +1364,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       0100086CH   LINE      CODE     ---       #145
       0100086CH   LINE      CODE     ---       #147
       0100086EH   LINE      CODE     ---       #148
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/12/2017  15:57:01  PAGE 22
+
+
       0100086EH   LINE      CODE     ---       #149
       01000871H   LINE      CODE     ---       #152
       01000871H   LINE      CODE     ---       #153
@@ -1429,9 +1380,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       01000887H   LINE      CODE     ---       #163
       01000887H   LINE      CODE     ---       #164
       0100088EH   LINE      CODE     ---       #165
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/11/2017  16:33:58  PAGE 23
-
-
       01000891H   LINE      CODE     ---       #168
       01000891H   LINE      CODE     ---       #169
       01000891H   LINE      CODE     ---       #171
@@ -1446,14 +1394,14 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_SPI_MASTER.OMF.CRBUILD (EFM8BB1_SPI0_MASTER)
       01000000H   PUBLIC    CODE     ---       ?C_STARTUP
 
       ---         MODULE    ---      ---       ?C?ULCMP
-      01000A0EH   PUBLIC    CODE     ---       ?C?ULCMP
+      0100095FH   PUBLIC    CODE     ---       ?C?ULCMP
 
       ---         MODULE    ---      ---       ?C_INIT
       010008E6H   PUBLIC    CODE     ---       ?C_START
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 022FH BYTE (27%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01DDH BYTE (23%) *
 ******************************************************************************
 
-Program Size: data=26.1 xdata=0 const=0 code=615
+Program Size: data=22.1 xdata=0 const=0 code=457
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
