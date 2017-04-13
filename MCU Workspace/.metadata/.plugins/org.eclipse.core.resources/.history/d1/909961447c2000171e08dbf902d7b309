@@ -16,6 +16,7 @@
 // Global CONSTANTS
 //-----------------------------------------------------------------------------
 #define UART_BUFFERSIZE        64
+#define NOT_SENDING  			8
 //-----------------------------------------------------------------------------
 // Global Variables
 //-----------------------------------------------------------------------------
@@ -27,8 +28,10 @@ uint8_t TX_Ready =1;
 uint8_t Byte = 0;
 
 uint32_t mV;// Measured voltage in mV
-uint32_t i = 0;
+uint32_t i = 6;
 uint8_t byteToBeSent = 0;
+bool sendByte = false;
+uint32_t numMeasurements = 2048;
 
 //-----------------------------------------------------------------------------
 // ADC0EOC_ISR
@@ -44,7 +47,7 @@ uint8_t byteToBeSent = 0;
 SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
 {
 	static uint32_t accumulator = 0;     // Accumulator for averaging
-	static uint16_t measurements = 2048;// Measurement counter
+	static uint16_t measurements = 1024; // Measurement counter
 	uint32_t result = 0;
 	uint32_t high,low,total;
 	ADC0CN0_ADINT = 0;// Clear ADC0 conv. complete flag
@@ -58,8 +61,8 @@ SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
 
 	if(measurements == 0)
 	{
-		measurements = 2048;
-		result = accumulator / 2048;
+		measurements = 1024;
+		result = accumulator / 1024;
 		accumulator = 0;
 
 		// The 12-bit ADC value is averaged across 2048 measurements.
@@ -71,9 +74,43 @@ SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
 
 		mV = (result * 3300) / 4092;
 		//RETARGET_PRINTF ("\nP0.0 voltage: %ld mV\n", mV);
-		TX_Ready = 1;
 	}
 
+	//Print MSB
+	if(measurements == 1024)
+	{
+		i = 3;
+		TX_Ready = 1;
+	}
+	//Print second MSB
+	if(measurements == 896)
+	{
+		i = 2;
+		TX_Ready = 1;
+	}
+	//Print third MSB
+	if(measurements == 768)
+	{
+		i = 1;
+		TX_Ready = 1;
+	}
+	//Print LSB
+	if(measurements == 640)
+	{
+		i = 0;
+		TX_Ready = 1;
+	}
+	//Print comma
+	if(measurements == 512)
+	{
+		i = 4;
+		TX_Ready = 1;
+	}
+	if(measurements < 512)
+	{
+		i = NOT_SENDING;
+		TX_Ready = 0;
+	}
 }
 
 //-----------------------------------------------------------------------------
@@ -107,34 +144,43 @@ SI_INTERRUPT (UART0_ISR, UART0_IRQn)
 		 Byte = SBUF0;
 	   }
 
-	   if (SCON0_TI == 1)                        // Check if transmit flag is set
+	   if (SCON0_TI == 1)             // Check if transmit flag is set
 	   {
 	      SCON0_TI = 0;               // Clear interrupt flag
 	      switch (i)
 	      {
 		  	  case 0:
 		  		byteToBeSent = 48 + (mV % 10);
-		  	  	  i = 1;
-		  	  	  break;
+		  		sendByte = true;
+		  		i = NOT_SENDING;
+		  	  	break;
 		  	  case 1:
 		  		byteToBeSent = 48 + (mV/10)%10;
-		  	  	  i = 2;
-		  	  	  break;
+		  		sendByte = true;
+		  		i = NOT_SENDING;
+		  		break;
 		  	  case 2:
 		  		byteToBeSent = 48 + (mV/100)%10;
-		  	  	  i = 3;
-		  	  	  break;
+		  		sendByte = true;
+		  		i = NOT_SENDING;
+		  		break;
 		  	  case 3:
 		  		byteToBeSent = 48 + (mV/1000)%10;
-		  	  	  i = 4;
-		  	  	  break;
+		  		sendByte = true;
+		  		i = NOT_SENDING;
+		  		break;
+		  	  case 4:
+		  		byteToBeSent = ',';
+		  		sendByte = true;
+		  		i = NOT_SENDING;
+		  		break;
+		  	  case NOT_SENDING:
+		  		sendByte = false;
+		  		break;
 	      }
-	      SBUF0 = byteToBeSent;
+	      if(sendByte)
+	    	  SBUF0 = byteToBeSent;
 	   }
-	   if(i<4)
-		 TX_Ready = 1;
-	   else
-		   i = 0;
 
 }
 

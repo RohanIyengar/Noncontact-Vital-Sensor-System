@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 1   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 15:11:33 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE INTERRUPTS
@@ -63,9 +63,9 @@ line level    source
   47          SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
   48          {
   49   1              static uint32_t accumulator = 0;     // Accumulator for averaging
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 2   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 15:11:33 PAGE 2   
 
-  50   1              static uint16_t measurements = 2048; // Measurement counter
+  50   1              static uint16_t measurements = 16; // Measurement counter
   51   1              uint32_t result = 0;
   52   1              uint32_t high,low,total;
   53   1              ADC0CN0_ADINT = 0;// Clear ADC0 conv. complete flag
@@ -79,8 +79,8 @@ line level    source
   61   1      
   62   1              if(measurements == 0)
   63   1              {
-  64   2                      measurements = numMeasurements;
-  65   2                      result = accumulator / numMeasurements;
+  64   2                      measurements = 16;
+  65   2                      result = accumulator / 16;
   66   2                      accumulator = 0;
   67   2      
   68   2                      // The 12-bit ADC value is averaged across 2048 measurements.
@@ -95,40 +95,40 @@ line level    source
   77   2              }
   78   1      
   79   1              //Print MSB
-  80   1              if(measurements == numMeasurements)
+  80   1              if(measurements == 16)
   81   1              {
   82   2                      i = 3;
   83   2                      TX_Ready = 1;
   84   2              }
   85   1              //Print second MSB
-  86   1              if(measurements == 1792)
+  86   1              if(measurements == 14)
   87   1              {
   88   2                      i = 2;
   89   2                      TX_Ready = 1;
   90   2              }
   91   1              //Print third MSB
-  92   1              if(measurements == 1536)
+  92   1              if(measurements == 12)
   93   1              {
   94   2                      i = 1;
   95   2                      TX_Ready = 1;
   96   2              }
   97   1              //Print LSB
-  98   1              if(measurements == 1280)
+  98   1              if(measurements == 10)
   99   1              {
  100   2                      i = 0;
  101   2                      TX_Ready = 1;
  102   2              }
  103   1              //Print comma
- 104   1              if(measurements == 1024)
+ 104   1              if(measurements == 8)
  105   1              {
  106   2                      i = 4;
  107   2                      TX_Ready = 1;
  108   2              }
- 109   1              if(measurements < 1024)
+ 109   1              if(measurements < 8)
  110   1              {
  111   2                      i = NOT_SENDING;
  112   2                      TX_Ready = 0;
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 3   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 15:11:33 PAGE 3   
 
  113   2              }
  114   1      }
@@ -193,7 +193,7 @@ line level    source
  173   3                                      byteToBeSent = ',';
  174   3                                      sendByte = true;
  175   3                                      i = NOT_SENDING;
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 4   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 15:11:33 PAGE 4   
 
  176   3                                      break;
  177   3                                case NOT_SENDING:
@@ -258,7 +258,7 @@ line level    source
  236          // UART0 ISR Content goes here. Remember to clear flag bits:
  237          // SCON0::RI (Receive Interrupt Flag)
  238          // SCON0::TI (Transmit Interrupt Flag)
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 5   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 15:11:33 PAGE 5   
 
  239          //
  240          // This routine is invoked whenever a character is entered or displayed on the
@@ -323,14 +323,14 @@ line level    source
  299          }
  300          
  301          SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 14:57:20 PAGE 6   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/13/2017 15:11:33 PAGE 6   
 
  302          {}
  303          */
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    671    ----
+   CODE SIZE        =    641    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

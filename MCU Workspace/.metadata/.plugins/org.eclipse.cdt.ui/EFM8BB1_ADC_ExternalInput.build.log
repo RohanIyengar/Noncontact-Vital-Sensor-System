@@ -1,6 +1,6 @@
-14:57:24 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
+15:11:38 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_ADC_ExternalInput ****
 make all 
 make: Nothing to be done for `all'.
 
-14:57:24 Build Finished (took 542ms)
+15:11:39 Build Finished (took 655ms)
 

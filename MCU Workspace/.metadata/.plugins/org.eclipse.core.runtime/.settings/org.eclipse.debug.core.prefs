@@ -1,4 +1,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.applicationLaunchType=org.eclipse.cdt.cdi.launch.localCLaunch,run,;
 eclipse.preferences.version=1
-org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
+org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=false
 prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="numMeasurements*7/8"/>\r\n<expression enabled\="true" text\="numMeasurements*5/8"/>\r\n<expression enabled\="true" text\="TX_Ready"/>\r\n</watchExpressions>\r\n
