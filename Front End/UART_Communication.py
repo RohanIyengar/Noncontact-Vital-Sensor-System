@@ -128,28 +128,28 @@ def receive_for(time=10):
 #     except Exception as e1:
 #         print("Error: ") + str(e1)
 
-try:
-    message = receive_for(1)
-    #print "Message received: " + message
-    print "Got " + str(len(message)) + " characters"
+# try:
+#     message = receive_for(1)
+#     #print "Message received: " + message
+#     print "Got " + str(len(message)) + " characters"
 
-    # Create traces
-    new_msg = message.split(",")
-    new_msg = new_msg[1:-1]
-    print new_msg
-    num_msg = [int(i) for i in new_msg]
-    time_vals = numpy.linspace(0, 60, num=len(num_msg))
-    # int_msg = []
-    # for str s in new_msg:
+#     # Create traces
+#     new_msg = message.split(",")
+#     new_msg = new_msg[1:-1]
+#     print new_msg
+#     num_msg = [int(i) for i in new_msg]
+#     time_vals = numpy.linspace(0, 60, num=len(num_msg))
+#     # int_msg = []
+#     # for str s in new_msg:
 
-    print "Number of points: " + str(len(num_msg))
-    trace0 = go.Scatter(
-        x = time_vals,
-        y = num_msg,
-        mode = 'lines+markers',
-        name = 'Waveform'
-    )
-    data = [trace0]
-    py.iplot(data, filename='line-mode',)
-except Exception as e2:
-    print "Error: " + str(e2)
+#     print "Number of points: " + str(len(num_msg))
+#     trace0 = go.Scatter(
+#         x = time_vals,
+#         y = num_msg,
+#         mode = 'lines+markers',
+#         name = 'Waveform'
+#     )
+#     data = [trace0]
+#     py.iplot(data, filename='line-mode',)
+# except Exception as e2:
+#     print "Error: " + str(e2)
