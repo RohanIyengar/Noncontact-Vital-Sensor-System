@@ -1,4 +1,4 @@
-function [time, rawSignal, respirationTransient, heartRateTransient, respRate, heartRate ] = SignalProcessorPeakFinding(fileName)
+function [time, rawSignal, respirationTransient, heartRateTransient, respirationRate, heartRate ] = SignalProcessorPeakFinding(fileName)
 
 %% Configuration Details
 cutoffFreq = 5;          %Highest Frequency to display (Hz)
@@ -50,13 +50,13 @@ heartRate = hrValCombined(1);
 respBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
     respFilterOrder,(respirationRate - fRespWidth)/fNorm, (respirationRate + fRespWidth)/fNorm);
 respBandpass = design(respBandpassDesign);
-combinedChannelRespFDesign = filter(respBandpass,rawSignal);
+respirationTransient = filter(respBandpass,rawSignal);
 
 %% Use fdesign to filter out heart rate transient
 heartBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
     heartFilterOrder,(heartRate - fHeartWidth)/fNorm, (heartRate + fHeartWidth)/fNorm);
 heartBandpass = design(heartBandpassDesign);
-combinedChannelHeartFDesign = filter(heartBandpass,rawSignal);
+heartRateTransient = filter(heartBandpass,rawSignal);
 
 %% Plot raw signals
 figure
@@ -74,14 +74,14 @@ ylabel('|C(f)|')
 
 %% Plot respiration transients
 figure
-plot(time,abs(combinedChannelRespFDesign)) 
+plot(time,abs(respirationTransient)) 
 title('Combined Channel Respiration Rate Transient')
 xlabel('Time (s)')
 ylabel('c(t)')
 
 %% Plot heart rate transients
 figure
-plot(time,abs(combinedChannelHeartFDesign)) 
+plot(time,abs(heartRateTransient)) 
 title('Combined Channel Heart Rate Transient')
 xlabel('Time (s)')
 ylabel('c(t)')
