@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 1   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE INITDEVICE
@@ -63,7 +63,7 @@ line level    source
   47   1              WDTCN = 0xAD; //Second key
   48   1              // [WDTCN - Watchdog Timer Control]$
   49   1      
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 2   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 2   
 
   50   1      }
   51          
@@ -128,7 +128,7 @@ line level    source
  110   1              // [P0MASK - Port 0 Mask]$
  111   1      
  112   1              // $[P0MAT - Port 0 Match]
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 3   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 3   
 
  113   1              // [P0MAT - Port 0 Match]$
  114   1      
@@ -193,7 +193,7 @@ line level    source
  173   1      
  174   1              // $[P1MASK - Port 1 Mask]
  175   1              // [P1MASK - Port 1 Mask]$
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 4   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 4   
 
  176   1      
  177   1              // $[P1MAT - Port 1 Match]
@@ -258,7 +258,7 @@ line level    source
  236   1               - The on-chip PGA gain is 1
  237   1               - Normal Track Mode
  238   1               ***********************************************************************/
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 5   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 5   
 
  239   1              ADC0CF = (0x1F << ADC0CF_ADSC__SHIFT) | ADC0CF_AD8BE__NORMAL
  240   1                              | ADC0CF_ADGN__GAIN_1 | ADC0CF_ADTM__TRACK_NORMAL;
@@ -323,7 +323,7 @@ line level    source
  299   1              // [REF0CN - Voltage Reference Control]$
  300   1      
  301   1      }
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 6   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 6   
 
  302          
  303          //================================================================================
@@ -388,7 +388,7 @@ line level    source
  362   1              // Stop Timer
  363   1              TMR2CN0 &= ~(TMR2CN0_TR2__BMASK);
  364   1              // [Timer Initialization]$
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 7   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 7   
 
  365   1      
  366   1              // $[TMR2CN0 - Timer 2 Control]
@@ -409,9 +409,9 @@ line level    source
  381   1      
  382   1              // $[TMR2RLL - Timer 2 Reload Low Byte]
  383   1              /***********************************************************************
- 384   1               - Timer 2 Reload Low Byte = 0x34
+ 384   1               - Timer 2 Reload Low Byte = 0x9A
  385   1               ***********************************************************************/
- 386   1              TMR2RLL = (0x34 << TMR2RLL_TMR2RLL__SHIFT);
+ 386   1              TMR2RLL = (0x9A << TMR2RLL_TMR2RLL__SHIFT);
  387   1              // [TMR2RLL - Timer 2 Reload Low Byte]$
  388   1      
  389   1              // $[TMR2CN0]
@@ -453,7 +453,7 @@ line level    source
  425   1               - Mode 0, 13-bit Counter/Timer
  426   1               - Mode 2, 8-bit Counter/Timer with Auto-Reload
  427   1               - Timer Mode
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 8   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 8   
 
  428   1               - Timer 0 enabled when TR0 = 1 irrespective of INT0 logic level
  429   1               - Timer Mode
@@ -518,7 +518,7 @@ line level    source
  488   1               - Disable all Timer 1 interrupt
  489   1               - Disable Timer 2 interrupt
  490   1               - Enable UART0 interrupt
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/12/2017 17:27:15 PAGE 9   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        04/16/2017 16:28:00 PAGE 9   
 
  491   1               ***********************************************************************/
  492   1              IE = IE_EA__ENABLED | IE_EX0__DISABLED | IE_EX1__DISABLED
@@ -530,35 +530,10 @@ line level    source
  498   1              // [IP - Interrupt Priority]$
  499   1      
  500   1      }
- 501          
- 502          extern void enter_NotSending_from_DefaultMode(void) {
- 503   1      
- 504   1      }
- 505          
- 506          extern void PORTS_0_enter_NotSending_from_DefaultMode(void) {
- 507   1      
- 508   1      }
- 509          
- 510          extern void PORTS_1_enter_NotSending_from_DefaultMode(void) {
- 511   1      
- 512   1      }
- 513          
- 514          extern void PBCFG_0_enter_NotSending_from_DefaultMode(void) {
- 515   1      
- 516   1      }
- 517          
- 518          extern void WDT_0_enter_NotSending_from_DefaultMode(void) {
- 519   1      
- 520   1      }
- 521          
- 522          extern void INTERRUPT_0_enter_NotSending_from_DefaultMode(void) {
- 523   1      
- 524   1      }
- 525          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    159    ----
+   CODE SIZE        =    153    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

@@ -1,6 +1,7 @@
 import serial, time
-global ser
+from threading import Timer
 ser = None
+timed_out = False
 
 def initializeSerial(in_port='COM3'):
     return serial.Serial(port=in_port,
@@ -88,3 +89,55 @@ while  i < 10000:
     except Exception as e1:
         print("Error: ") + str(e1)
         i = i + 1
+def recv_without_open():
+    ser_obj = initializeSerial()
+    print "Initialized object to " + ser_obj.portstr
+    done = False
+    line = ""
+    while not done:
+        for c in ser_obj.read(ser_obj.inWaiting()):
+            line = line + c
+        if len(line) != 0:
+            print "Got the line: " + line
+            line = ""
+            done = True
+
+def timeout():
+    global timed_out
+    timed_out = True
+
+def receive_for(time=10):
+    global timed_out
+    timed_out = False
+    ser_obj = initializeSerial()
+    print "Initialized serial object to " + ser_obj.portstr
+    done = False
+    line = ""
+    t = Timer(time, timeout)
+    t.start()
+    while not timed_out:
+        new_data = ser_obj.read(ser_obj.inWaiting())
+        line = line + new_data
+    return line
+# i = 0;
+# while  i < 10000:
+#     time.sleep(.1)
+#     try:
+#         receive()
+#     except Exception as e1:
+#         print("Error: ") + str(e1)
+#         i = i + 1
+
+# while 1:
+#     #time.sleep(.1)
+#     try:
+#         recv_without_open()
+#     except Exception as e1:
+#         print("Error: ") + str(e1)
+
+try:
+    message = receive_for(1)
+    print "Message received: " + message
+    print "Got " + str(len(message)) + " characters"
+except Exception as e2:
+    print "Error: " + str(e2)

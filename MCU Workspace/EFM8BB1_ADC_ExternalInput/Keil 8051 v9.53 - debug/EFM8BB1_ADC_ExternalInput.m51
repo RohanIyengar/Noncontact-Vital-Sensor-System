@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.30.0                                                          04/13/2017  15:11:33  PAGE 1
+LX51 LINKER/LOCATER V4.66.30.0                                                          04/16/2017  17:04:11  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.30.0, INVOKED BY:
@@ -40,13 +40,13 @@ ACTIVE MEMORY CLASSES OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGE
 
 BASE        START       END         USED      MEMORY CLASS
 ==========================================================
-C:000000H   C:000000H   C:001FFEH   000548H   CODE
+C:000000H   C:000000H   C:001FFEH   0004DAH   CODE
 C:000000H   C:000000H   C:001FFEH             CONST
 C:000000H   C:000000H   C:001FFEH             ECODE
 B00:0000H   C:000000H   C:001FFEH             HCONST
 X:000000H   X:000000H   X:0000FFH             XDATA
 X:000000H   X:000000H   X:0000FFH             HDATA
-I:000000H   I:000000H   I:00007FH   000078H   DATA
+I:000000H   I:000000H   I:00007FH   00006CH   DATA
 I:000020H.0 I:000020H.0 I:00002FH.7 000000H.2 BIT
 I:000000H   I:000000H   I:0000FFH   000001H   IDATA
 
@@ -59,14 +59,15 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 
 * * * * * * * * * * *   D A T A   M E M O R Y   * * * * * * * * * * * * *
 000000H   000007H   000008H   ---    AT..     DATA           "REG BANK 0"
-000008H   000017H   000010H   BYTE   UNIT     DATA           _DATA_GROUP_
-000018H   00001FH   000008H   BYTE   UNIT     DATA           ?DT?EFM8BB1_ADC_EXTERNALINPUT
+000008H   00000FH   000008H   BYTE   UNIT     DATA           ?DT?EFM8BB1_ADC_EXTERNALINPUT
+000010H   000013H   000004H   BYTE   UNIT     DATA           _DATA_GROUP_
+000014H.0 00001FH.7 00000CH.0 ---    ---      **GAP**
 000020H.0 000020H.0 000000H.1 BIT    UNIT     BIT            ?BI?EFM8BB1_ADC_EXTERNALINPUT
 000020H.1 000020H.1 000000H.1 BIT    UNIT     BIT            ?BI?INTERRUPTS
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 2
+
+
 000020H.2 000020H   000000H.6 ---    ---      **GAP**
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 2
-
-
 000021H   000078H   000058H   BYTE   UNIT     DATA           ?DT?INTERRUPTS
 000079H   000079H   000001H   BYTE   UNIT     IDATA          ?STACK
 
@@ -79,39 +80,32 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 00002EH   000052H   000025H   ---    ---      **GAP**
 000053H   000055H   000003H   BYTE   OFFS..   CODE           ?INTERRUPTS?00053
 000056H   0007FFH   0007AAH   ---    ---      **GAP**
-000800H   00097CH   00017DH   BYTE   UNIT     CODE           ?PR?ADC0EOC_ISR?INTERRUPTS
-00097DH   000AD3H   000157H   BYTE   UNIT     CODE           ?C?LIB_CODE
-000AD4H   000BCDH   0000FAH   BYTE   UNIT     CODE           ?PR?UART0_ISR?INTERRUPTS
-000BCEH   000C59H   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
-000C5AH   000C8CH   000033H   BYTE   UNIT     CODE           ?C_INITSEG
-000C8DH   000CB0H   000024H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000CB1H   000CC5H   000015H   BYTE   UNIT     CODE           ?PR?MAIN?EFM8BB1_ADC_EXTERNALINPUT
-000CC6H   000CD8H   000013H   BYTE   UNIT     CODE           ?PR?TIMER01_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000CD9H   000CEBH   000013H   BYTE   UNIT     CODE           ?PR?TIMER16_2_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000CECH   000CFBH   000010H   BYTE   UNIT     CODE           ?PR?ADC_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000CFCH   000D05H   00000AH   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D06H   000D0FH   00000AH   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D10H   000D19H   00000AH   BYTE   UNIT     CODE           ?PR?TIMER_SETUP_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D1AH   000D20H   000007H   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D21H   000D27H   000007H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D28H   000D2EH   000007H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D2FH   000D32H   000004H   BYTE   UNIT     CODE           ?PR?VREF_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D33H   000D36H   000004H   BYTE   UNIT     CODE           ?PR?CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D37H   000D3AH   000004H   BYTE   UNIT     CODE           ?PR?UART_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D3BH   000D3BH   000001H   BYTE   UNIT     CODE           ?PR?TIMER2_ISR?INTERRUPTS
+000800H   000956H   000157H   BYTE   UNIT     CODE           ?C?LIB_CODE
+000957H   000A65H   00010FH   BYTE   UNIT     CODE           ?PR?ADC0EOC_ISR?INTERRUPTS
+000A66H   000B5FH   0000FAH   BYTE   UNIT     CODE           ?PR?UART0_ISR?INTERRUPTS
+000B60H   000BEBH   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
+000BECH   000C1EH   000033H   BYTE   UNIT     CODE           ?C_INITSEG
+000C1FH   000C42H   000024H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000C43H   000C57H   000015H   BYTE   UNIT     CODE           ?PR?MAIN?EFM8BB1_ADC_EXTERNALINPUT
+000C58H   000C6AH   000013H   BYTE   UNIT     CODE           ?PR?TIMER01_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000C6BH   000C7DH   000013H   BYTE   UNIT     CODE           ?PR?TIMER16_2_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000C7EH   000C8DH   000010H   BYTE   UNIT     CODE           ?PR?ADC_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000C8EH   000C97H   00000AH   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000C98H   000CA1H   00000AH   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CA2H   000CABH   00000AH   BYTE   UNIT     CODE           ?PR?TIMER_SETUP_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CACH   000CB2H   000007H   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CB3H   000CB9H   000007H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CBAH   000CC0H   000007H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CC1H   000CC4H   000004H   BYTE   UNIT     CODE           ?PR?VREF_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CC5H   000CC8H   000004H   BYTE   UNIT     CODE           ?PR?CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CC9H   000CCCH   000004H   BYTE   UNIT     CODE           ?PR?UART_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000CCDH   000CCDH   000001H   BYTE   UNIT     CODE           ?PR?TIMER2_ISR?INTERRUPTS
 
 * * * * * * * * *   R E M O V E D     S E G M E N T S   * * * * * * * *
    *DEL*:           000004H   BYTE   UNIT     CODE           ?PR?_GETKEY?RETARGETIO
    *DEL*:           000004H   BYTE   UNIT     CODE           ?PR?_PUTCHAR?RETARGETIO
    *DEL*:           000008H   BYTE   UNIT     CODE           ?PR?RETARGET_READCHAR?RETARGETSERIAL
    *DEL*:           000013H   BYTE   UNIT     CODE           ?PR?_RETARGET_WRITECHAR?RETARGETSERIAL
-   *DEL*:           000001H   BYTE   UNIT     CODE           ?PR?ENTER_NOTSENDING_FROM_DEFAULTMODE?INITDEVICE
-   *DEL*:           000001H   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_NOTSENDING_FROM_DEFAULTMODE?INITDEVICE
-   *DEL*:           000001H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_NOTSENDING_FROM_DEFAULTMODE?INITDEVICE
-   *DEL*:           000001H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_NOTSENDING_FROM_DEFAULTMODE?INITDEVICE
-   *DEL*:           000001H   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_NOTSENDING_FROM_DEFAULTMODE?INITDEVICE
-   *DEL*:           000001H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_NOTSENDING_FROM_DEFAULTMODE?INITDEVI
-                                                             -CE
 
 
 
@@ -121,7 +115,7 @@ OVERLAY MAP OF MODULE:   EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 FUNCTION/MODULE                                BIT_GROUP   DATA_GROUP 
 --> CALLED FUNCTION/MODULE                    START  STOP  START  STOP
 ======================================================================
-ADC0EOC_ISR/INTERRUPTS                        ----- -----  0008H 0017H
+ADC0EOC_ISR/INTERRUPTS                        ----- -----  0010H 0013H
 
 *** NEW ROOT ********************************
 
@@ -129,15 +123,15 @@ TIMER2_ISR/INTERRUPTS                         ----- -----  ----- -----
 
 *** NEW ROOT ********************************
 
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 3
-
-
 UART0_ISR/INTERRUPTS                          ----- -----  ----- -----
 
 *** NEW ROOT ********************************
 
 ?C_C51STARTUP                                 ----- -----  ----- -----
   +--> MAIN/EFM8BB1_ADC_EXTERNALINPUT
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 3
+
+
   +--> ?C_INITSEG
 
 MAIN/EFM8BB1_ADC_EXTERNALINPUT                ----- -----  ----- -----
@@ -194,23 +188,23 @@ INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET+     ----- -----  ----- -----
 ... /INITDEVICE
 
 ?C_INITSEG                                    ----- -----  ----- -----
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 4
-
-
 
 
 
 PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 
 
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 4
+
+
       VALUE       CLASS    TYPE      PUBLIC SYMBOL NAME
       =================================================
       00000000H   NUMBER   ---       ?C?CODESEG
-      01000A9AH   CODE     ---       ?C?LCASE
-      0100097DH   CODE     ---       ?C?LMUL
-      01000A08H   CODE     ---       ?C?ULDIV
+      0100091DH   CODE     ---       ?C?LCASE
+      01000800H   CODE     ---       ?C?LMUL
+      0100088BH   CODE     ---       ?C?ULDIV
       00000000H   NUMBER   ---       ?C?XDATASEG
-      01000C15H   CODE     ---       ?C_START
+      01000BA7H   CODE     ---       ?C_START
       01000000H   CODE     NEAR LAB  ?C_STARTUP
 *DEL*:00000000H   CODE     ---       _getkey
 *DEL*:00000000H   CODE     ---       _putchar
@@ -238,7 +232,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000E8H.5 DATA     BIT       ADC0CN0_ADINT
 *SFR* 000000E8H.3 DATA     BIT       ADC0CN0_ADWINT
 *SFR* 000000B2H   DATA     BYTE      ADC0CN1
-      01000800H   CODE     ---       ADC0EOC_ISR
+      01000957H   CODE     ---       ADC0EOC_ISR
 *SFR* 000000C3H   DATA     WORD      ADC0GT
 *SFR* 000000C4H   DATA     BYTE      ADC0GTH
 *SFR* 000000C3H   DATA     BYTE      ADC0GTL
@@ -250,7 +244,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000BBH   DATA     BYTE      ADC0MX
 *SFR* 000000DFH   DATA     BYTE      ADC0PWR
 *SFR* 000000B9H   DATA     BYTE      ADC0TK
-      01000CECH   CODE     ---       ADC_0_enter_DefaultMode_from_RESET
+      01000C7EH   CODE     ---       ADC_0_enter_DefaultMode_from_RESET
 *SFR* 000000F0H   DATA     BYTE      B
 *SFR* 000000F0H   DATA     BIT       B_B0
 *SFR* 000000F0H.1 DATA     BIT       B_B1
@@ -259,24 +253,24 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000F0H.4 DATA     BIT       B_B4
 *SFR* 000000F0H.5 DATA     BIT       B_B5
 *SFR* 000000F0H.6 DATA     BIT       B_B6
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 5
-
-
 *SFR* 000000F0H.7 DATA     BIT       B_B7
 *SFR* 000000A0H.1 DATA     BIT       BC_EN
       00000028H   DATA     BYTE      Byte
       0000002BH   DATA     BYTE      byteToBeSent
 *SFR* 0000008EH   DATA     BYTE      CKCON0
 *SFR* 000000A9H   DATA     BYTE      CLKSEL
-      01000D33H   CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 5
+
+
+      01000CC5H   CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
 *SFR* 0000009BH   DATA     BYTE      CMP0CN0
 *SFR* 0000009DH   DATA     BYTE      CMP0MD
 *SFR* 0000009FH   DATA     BYTE      CMP0MX
 *SFR* 000000BFH   DATA     BYTE      CMP1CN0
 *SFR* 000000ABH   DATA     BYTE      CMP1MD
 *SFR* 000000AAH   DATA     BYTE      CMP1MX
-      0000001CH   DATA     DWORD     count
-      00000018H   DATA     DWORD     counter
+      0000000CH   DATA     DWORD     count
+      00000008H   DATA     DWORD     counter
 *SFR* 000000D2H   DATA     BYTE      CRC0AUTO
 *SFR* 000000CEH   DATA     BYTE      CRC0CN0
 *SFR* 000000D3H   DATA     BYTE      CRC0CNT
@@ -293,8 +287,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000A8H.7 DATA     BIT       EA
 *SFR* 000000E6H   DATA     BYTE      EIE1
 *SFR* 000000F3H   DATA     BYTE      EIP1
-      01000C8DH   CODE     ---       enter_DefaultMode_from_RESET
-*DEL*:00000000H   CODE     ---       enter_NotSending_from_DefaultMode
+      01000C1FH   CODE     ---       enter_DefaultMode_from_RESET
 *SFR* 000000A8H.4 DATA     BIT       ES
 *SFR* 000000A8H.1 DATA     BIT       ET0
 *SFR* 000000A8H.3 DATA     BIT       ET1
@@ -317,16 +310,12 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000A8H.2 DATA     BIT       IE_EX1
 *SFR* 000000B0H.2 DATA     BIT       INT0
 *SFR* 000000B0H.3 DATA     BIT       INT1
-      01000D28H   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
-*DEL*:00000000H   CODE     ---       INTERRUPT_0_enter_NotSending_from_DefaultMode
+      01000CBAH   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
 *SFR* 000000B8H   DATA     BYTE      IP
 *SFR* 000000B8H.4 DATA     BIT       IP_PS0
 *SFR* 000000B8H.6 DATA     BIT       IP_PSPI0
 *SFR* 000000B8H.1 DATA     BIT       IP_PT0
 *SFR* 000000B8H.3 DATA     BIT       IP_PT1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 6
-
-
 *SFR* 000000B8H.5 DATA     BIT       IP_PT2
 *SFR* 000000B8H   DATA     BIT       IP_PX0
 *SFR* 000000B8H.2 DATA     BIT       IP_PX1
@@ -334,7 +323,10 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000E4H   DATA     BYTE      IT01CF
 *SFR* 00000088H.2 DATA     BIT       IT1
 *SFR* 000000B1H   DATA     BYTE      LFO0CN
-      01000CB1H   CODE     ---       main
+      01000C43H   CODE     ---       main
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 6
+
+
       0000002CH   DATA     DWORD     mV
       00000030H   DATA     DWORD     numMeasurements
 *SFR* 000000D0H.2 DATA     BIT       OV
@@ -372,8 +364,7 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000A0H.1 DATA     BIT       P2_B1
 *SFR* 000000A6H   DATA     BYTE      P2MDOUT
 *SFR* 000000B0H   DATA     BYTE      P3
-      01000D21H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
-*DEL*:00000000H   CODE     ---       PBCFG_0_enter_NotSending_from_DefaultMode
+      01000CB3H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
 *SFR* 000000F9H   DATA     WORD      PCA0
 *SFR* 0000009EH   DATA     BYTE      PCA0CENT
 *SFR* 0000009CH   DATA     BYTE      PCA0CLR
@@ -389,9 +380,6 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000FCH   DATA     BYTE      PCA0CPH0
 *SFR* 000000EAH   DATA     BYTE      PCA0CPH1
 *SFR* 000000ECH   DATA     BYTE      PCA0CPH2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 7
-
-
 *SFR* 000000FBH   DATA     BYTE      PCA0CPL0
 *SFR* 000000E9H   DATA     BYTE      PCA0CPL1
 *SFR* 000000EBH   DATA     BYTE      PCA0CPL2
@@ -401,14 +389,15 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000FAH   DATA     BYTE      PCA0H
 *SFR* 000000F9H   DATA     BYTE      PCA0L
 *SFR* 000000D9H   DATA     BYTE      PCA0MD
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 7
+
+
 *SFR* 00000096H   DATA     BYTE      PCA0POL
 *SFR* 000000F7H   DATA     BYTE      PCA0PWM
 *SFR* 00000087H   DATA     BYTE      PCON
 *SFR* 00000087H   DATA     BYTE      PCON0
-      01000CFCH   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-*DEL*:00000000H   CODE     ---       PORTS_0_enter_NotSending_from_DefaultMode
-      01000D06H   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
-*DEL*:00000000H   CODE     ---       PORTS_1_enter_NotSending_from_DefaultMode
+      01000C8EH   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      01000C98H   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
 *SFR* 000000A0H   DATA     BYTE      PPAGE_SFR
 *SFR* 000000F6H   DATA     BYTE      PRTDRV
 *SFR* 000000B8H.4 DATA     BIT       PS
@@ -454,9 +443,6 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 00000098H.6 DATA     BIT       SM1
 *SFR* 00000098H.5 DATA     BIT       SM2
 *SFR* 000000D6H   DATA     BYTE      SMB0ADM
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 8
-
-
 *SFR* 000000D7H   DATA     BYTE      SMB0ADR
 *SFR* 000000C1H   DATA     BYTE      SMB0CF
 *SFR* 000000C0H   DATA     BYTE      SMB0CN0
@@ -468,6 +454,9 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000C0H.5 DATA     BIT       SMB0CN0_STA
 *SFR* 000000C0H.4 DATA     BIT       SMB0CN0_STO
 *SFR* 000000C0H.6 DATA     BIT       SMB0CN0_TXMODE
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 8
+
+
 *SFR* 000000C2H   DATA     BYTE      SMB0DAT
 *SFR* 000000ACH   DATA     BYTE      SMB0TC
 *SFR* 00000081H   DATA     BYTE      SP
@@ -501,10 +490,10 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 0000008CH   DATA     BYTE      TH0
 *SFR* 0000008DH   DATA     BYTE      TH1
 *SFR* 00000098H.1 DATA     BIT       TI
-      01000CC6H   CODE     ---       TIMER01_0_enter_DefaultMode_from_RESET
-      01000CD9H   CODE     ---       TIMER16_2_enter_DefaultMode_from_RESET
-      01000D3BH   CODE     ---       TIMER2_ISR
-      01000D10H   CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
+      01000C58H   CODE     ---       TIMER01_0_enter_DefaultMode_from_RESET
+      01000C6BH   CODE     ---       TIMER16_2_enter_DefaultMode_from_RESET
+      01000CCDH   CODE     ---       TIMER2_ISR
+      01000CA2H   CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
 *SFR* 0000008AH   DATA     BYTE      TL0
 *SFR* 0000008BH   DATA     BYTE      TL1
 *SFR* 00000089H   DATA     BYTE      TMOD
@@ -519,9 +508,6 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 000000C8H.2 DATA     BIT       TMR2CN0_TR2
 *SFR* 000000CDH   DATA     BYTE      TMR2H
 *SFR* 000000CCH   DATA     BYTE      TMR2L
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 9
-
-
 *SFR* 000000CAH   DATA     WORD      TMR2RL
 *SFR* 000000CBH   DATA     BYTE      TMR2RLH
 *SFR* 000000CAH   DATA     BYTE      TMR2RLL
@@ -533,19 +519,21 @@ PUBLIC SYMBOLS OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
 *SFR* 00000093H   DATA     BYTE      TMR3RLH
 *SFR* 00000092H   DATA     BYTE      TMR3RLL
 *SFR* 00000088H.4 DATA     BIT       TR0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 9
+
+
 *SFR* 00000088H.6 DATA     BIT       TR1
       00000027H   DATA     BYTE      TX_Ready
 *SFR* 000000B0H.1 DATA     BIT       TXD
-      01000AD4H   CODE     ---       UART0_ISR
-      01000D37H   CODE     ---       UART_0_enter_DefaultMode_from_RESET
+      01000A66H   CODE     ---       UART0_ISR
+      01000CC9H   CODE     ---       UART_0_enter_DefaultMode_from_RESET
       00000039H   DATA     ---       UART_Buffer
       00000038H   DATA     BYTE      UART_Buffer_Size
       00000029H   DATA     BYTE      UART_Input_First
       0000002AH   DATA     BYTE      UART_Output_First
 *SFR* 000000FFH   DATA     BYTE      VDM0CN
-      01000D2FH   CODE     ---       VREF_0_enter_DefaultMode_from_RESET
-      01000D1AH   CODE     ---       WDT_0_enter_DefaultMode_from_RESET
-*DEL*:00000000H   CODE     ---       WDT_0_enter_NotSending_from_DefaultMode
+      01000CC1H   CODE     ---       VREF_0_enter_DefaultMode_from_RESET
+      01000CACH   CODE     ---       WDT_0_enter_DefaultMode_from_RESET
 *SFR* 00000097H   DATA     BYTE      WDTCN
 *SFR* 000000B0H.6 DATA     BIT       WR
 *SFR* 000000E1H   DATA     BYTE      XBR0
@@ -584,9 +572,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000D0H.2 SFRSYM    DATA     BIT       OV
       000000B0H.6 SFRSYM    DATA     BIT       WR
       00000099H   SFRSYM    DATA     BYTE      SBUF
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 10
-
-
       00000087H   SFRSYM    DATA     BYTE      PCON
       00000098H   SFRSYM    DATA     BYTE      SCON
       00000089H   SFRSYM    DATA     BYTE      TMOD
@@ -599,6 +584,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000A8H.3 SFRSYM    DATA     BIT       ET1
       00000088H.5 SFRSYM    DATA     BIT       TF0
       00000088H.7 SFRSYM    DATA     BIT       TF1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 10
+
+
       00000098H.2 SFRSYM    DATA     BIT       RB8
       0000008CH   SFRSYM    DATA     BYTE      TH0
       000000A8H   SFRSYM    DATA     BIT       EX0
@@ -632,10 +620,10 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000007H   SYMBOL    DATA     CHAR      c
 
       ---         MODULE    ---      ---       EFM8BB1_ADC_EXTERNALINPUT
-      0000001CH   PUBLIC    DATA     DWORD     count
+      0000000CH   PUBLIC    DATA     DWORD     count
       00000020H.0 PUBLIC    BIT      BIT       stopCounting
-      00000018H   PUBLIC    DATA     DWORD     counter
-      01000CB1H   PUBLIC    CODE     ---       main
+      00000008H   PUBLIC    DATA     DWORD     counter
+      01000C43H   PUBLIC    CODE     ---       main
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
@@ -649,9 +637,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000E6H   SFRSYM    DATA     BYTE      EIE1
       000000C0H.1 SFRSYM    DATA     BIT       SMB0CN0_ACK
       0000008FH   SFRSYM    DATA     BYTE      PSCTL
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 11
-
-
       000000E4H   SFRSYM    DATA     BYTE      IT01CF
       000000C0H.6 SFRSYM    DATA     BIT       SMB0CN0_TXMODE
       000000ADH   SFRSYM    DATA     BYTE      DERIVID
@@ -664,6 +649,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000093H   SFRSYM    DATA     BYTE      TMR3RLH
       000000F3H   SFRSYM    DATA     BYTE      EIP1
       00000098H.2 SFRSYM    DATA     BIT       SCON0_RB8
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 11
+
+
       000000CAH   SFRSYM    DATA     BYTE      TMR2RLL
       000000FCH   SFRSYM    DATA     BYTE      PCA0CPH0
       00000092H   SFRSYM    DATA     BYTE      TMR3RLL
@@ -714,9 +702,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000080H   SFRSYM    DATA     BIT       DISP_EN
       000000D8H   SFRSYM    DATA     BIT       PCA0CN0_CCF0
       000000E0H.5 SFRSYM    DATA     BIT       ACC_ACC5
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 12
-
-
       000000D8H.1 SFRSYM    DATA     BIT       PCA0CN0_CCF1
       000000E0H.6 SFRSYM    DATA     BIT       ACC_ACC6
       000000CCH   SFRSYM    DATA     WORD      TMR2
@@ -729,6 +714,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000098H.4 SFRSYM    DATA     BIT       SCON0_REN
       000000ACH   SFRSYM    DATA     BYTE      SMB0TC
       000000F2H   SFRSYM    DATA     BYTE      P1MDIN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 12
+
+
       000000C0H.4 SFRSYM    DATA     BIT       SMB0CN0_STO
       000000FEH   SFRSYM    DATA     BYTE      P0MASK
       000000EEH   SFRSYM    DATA     BYTE      P1MASK
@@ -779,9 +767,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000B8H.1 SFRSYM    DATA     BIT       IP_PT0
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       000000C0H.2 SFRSYM    DATA     BIT       SMB0CN0_ARBLOST
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 13
-
-
       000000B8H.5 SFRSYM    DATA     BIT       IP_PT2
       0000008AH   SFRSYM    DATA     BYTE      TL0
       000000F8H.1 SFRSYM    DATA     BIT       SPI0CN0_TXBMT
@@ -794,6 +779,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000080H   SFRSYM    DATA     BIT       P0_B0
       000000B8H   SFRSYM    DATA     BIT       IP_PX0
       00000090H   SFRSYM    DATA     BIT       P1_B0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 13
+
+
       00000080H.1 SFRSYM    DATA     BIT       P0_B1
       000000B8H.2 SFRSYM    DATA     BIT       IP_PX1
       0000009BH   SFRSYM    DATA     BYTE      CMP0CN0
@@ -844,9 +832,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000098H   SFRSYM    DATA     BYTE      SCON0
       000000F6H   SFRSYM    DATA     BYTE      PRTDRV
       000000EDH   SFRSYM    DATA     BYTE      P1MAT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 14
-
-
       000000E8H.3 SFRSYM    DATA     BIT       ADC0CN0_ADWINT
       000000E8H.4 SFRSYM    DATA     BIT       ADC0CN0_ADBUSY
       000000D6H   SFRSYM    DATA     BYTE      SMB0ADM
@@ -859,6 +844,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000D7H   SFRSYM    DATA     BYTE      SMB0ADR
       00000088H.4 SFRSYM    DATA     BIT       TCON_TR0
       000000C8H.4 SFRSYM    DATA     BIT       TMR2CN0_TF2CEN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 14
+
+
       00000088H.6 SFRSYM    DATA     BIT       TCON_TR1
       000000C2H   SFRSYM    DATA     BYTE      SMB0DAT
       000000CDH   SFRSYM    DATA     BYTE      TMR2H
@@ -885,45 +873,45 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
       000000B3H   SFRSYM    DATA     BYTE      ADC0AC
 
-      01000CB1H   BLOCK     CODE     ---       LVL=0
-      01000CB1H   LINE      CODE     ---       #132
-      01000CB1H   LINE      CODE     ---       #133
-      01000CB1H   LINE      CODE     ---       #134
-      01000CB4H   LINE      CODE     ---       #139
-      01000CB6H   LINE      CODE     ---       #141
-      01000CB8H   LINE      CODE     ---       #144
-      01000CBAH   LINE      CODE     ---       #146
-      01000CBAH   LINE      CODE     ---       #147
-      01000CBAH   LINE      CODE     ---       #148
-      01000CBFH   LINE      CODE     ---       #149
-      01000CBFH   LINE      CODE     ---       #150
-      01000CC2H   LINE      CODE     ---       #151
-      01000CC4H   LINE      CODE     ---       #152
-      01000CC4H   LINE      CODE     ---       #153
+      01000C43H   BLOCK     CODE     ---       LVL=0
+      01000C43H   LINE      CODE     ---       #132
+      01000C43H   LINE      CODE     ---       #133
+      01000C43H   LINE      CODE     ---       #134
+      01000C46H   LINE      CODE     ---       #139
+      01000C48H   LINE      CODE     ---       #141
+      01000C4AH   LINE      CODE     ---       #144
+      01000C4CH   LINE      CODE     ---       #146
+      01000C4CH   LINE      CODE     ---       #147
+      01000C4CH   LINE      CODE     ---       #148
+      01000C51H   LINE      CODE     ---       #149
+      01000C51H   LINE      CODE     ---       #150
+      01000C54H   LINE      CODE     ---       #151
+      01000C56H   LINE      CODE     ---       #152
+      01000C56H   LINE      CODE     ---       #153
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       INITDEVICE
-      01000D28H   PUBLIC    CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
-      01000D37H   PUBLIC    CODE     ---       UART_0_enter_DefaultMode_from_RESET
-      01000D10H   PUBLIC    CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
-      01000CD9H   PUBLIC    CODE     ---       TIMER16_2_enter_DefaultMode_from_RESET
-      01000CC6H   PUBLIC    CODE     ---       TIMER01_0_enter_DefaultMode_from_RESET
-      01000D33H   PUBLIC    CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 15
-
-
-      01000D2FH   PUBLIC    CODE     ---       VREF_0_enter_DefaultMode_from_RESET
-      01000CECH   PUBLIC    CODE     ---       ADC_0_enter_DefaultMode_from_RESET
-      01000D21H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
-      01000D06H   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
-      01000CFCH   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000D1AH   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
-      01000C8DH   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
+      01000CBAH   PUBLIC    CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
+      01000CC9H   PUBLIC    CODE     ---       UART_0_enter_DefaultMode_from_RESET
+      01000CA2H   PUBLIC    CODE     ---       TIMER_SETUP_0_enter_DefaultMode_from_RESET
+      01000C6BH   PUBLIC    CODE     ---       TIMER16_2_enter_DefaultMode_from_RESET
+      01000C58H   PUBLIC    CODE     ---       TIMER01_0_enter_DefaultMode_from_RESET
+      01000CC5H   PUBLIC    CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
+      01000CC1H   PUBLIC    CODE     ---       VREF_0_enter_DefaultMode_from_RESET
+      01000C7EH   PUBLIC    CODE     ---       ADC_0_enter_DefaultMode_from_RESET
+      01000CB3H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      01000C98H   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      01000C8EH   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      01000CACH   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
+      01000C1FH   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
       00000090H   SFRSYM    DATA     BYTE      P1
       00000097H   SFRSYM    DATA     BYTE      WDTCN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 15
+
+
       000000A0H   SFRSYM    DATA     BYTE      P2
       000000BCH   SFRSYM    DATA     BYTE      ADC0CF
       000000C8H   SFRSYM    DATA     BIT       TMR2CN0_T2XCLK
@@ -974,9 +962,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000E1H   SFRSYM    DATA     BYTE      XBR0
       000000C1H   SFRSYM    DATA     BYTE      SMB0CF
       000000E2H   SFRSYM    DATA     BYTE      XBR1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 16
-
-
       000000C0H.5 SFRSYM    DATA     BIT       SMB0CN0_STA
       000000E3H   SFRSYM    DATA     BYTE      XBR2
       000000BBH   SFRSYM    DATA     BYTE      ADC0MX
@@ -989,6 +974,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000C8H.2 SFRSYM    DATA     BIT       TMR2CN0_TR2
       000000E0H.2 SFRSYM    DATA     BIT       ACC_ACC2
       000000E0H.3 SFRSYM    DATA     BIT       ACC_ACC3
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 16
+
+
       00000081H   SFRSYM    DATA     BYTE      SP
       0000009DH   SFRSYM    DATA     BYTE      CMP0MD
       000000E0H.4 SFRSYM    DATA     BIT       ACC_ACC4
@@ -1039,9 +1027,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
       000000F8H   SFRSYM    DATA     BIT       SPI0CN0_SPIEN
       000000F0H   SFRSYM    DATA     BYTE      B
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 17
-
-
       000000BEH   SFRSYM    DATA     BYTE      ADC0H
       000000D2H   SFRSYM    DATA     BYTE      CRC0AUTO
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_ADBMEN
@@ -1054,6 +1039,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000E9H   SFRSYM    DATA     WORD      PCA0CP1
       000000EBH   SFRSYM    DATA     WORD      PCA0CP2
       000000CEH   SFRSYM    DATA     BYTE      CRC0CN0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 17
+
+
       0000008CH   SFRSYM    DATA     BYTE      TH0
       000000B8H.4 SFRSYM    DATA     BIT       IP_PS0
       0000008DH   SFRSYM    DATA     BYTE      TH1
@@ -1104,9 +1092,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
       00000088H.5 SFRSYM    DATA     BIT       TCON_TF0
       00000098H   SFRSYM    DATA     BIT       SCON0_RI
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 18
-
-
       00000082H   SFRSYM    DATA     BYTE      DPL
       00000088H.7 SFRSYM    DATA     BIT       TCON_TF1
       00000099H   SFRSYM    DATA     BYTE      SBUF0
@@ -1119,6 +1104,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000088H   SFRSYM    DATA     BIT       TCON_IT0
       000000E8H.1 SFRSYM    DATA     BIT       ADC0CN0_ADCM1
       000000EFH   SFRSYM    DATA     BYTE      RSTSRC
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 18
+
+
       000000FDH   SFRSYM    DATA     BYTE      P0MAT
       000000DEH   SFRSYM    DATA     BYTE      CRC0DAT
       00000088H.2 SFRSYM    DATA     BIT       TCON_IT1
@@ -1163,125 +1151,125 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
       000000B3H   SFRSYM    DATA     BYTE      ADC0AC
 
-      01000C8DH   BLOCK     CODE     ---       LVL=0
-      01000C8DH   LINE      CODE     ---       #22
-      01000C8DH   LINE      CODE     ---       #24
-      01000C90H   LINE      CODE     ---       #25
-      01000C93H   LINE      CODE     ---       #26
-      01000C96H   LINE      CODE     ---       #27
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 19
-
-
-      01000C99H   LINE      CODE     ---       #28
-      01000C9CH   LINE      CODE     ---       #29
-      01000C9FH   LINE      CODE     ---       #30
-      01000CA2H   LINE      CODE     ---       #31
-      01000CA5H   LINE      CODE     ---       #32
-      01000CA8H   LINE      CODE     ---       #33
-      01000CABH   LINE      CODE     ---       #34
-      01000CAEH   LINE      CODE     ---       #35
+      01000C1FH   BLOCK     CODE     ---       LVL=0
+      01000C1FH   LINE      CODE     ---       #22
+      01000C1FH   LINE      CODE     ---       #24
+      01000C22H   LINE      CODE     ---       #25
+      01000C25H   LINE      CODE     ---       #26
+      01000C28H   LINE      CODE     ---       #27
+      01000C2BH   LINE      CODE     ---       #28
+      01000C2EH   LINE      CODE     ---       #29
+      01000C31H   LINE      CODE     ---       #30
+      01000C34H   LINE      CODE     ---       #31
+      01000C37H   LINE      CODE     ---       #32
+      01000C3AH   LINE      CODE     ---       #33
+      01000C3DH   LINE      CODE     ---       #34
+      01000C40H   LINE      CODE     ---       #35
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D1AH   BLOCK     CODE     ---       LVL=0
-      01000D1AH   LINE      CODE     ---       #43
-      01000D1AH   LINE      CODE     ---       #46
-      01000D1DH   LINE      CODE     ---       #47
-      01000D20H   LINE      CODE     ---       #50
+      01000CACH   BLOCK     CODE     ---       LVL=0
+      01000CACH   LINE      CODE     ---       #43
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 19
+
+
+      01000CACH   LINE      CODE     ---       #46
+      01000CAFH   LINE      CODE     ---       #47
+      01000CB2H   LINE      CODE     ---       #50
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000CFCH   BLOCK     CODE     ---       LVL=0
-      01000CFCH   LINE      CODE     ---       #55
-      01000CFCH   LINE      CODE     ---       #70
-      01000CFFH   LINE      CODE     ---       #87
-      01000D02H   LINE      CODE     ---       #103
-      01000D05H   LINE      CODE     ---       #115
+      01000C8EH   BLOCK     CODE     ---       LVL=0
+      01000C8EH   LINE      CODE     ---       #55
+      01000C8EH   LINE      CODE     ---       #70
+      01000C91H   LINE      CODE     ---       #87
+      01000C94H   LINE      CODE     ---       #103
+      01000C97H   LINE      CODE     ---       #115
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D06H   BLOCK     CODE     ---       LVL=0
-      01000D06H   LINE      CODE     ---       #120
-      01000D06H   LINE      CODE     ---       #135
-      01000D09H   LINE      CODE     ---       #152
-      01000D0CH   LINE      CODE     ---       #168
-      01000D0FH   LINE      CODE     ---       #180
+      01000C98H   BLOCK     CODE     ---       LVL=0
+      01000C98H   LINE      CODE     ---       #120
+      01000C98H   LINE      CODE     ---       #135
+      01000C9BH   LINE      CODE     ---       #152
+      01000C9EH   LINE      CODE     ---       #168
+      01000CA1H   LINE      CODE     ---       #180
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D21H   BLOCK     CODE     ---       LVL=0
-      01000D21H   LINE      CODE     ---       #185
-      01000D21H   LINE      CODE     ---       #191
-      01000D24H   LINE      CODE     ---       #208
-      01000D27H   LINE      CODE     ---       #216
+      01000CB3H   BLOCK     CODE     ---       LVL=0
+      01000CB3H   LINE      CODE     ---       #185
+      01000CB3H   LINE      CODE     ---       #191
+      01000CB6H   LINE      CODE     ---       #208
+      01000CB9H   LINE      CODE     ---       #216
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000CECH   BLOCK     CODE     ---       LVL=0
-      01000CECH   LINE      CODE     ---       #221
-      01000CECH   LINE      CODE     ---       #229
-      01000CEFH   LINE      CODE     ---       #239
-      01000CF2H   LINE      CODE     ---       #251
-      01000CF5H   LINE      CODE     ---       #279
-      01000CF8H   LINE      CODE     ---       #280
-      01000CFBH   LINE      CODE     ---       #284
+      01000C7EH   BLOCK     CODE     ---       LVL=0
+      01000C7EH   LINE      CODE     ---       #221
+      01000C7EH   LINE      CODE     ---       #229
+      01000C81H   LINE      CODE     ---       #239
+      01000C84H   LINE      CODE     ---       #251
+      01000C87H   LINE      CODE     ---       #279
+      01000C8AH   LINE      CODE     ---       #280
+      01000C8DH   LINE      CODE     ---       #284
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D2FH   BLOCK     CODE     ---       LVL=0
-      01000D2FH   LINE      CODE     ---       #289
-      01000D2FH   LINE      CODE     ---       #297
-      01000D32H   LINE      CODE     ---       #301
+      01000CC1H   BLOCK     CODE     ---       LVL=0
+      01000CC1H   LINE      CODE     ---       #289
+      01000CC1H   LINE      CODE     ---       #297
+      01000CC4H   LINE      CODE     ---       #301
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D33H   BLOCK     CODE     ---       LVL=0
-      01000D33H   LINE      CODE     ---       #306
-      01000D33H   LINE      CODE     ---       #312
-      01000D36H   LINE      CODE     ---       #315
+      01000CC5H   BLOCK     CODE     ---       LVL=0
+      01000CC5H   LINE      CODE     ---       #306
+      01000CC5H   LINE      CODE     ---       #312
+      01000CC8H   LINE      CODE     ---       #315
       ---         BLOCKEND  ---      ---       LVL=0
 
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 20
-
-
-      01000CC6H   BLOCK     CODE     ---       LVL=0
-      01000CC6H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000C58H   BLOCK     CODE     ---       LVL=0
+      01000C58H   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      TCON_save
       ---         BLOCKEND  ---      ---       LVL=1
-      01000CC6H   LINE      CODE     ---       #320
-      01000CC6H   LINE      CODE     ---       #324
-      01000CC8H   LINE      CODE     ---       #326
-      01000CCBH   LINE      CODE     ---       #340
-      01000CCEH   LINE      CODE     ---       #348
-      01000CD8H   LINE      CODE     ---       #352
+      01000C58H   LINE      CODE     ---       #320
+      01000C58H   LINE      CODE     ---       #324
+      01000C5AH   LINE      CODE     ---       #326
+      01000C5DH   LINE      CODE     ---       #340
+      01000C60H   LINE      CODE     ---       #348
+      01000C6AH   LINE      CODE     ---       #352
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000CD9H   BLOCK     CODE     ---       LVL=0
-      01000CD9H   BLOCK     CODE     NEAR LAB  LVL=1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 20
+
+
+      01000C6BH   BLOCK     CODE     ---       LVL=0
+      01000C6BH   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      TMR2CN0_TR2_save
       ---         BLOCKEND  ---      ---       LVL=1
-      01000CD9H   LINE      CODE     ---       #357
-      01000CD9H   LINE      CODE     ---       #361
-      01000CDDH   LINE      CODE     ---       #363
-      01000CE0H   LINE      CODE     ---       #379
-      01000CE3H   LINE      CODE     ---       #386
-      01000CE6H   LINE      CODE     ---       #393
-      01000CE9H   LINE      CODE     ---       #398
-      01000CEBH   LINE      CODE     ---       #401
+      01000C6BH   LINE      CODE     ---       #357
+      01000C6BH   LINE      CODE     ---       #361
+      01000C6FH   LINE      CODE     ---       #363
+      01000C72H   LINE      CODE     ---       #379
+      01000C75H   LINE      CODE     ---       #386
+      01000C78H   LINE      CODE     ---       #393
+      01000C7BH   LINE      CODE     ---       #398
+      01000C7DH   LINE      CODE     ---       #401
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D10H   BLOCK     CODE     ---       LVL=0
-      01000D10H   LINE      CODE     ---       #406
-      01000D10H   LINE      CODE     ---       #417
-      01000D13H   LINE      CODE     ---       #432
-      01000D16H   LINE      CODE     ---       #440
-      01000D19H   LINE      CODE     ---       #443
+      01000CA2H   BLOCK     CODE     ---       LVL=0
+      01000CA2H   LINE      CODE     ---       #406
+      01000CA2H   LINE      CODE     ---       #417
+      01000CA5H   LINE      CODE     ---       #432
+      01000CA8H   LINE      CODE     ---       #440
+      01000CABH   LINE      CODE     ---       #443
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D37H   BLOCK     CODE     ---       LVL=0
-      01000D37H   LINE      CODE     ---       #448
-      01000D37H   LINE      CODE     ---       #453
-      01000D3AH   LINE      CODE     ---       #456
+      01000CC9H   BLOCK     CODE     ---       LVL=0
+      01000CC9H   LINE      CODE     ---       #448
+      01000CC9H   LINE      CODE     ---       #453
+      01000CCCH   LINE      CODE     ---       #456
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D28H   BLOCK     CODE     ---       LVL=0
-      01000D28H   LINE      CODE     ---       #461
-      01000D28H   LINE      CODE     ---       #473
-      01000D2BH   LINE      CODE     ---       #492
-      01000D2EH   LINE      CODE     ---       #500
+      01000CBAH   BLOCK     CODE     ---       LVL=0
+      01000CBAH   LINE      CODE     ---       #461
+      01000CBAH   LINE      CODE     ---       #473
+      01000CBDH   LINE      CODE     ---       #492
+      01000CC0H   LINE      CODE     ---       #500
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       INTERRUPTS
@@ -1296,12 +1284,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000029H   PUBLIC    DATA     BYTE      UART_Input_First
       00000028H   PUBLIC    DATA     BYTE      Byte
       00000027H   PUBLIC    DATA     BYTE      TX_Ready
-      01000AD4H   PUBLIC    CODE     ---       UART0_ISR
-      01000D3BH   PUBLIC    CODE     ---       TIMER2_ISR
-      01000800H   PUBLIC    CODE     ---       ADC0EOC_ISR
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 21
-
-
+      01000A66H   PUBLIC    CODE     ---       UART0_ISR
+      01000CCDH   PUBLIC    CODE     ---       TIMER2_ISR
+      01000957H   PUBLIC    CODE     ---       ADC0EOC_ISR
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
@@ -1314,6 +1299,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000F9H   SFRSYM    DATA     WORD      PCA0
       000000E6H   SFRSYM    DATA     BYTE      EIE1
       000000C0H.1 SFRSYM    DATA     BIT       SMB0CN0_ACK
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 21
+
+
       0000008FH   SFRSYM    DATA     BYTE      PSCTL
       000000E4H   SFRSYM    DATA     BYTE      IT01CF
       000000C0H.6 SFRSYM    DATA     BIT       SMB0CN0_TXMODE
@@ -1364,9 +1352,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000D1H   SFRSYM    DATA     BYTE      REF0CN
       0000008EH   SFRSYM    DATA     BYTE      CKCON0
       000000E0H.1 SFRSYM    DATA     BIT       ACC_ACC1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 22
-
-
       000000C9H   SFRSYM    DATA     BYTE      REG0CN
       000000DDH   SFRSYM    DATA     BYTE      CRC0IN
       000000C8H.2 SFRSYM    DATA     BIT       TMR2CN0_TR2
@@ -1379,6 +1364,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000ABH   SFRSYM    DATA     BYTE      CMP1MD
       000000D8H   SFRSYM    DATA     BIT       PCA0CN0_CCF0
       000000E0H.5 SFRSYM    DATA     BIT       ACC_ACC5
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 22
+
+
       000000D8H.1 SFRSYM    DATA     BIT       PCA0CN0_CCF1
       000000E0H.6 SFRSYM    DATA     BIT       ACC_ACC6
       000000CCH   SFRSYM    DATA     WORD      TMR2
@@ -1429,9 +1417,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000BDH   SFRSYM    DATA     BYTE      ADC0L
       00000092H   SFRSYM    DATA     WORD      TMR3RL
       000000D8H   SFRSYM    DATA     BYTE      PCA0CN0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 23
-
-
       000000E0H   SFRSYM    DATA     BYTE      ACC
       000000FBH   SFRSYM    DATA     WORD      PCA0CP0
       000000E9H   SFRSYM    DATA     WORD      PCA0CP1
@@ -1444,6 +1429,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000B8H.1 SFRSYM    DATA     BIT       IP_PT0
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       000000C0H.2 SFRSYM    DATA     BIT       SMB0CN0_ARBLOST
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 23
+
+
       000000B8H.5 SFRSYM    DATA     BIT       IP_PT2
       0000008AH   SFRSYM    DATA     BYTE      TL0
       000000F8H.1 SFRSYM    DATA     BIT       SPI0CN0_TXBMT
@@ -1494,9 +1482,6 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000C3H   SFRSYM    DATA     BYTE      ADC0GTL
       000000C8H.6 SFRSYM    DATA     BIT       TMR2CN0_TF2L
       00000098H.1 SFRSYM    DATA     BIT       SCON0_TI
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 24
-
-
       000000E8H   SFRSYM    DATA     BIT       ADC0CN0_ADCM0
       000000C6H   SFRSYM    DATA     BYTE      ADC0LTH
       00000088H   SFRSYM    DATA     BIT       TCON_IT0
@@ -1509,6 +1494,9 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000098H   SFRSYM    DATA     BYTE      SCON0
       000000F6H   SFRSYM    DATA     BYTE      PRTDRV
       000000EDH   SFRSYM    DATA     BYTE      P1MAT
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 24
+
+
       000000E8H.3 SFRSYM    DATA     BIT       ADC0CN0_ADWINT
       000000E8H.4 SFRSYM    DATA     BIT       ADC0CN0_ADBUSY
       000000D6H   SFRSYM    DATA     BYTE      SMB0ADM
@@ -1546,119 +1534,111 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
       000000B3H   SFRSYM    DATA     BYTE      ADC0AC
 
-      01000800H   BLOCK     CODE     ---       LVL=0
-      0100081DH   BLOCK     CODE     NEAR LAB  LVL=1
+      01000957H   BLOCK     CODE     ---       LVL=0
+      01000974H   BLOCK     CODE     NEAR LAB  LVL=1
       00000021H   SYMBOL    DATA     DWORD     accumulator
       00000025H   SYMBOL    DATA     WORD      measurements
-      00000008H   SYMBOL    DATA     DWORD     result
-      0000000CH   SYMBOL    DATA     DWORD     high
-      00000010H   SYMBOL    DATA     DWORD     low
-      00000014H   SYMBOL    DATA     DWORD     total
+      00000010H   SYMBOL    DATA     DWORD     result
       ---         BLOCKEND  ---      ---       LVL=1
-      01000800H   LINE      CODE     ---       #47
-      0100081DH   LINE      CODE     ---       #51
-      01000829H   LINE      CODE     ---       #53
-      0100082BH   LINE      CODE     ---       #56
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 25
+      01000957H   LINE      CODE     ---       #47
+      01000974H   LINE      CODE     ---       #51
+      01000980H   LINE      CODE     ---       #52
+      01000982H   LINE      CODE     ---       #54
+      0100098AH   LINE      CODE     ---       #56
+      01000990H   LINE      CODE     ---       #57
+      01000990H   LINE      CODE     ---       #58
+      01000995H   LINE      CODE     ---       #59
+      010009ACH   LINE      CODE     ---       #66
+      010009CEH   LINE      CODE     ---       #68
+      010009CEH   LINE      CODE     ---       #71
+      010009D6H   LINE      CODE     ---       #72
+      010009D6H   LINE      CODE     ---       #73
+      010009DFH   LINE      CODE     ---       #74
+      010009E2H   LINE      CODE     ---       #75
+      010009E2H   LINE      CODE     ---       #77
+      010009EAH   LINE      CODE     ---       #78
+      010009EAH   LINE      CODE     ---       #79
+      010009F3H   LINE      CODE     ---       #80
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 25
 
 
-      01000836H   LINE      CODE     ---       #57
-      01000840H   LINE      CODE     ---       #58
-      0100084CH   LINE      CODE     ---       #59
-      0100088AH   LINE      CODE     ---       #60
-      01000892H   LINE      CODE     ---       #62
-      01000898H   LINE      CODE     ---       #63
-      01000898H   LINE      CODE     ---       #64
-      0100089DH   LINE      CODE     ---       #65
-      010008B5H   LINE      CODE     ---       #66
-      010008C1H   LINE      CODE     ---       #75
-      010008E5H   LINE      CODE     ---       #77
-      010008E5H   LINE      CODE     ---       #80
-      010008EDH   LINE      CODE     ---       #81
-      010008EDH   LINE      CODE     ---       #82
-      010008F6H   LINE      CODE     ---       #83
-      010008F9H   LINE      CODE     ---       #84
-      010008F9H   LINE      CODE     ---       #86
-      01000901H   LINE      CODE     ---       #87
-      01000901H   LINE      CODE     ---       #88
-      0100090AH   LINE      CODE     ---       #89
-      0100090DH   LINE      CODE     ---       #90
-      0100090DH   LINE      CODE     ---       #92
-      01000915H   LINE      CODE     ---       #93
-      01000915H   LINE      CODE     ---       #94
-      0100091EH   LINE      CODE     ---       #95
-      01000921H   LINE      CODE     ---       #96
-      01000921H   LINE      CODE     ---       #98
-      01000929H   LINE      CODE     ---       #99
-      01000929H   LINE      CODE     ---       #100
-      01000931H   LINE      CODE     ---       #101
-      01000934H   LINE      CODE     ---       #102
-      01000934H   LINE      CODE     ---       #104
-      0100093CH   LINE      CODE     ---       #105
-      0100093CH   LINE      CODE     ---       #106
-      01000945H   LINE      CODE     ---       #107
-      01000948H   LINE      CODE     ---       #108
-      01000948H   LINE      CODE     ---       #109
-      01000953H   LINE      CODE     ---       #110
-      01000953H   LINE      CODE     ---       #111
-      0100095FH   LINE      CODE     ---       #112
-      01000962H   LINE      CODE     ---       #113
-      01000962H   LINE      CODE     ---       #114
+      010009F6H   LINE      CODE     ---       #81
+      010009F6H   LINE      CODE     ---       #83
+      010009FEH   LINE      CODE     ---       #84
+      010009FEH   LINE      CODE     ---       #85
+      01000A07H   LINE      CODE     ---       #86
+      01000A0AH   LINE      CODE     ---       #87
+      01000A0AH   LINE      CODE     ---       #89
+      01000A12H   LINE      CODE     ---       #90
+      01000A12H   LINE      CODE     ---       #91
+      01000A1AH   LINE      CODE     ---       #92
+      01000A1DH   LINE      CODE     ---       #93
+      01000A1DH   LINE      CODE     ---       #95
+      01000A25H   LINE      CODE     ---       #96
+      01000A25H   LINE      CODE     ---       #97
+      01000A2EH   LINE      CODE     ---       #98
+      01000A31H   LINE      CODE     ---       #99
+      01000A31H   LINE      CODE     ---       #100
+      01000A3CH   LINE      CODE     ---       #101
+      01000A3CH   LINE      CODE     ---       #102
+      01000A48H   LINE      CODE     ---       #103
+      01000A4BH   LINE      CODE     ---       #104
+      01000A4BH   LINE      CODE     ---       #105
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D3BH   BLOCK     CODE     ---       LVL=0
-      01000D3BH   LINE      CODE     ---       #125
-      01000D3BH   LINE      CODE     ---       #128
+      01000CCDH   BLOCK     CODE     ---       LVL=0
+      01000CCDH   LINE      CODE     ---       #116
+      01000CCDH   LINE      CODE     ---       #119
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000AD4H   BLOCK     CODE     ---       LVL=0
-      01000AD4H   LINE      CODE     ---       #139
-      01000AF1H   LINE      CODE     ---       #141
-      01000AF4H   LINE      CODE     ---       #142
-      01000AF4H   LINE      CODE     ---       #143
-      01000AF6H   LINE      CODE     ---       #144
-      01000AF9H   LINE      CODE     ---       #145
-      01000AF9H   LINE      CODE     ---       #147
-      01000AFFH   LINE      CODE     ---       #148
-      01000AFFH   LINE      CODE     ---       #149
-      01000B01H   LINE      CODE     ---       #150
-      01000B34H   LINE      CODE     ---       #151
-      01000B34H   LINE      CODE     ---       #152
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 26
+      01000A66H   BLOCK     CODE     ---       LVL=0
+      01000A66H   LINE      CODE     ---       #130
+      01000A83H   LINE      CODE     ---       #132
+      01000A86H   LINE      CODE     ---       #133
+      01000A86H   LINE      CODE     ---       #134
+      01000A88H   LINE      CODE     ---       #135
+      01000A8BH   LINE      CODE     ---       #136
+      01000A8BH   LINE      CODE     ---       #138
+      01000A91H   LINE      CODE     ---       #139
+      01000A91H   LINE      CODE     ---       #140
+      01000A93H   LINE      CODE     ---       #141
+      01000AC6H   LINE      CODE     ---       #142
+      01000AC6H   LINE      CODE     ---       #143
+      01000AC6H   LINE      CODE     ---       #144
+      01000AD4H   LINE      CODE     ---       #145
+      01000AD4H   LINE      CODE     ---       #146
+      01000AD4H   LINE      CODE     ---       #147
+      01000AD6H   LINE      CODE     ---       #148
+      01000AD6H   LINE      CODE     ---       #149
+      01000AEDH   LINE      CODE     ---       #150
+      01000AEDH   LINE      CODE     ---       #151
+      01000AEDH   LINE      CODE     ---       #152
+      01000AEFH   LINE      CODE     ---       #153
+      01000AEFH   LINE      CODE     ---       #154
+      01000B06H   LINE      CODE     ---       #155
+      01000B06H   LINE      CODE     ---       #156
+      01000B06H   LINE      CODE     ---       #157
+      01000B08H   LINE      CODE     ---       #158
+      01000B08H   LINE      CODE     ---       #159
+      01000B28H   LINE      CODE     ---       #160
+      01000B28H   LINE      CODE     ---       #161
+      01000B28H   LINE      CODE     ---       #162
+      01000B2AH   LINE      CODE     ---       #163
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 26
 
 
-      01000B34H   LINE      CODE     ---       #153
-      01000B42H   LINE      CODE     ---       #154
-      01000B42H   LINE      CODE     ---       #155
-      01000B42H   LINE      CODE     ---       #156
-      01000B44H   LINE      CODE     ---       #157
-      01000B44H   LINE      CODE     ---       #158
-      01000B5BH   LINE      CODE     ---       #159
-      01000B5BH   LINE      CODE     ---       #160
-      01000B5BH   LINE      CODE     ---       #161
-      01000B5DH   LINE      CODE     ---       #162
-      01000B5DH   LINE      CODE     ---       #163
-      01000B74H   LINE      CODE     ---       #164
-      01000B74H   LINE      CODE     ---       #165
-      01000B74H   LINE      CODE     ---       #166
-      01000B76H   LINE      CODE     ---       #167
-      01000B76H   LINE      CODE     ---       #168
-      01000B96H   LINE      CODE     ---       #169
-      01000B96H   LINE      CODE     ---       #170
-      01000B96H   LINE      CODE     ---       #171
-      01000B98H   LINE      CODE     ---       #172
-      01000B98H   LINE      CODE     ---       #173
-      01000B9BH   LINE      CODE     ---       #174
-      01000B9DH   LINE      CODE     ---       #175
-      01000BA9H   LINE      CODE     ---       #176
-      01000BABH   LINE      CODE     ---       #177
-      01000BABH   LINE      CODE     ---       #178
-      01000BADH   LINE      CODE     ---       #179
-      01000BADH   LINE      CODE     ---       #180
-      01000BADH   LINE      CODE     ---       #181
-      01000BB0H   LINE      CODE     ---       #182
-      01000BB3H   LINE      CODE     ---       #183
-      01000BB3H   LINE      CODE     ---       #185
+      01000B2AH   LINE      CODE     ---       #164
+      01000B2DH   LINE      CODE     ---       #165
+      01000B2FH   LINE      CODE     ---       #166
+      01000B3BH   LINE      CODE     ---       #167
+      01000B3DH   LINE      CODE     ---       #168
+      01000B3DH   LINE      CODE     ---       #169
+      01000B3FH   LINE      CODE     ---       #170
+      01000B3FH   LINE      CODE     ---       #171
+      01000B3FH   LINE      CODE     ---       #172
+      01000B42H   LINE      CODE     ---       #173
+      01000B45H   LINE      CODE     ---       #174
+      01000B45H   LINE      CODE     ---       #176
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       ?C_STARTUP
@@ -1672,14 +1652,14 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       00000000H   SYMBOL    NUMBER   ---       IBPSTACK
       00000100H   SYMBOL    NUMBER   ---       IBPSTACKTOP
       00000080H   SYMBOL    NUMBER   ---       IDATALEN
-      01000BD1H   SYMBOL    CODE     NEAR LAB  IDATALOOP
+      01000B63H   SYMBOL    CODE     NEAR LAB  IDATALOOP
       00000000H   SYMBOL    NUMBER   ---       PBPSTACK
       00000100H   SYMBOL    NUMBER   ---       PBPSTACKTOP
       00000000H   SYMBOL    NUMBER   ---       PDATALEN
       00000000H   SYMBOL    NUMBER   ---       PDATASTART
       00000000H   SYMBOL    NUMBER   ---       PPAGE
       00000000H   SYMBOL    NUMBER   ---       PPAGEENABLE
-      01000BCEH   SYMBOL    CODE     NEAR LAB  STARTUP1
+      01000B60H   SYMBOL    CODE     NEAR LAB  STARTUP1
       00000000H   SYMBOL    NUMBER   ---       XBPSTACK
       00010000H   SYMBOL    NUMBER   ---       XBPSTACKTOP
       00000000H   SYMBOL    NUMBER   ---       XDATALEN
@@ -1689,33 +1669,33 @@ SYMBOL TABLE OF MODULE:  EFM8BB1_ADC_EXTERNALINPUT.OMF.CRBUILD (RETARGETIO)
       01000000H   LINE      CODE     ---       #126
       ---         BLOCKEND  ---      ---       LVL=0
 
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/13/2017  15:11:33  PAGE 27
-
-
-      01000BCEH   BLOCK     CODE     NEAR LAB  LVL=0
-      01000BCEH   LINE      CODE     ---       #138
-      01000BD0H   LINE      CODE     ---       #139
-      01000BD1H   LINE      CODE     ---       #140
-      01000BD2H   LINE      CODE     ---       #141
-      01000BD4H   LINE      CODE     ---       #190
-      01000BD7H   LINE      CODE     ---       #201
+      01000B60H   BLOCK     CODE     NEAR LAB  LVL=0
+      01000B60H   LINE      CODE     ---       #138
+      01000B62H   LINE      CODE     ---       #139
+      01000B63H   LINE      CODE     ---       #140
+      01000B64H   LINE      CODE     ---       #141
+      01000B66H   LINE      CODE     ---       #190
+      01000B69H   LINE      CODE     ---       #201
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       ?C_INIT
-      01000C15H   PUBLIC    CODE     ---       ?C_START
+      01000BA7H   PUBLIC    CODE     ---       ?C_START
 
       ---         MODULE    ---      ---       ?C?LMUL
-      0100097DH   PUBLIC    CODE     ---       ?C?LMUL
+      01000800H   PUBLIC    CODE     ---       ?C?LMUL
 
       ---         MODULE    ---      ---       ?C?ULDIV
-      01000A08H   PUBLIC    CODE     ---       ?C?ULDIV
+      0100088BH   PUBLIC    CODE     ---       ?C?ULDIV
 
       ---         MODULE    ---      ---       ?C?LCASE
-      01000A9AH   PUBLIC    CODE     ---       ?C?LCASE
+      0100091DH   PUBLIC    CODE     ---       ?C?LCASE
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/16/2017  17:04:11  PAGE 27
+
+
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0399H BYTE (44%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0325H BYTE (39%) *
 ******************************************************************************
 
-Program Size: data=121.2 xdata=0 const=0 code=1352
+Program Size: data=109.2 xdata=0 const=0 code=1242
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
