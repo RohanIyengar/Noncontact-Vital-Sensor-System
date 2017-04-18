@@ -5,9 +5,9 @@ function [hrVal] = SignalProcessorPeakFinding(inputFFT, f, threshold, leeWay)
 %leeWay = 0.1;
 %f = f;
 
-%% Plot of FFT
-figure;
-plot(f, inputFFT);
+% % Plot of FFT
+% figure;
+% plot(f, inputFFT);
 
 %% Isolating Freqs to be Tested
 [~, respInd] = max(inputFFT);
@@ -20,9 +20,9 @@ mask = lowMask & highMask;
 fNew = f(mask);
 testRange = inputFFT(mask);
 
-%% Plotting Range of Data to be Tested
-figure;
-plot(fNew, testRange);
+% %% Plotting Range of Data to be Tested
+% figure;
+% plot(fNew, testRange);
 
 %% Setting a threshold and ordering Peaks
 initVal = max(testRange);

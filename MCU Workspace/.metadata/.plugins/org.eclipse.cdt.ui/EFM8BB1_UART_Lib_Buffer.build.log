@@ -1,0 +1,6 @@
+17:54:04 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_UART_Lib_Buffer ****
+make all 
+make: Nothing to be done for `all'.
+
+17:54:05 Build Finished (took 589ms)
+

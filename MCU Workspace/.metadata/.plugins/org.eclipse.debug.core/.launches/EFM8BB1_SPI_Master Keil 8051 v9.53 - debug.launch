@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.silabs.ss.tool.ide.c8051.debug.launch">
+<stringAttribute key="com.silabs.ss.framework.debugger.core.BOARDS" value=""/>
+<stringAttribute key="com.silabs.ss.framework.debugger.core.DEFAULT_ADAPTER" value=""/>
+<stringAttribute key="com.silabs.ss.framework.debugger.core.ERASE_METHOD" value="page"/>
+<stringAttribute key="com.silabs.ss.framework.debugger.core.MCU" value=""/>
+<booleanAttribute key="com.silabs.ss.framework.debugger.core.RUN_FROM_RESET" value="true"/>
+<booleanAttribute key="com.silabs.ss.framework.debugger.core.SMART_DOWNLOAD" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Keil 8051 v9.53 - debug/EFM8BB1_SPI_Master.omf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="EFM8BB1_SPI_Master"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/EFM8BB1_SPI_Master"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#13;&#10;"/>
+</launchConfiguration>
