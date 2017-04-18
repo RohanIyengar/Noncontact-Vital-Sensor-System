@@ -14,7 +14,7 @@ TITLE_FONT = ("Helvetica", 18, "bold")
 heartRate = 1;
 respRate = 2;
 eng = mat.start_matlab()
-#eng.cd(r"C:/Users/Rohan/Documents/Noncontact-Vital-Sensor-System/Matlab Signal Processing")
+eng.cd(r"C:/Users/Rohan/Documents/Noncontact-Vital-Sensor-System/Matlab Signal Processing")
 
 class SampleApp(tk.Tk):
 
