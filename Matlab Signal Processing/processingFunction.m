@@ -44,7 +44,7 @@ respirationRate = f(respLoc);
 
 %% Determine Heartrate using combined channel
 [hrVal] = SignalProcessorPeakFinding(oneSidedDFT, f, .25, .1); 
-heartRate = hrValCombined(1);
+heartRate = hrVal(1);
 
 %% Use fdesign to filter out respiration rate transient
 respBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...

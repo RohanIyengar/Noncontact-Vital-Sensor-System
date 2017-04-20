@@ -8,7 +8,7 @@ data4 = numpy.linspace(15.0, 20.0, num=21)
 data = zip(data0,data1,data2)
 #q_data = zip(data0,data3,data4)
 header = [("Label", "", ""),("Time(s)", "CH2", "CH3")]
-out1 = csv.writer(open("sample_data.csv","wb"), delimiter=',',quoting=csv.QUOTE_ALL)
+out1 = csv.writer(open("C:/Users/Rohan/Documents/Noncontact-Vital-Sensor-System/Matlab Signal Processing/sample_data.csv","wb"), delimiter=',',quoting=csv.QUOTE_ALL)
 #i_data = [data[i] for i in [0,1,2]];
 #print i_data
 out1.writerows(header)

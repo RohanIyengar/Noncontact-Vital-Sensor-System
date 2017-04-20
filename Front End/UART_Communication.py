@@ -4,7 +4,7 @@ from threading import Timer
 ser = None
 timed_out = False
 
-def initializeSerial(in_port='COM3'):
+def initializeSerial(in_port='COM4'):
     return serial.Serial(port=in_port,
         baudrate=115200,
         parity=serial.PARITY_ODD,
@@ -82,14 +82,6 @@ def receive(ser=None, input='Hello World'):
     else:
         print "serial port is not open"
 
-i = 0;
-while  i < 10000:
-    time.sleep(.1)
-    try:
-        receive()
-    except Exception as e1:
-        print("Error: ") + str(e1)
-        i = i + 1
 def recv_without_open():
     ser_obj = initializeSerial()
     print "Initialized object to " + ser_obj.portstr
@@ -135,34 +127,35 @@ def receive_for(time=10):
 #         recv_without_open()
 #     except Exception as e1:
 #         print("Error: ") + str(e1)
-try:
-    message = receive_for(1)
-    print "Message received: " + message
-    print "Got " + str(len(message)) + " characters"
-except Exception as e2:
-    print "Error: " + str(e2)
-# try:
-#     message = receive_for(1)
-#     #print "Message received: " + message
-#     print "Got " + str(len(message)) + " characters"
+if __name__ == "__main__":
+    try:
+        message = receive_for(1)
+        print "Message received: " + message
+        print "Got " + str(len(message)) + " characters"
+    except Exception as e2:
+        print "Error: " + str(e2)
+    try:
+        message = receive_for(1)
+        #print "Message received: " + message
+        print "Got " + str(len(message)) + " characters"
 
-#     # Create traces
-#     new_msg = message.split(",")
-#     new_msg = new_msg[1:-1]
-#     print new_msg
-#     num_msg = [int(i) for i in new_msg]
-#     time_vals = numpy.linspace(0, 60, num=len(num_msg))
-#     # int_msg = []
-#     # for str s in new_msg:
+        # Create traces
+        new_msg = message.split(",")
+        new_msg = new_msg[1:-1]
+        print new_msg
+        num_msg = [int(i) for i in new_msg]
+        time_vals = numpy.linspace(0, 60, num=len(num_msg))
+        # int_msg = []
+        # for str s in new_msg:
 
-#     print "Number of points: " + str(len(num_msg))
-#     trace0 = go.Scatter(
-#         x = time_vals,
-#         y = num_msg,
-#         mode = 'lines+markers',
-#         name = 'Waveform'
-#     )
-#     data = [trace0]
-#     py.iplot(data, filename='line-mode',)
-# except Exception as e2:
-#     print "Error: " + str(e2)
+        print "Number of points: " + str(len(num_msg))
+        trace0 = go.Scatter(
+            x = time_vals,
+            y = num_msg,
+            mode = 'lines+markers',
+            name = 'Waveform'
+        )
+        data = [trace0]
+        py.iplot(data, filename='line-mode',)
+    except Exception as e2:
+        print "Error: " + str(e2)
