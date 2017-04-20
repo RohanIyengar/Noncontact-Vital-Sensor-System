@@ -1,6 +1,6 @@
-15:57:06 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_SPI_Master ****
+16:37:40 **** Incremental Build of configuration Keil 8051 v9.53 - debug for project EFM8BB1_SPI_Master ****
 make all 
 make: Nothing to be done for `all'.
 
-15:57:07 Build Finished (took 335ms)
+16:37:41 Build Finished (took 889ms)
 

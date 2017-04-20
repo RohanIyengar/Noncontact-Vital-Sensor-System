@@ -1,4 +1,4 @@
-function [time, rawSignal, respirationTransient, heartRateTransient, respirationRate, heartRate ] = SignalProcessorPeakFinding(fileName)
+function [time, rawSignal, respirationTransient, heartRateTransient, respirationRate, heartRate ] = processingFunction(fileName)
 
 %% Configuration Details
 cutoffFreq = 5;          %Highest Frequency to display (Hz)

@@ -79,7 +79,6 @@ combinedRespDFT(~respMask) = 0;
 
 respirationRate = f(combinedRespLoc);
 respChoice = 'Combined Channel';
-
 if(maxIResp > maxQResp && maxIResp > maxCombinedResp)
     respirationRate = f(iRespLoc);
     respChoice = 'I channel';
