@@ -24,7 +24,7 @@ num_msg = time_vals = np.array([])
 respTrans = np.array([])
 heartTrans = np.array([])
 timed_out = False
-signal_data = []
+signal_data = np.array([])
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
@@ -61,15 +61,15 @@ def receive_realtime(in_time=10):
     start_time = time.time()
     t.start()
     while not timed_out:
-        #if ser_obj.inWaiting() > 0:
-        new_data = ser_obj.read(ser_obj.inWaiting())
-        print new_data
-        end_time = time.time()
-        new_msg = new_data.split(",")
-        num_msg = [int_error_check(i) for i in new_msg]
-        signal_data.append(num_msg)
-        time_vals = np.linspace(0, end_time, num=len(signal_data))
-        line = line + new_data
+        if ser_obj.inWaiting() > 0:
+            new_data = ser_obj.read(ser_obj.inWaiting())
+            print new_data
+            end_time = time.time()
+            new_msg = new_data.split(",")
+            num_msg = [int_error_check(i) for i in new_msg]
+            signal_data = np.append(signal_data, num_msg)
+            time_vals = np.linspace(0, end_time, num=len(signal_data))
+            line = line + new_data
     return line
 
 def dataCall():
@@ -84,7 +84,7 @@ def dataCall():
     signal_data = signal_data[1:-1]
     time_vals = np.linspace(0, timeDur, num=len(signal_data))
     print signal_data
-    print "Size: " + str(len(signal_data))
+    print "Size: " + str(len(signal_data)) + " Time: " + str(time_vals.size)
     print time_vals
     data = zip(time_vals, signal_data)
     #q_data = zip(data0,data3,data4)
