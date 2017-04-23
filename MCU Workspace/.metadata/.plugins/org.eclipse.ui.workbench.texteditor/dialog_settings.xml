@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="0.1" key="selection"/>
+		<item value="print" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="print"/>
 			<item value="0.1"/>
 			<item value="AGND"/>
 			<item value="priorit"/>
@@ -23,7 +24,7 @@
 		<item value="305" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="444" key="DIALOG_HEIGHT"/>
-		<item value="1186" key="DIALOG_X_ORIGIN"/>
-		<item value="288" key="DIALOG_Y_ORIGIN"/>
+		<item value="1290" key="DIALOG_X_ORIGIN"/>
+		<item value="358" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
