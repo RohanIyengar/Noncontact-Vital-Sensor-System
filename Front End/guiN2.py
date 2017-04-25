@@ -228,7 +228,7 @@ def do_a_plot():
         fig.tight_layout()
         count+=1
 
-    if (time_vals.size != 0 and time_vals.size == len(signal_data)):
+    if (time_vals.size != 0 and time_vals.size == signal_data.size):
         a.clear()
         a.set_title ("Raw Signal", fontsize=16)
         a.set_xlabel("Time (s)")
@@ -277,5 +277,6 @@ if __name__ == "__main__":
     try:
         app = SampleApp()
         app.mainloop()
+        app.destroy()
     except Exception as e:
         print e
