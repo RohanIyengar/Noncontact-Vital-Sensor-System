@@ -5,6 +5,7 @@ Created on Sat Apr 15 14:19:56 2017
 @author: Sai
 """
 
+import logging
 import time
 import matlab.engine as mat
 import csv
@@ -26,6 +27,9 @@ heartTrans = np.array([])
 timed_out = False
 signal_data = np.array([])
 thread_cond = False
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.CRITICAL)
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
@@ -46,7 +50,7 @@ def int_error_check(i):
     try:
         return int(i)
     except ValueError:
-        print "An integer conversion errored with empty string: " + str(i == "")
+        logger.error("An integer conversion errored with empty string: " + str(i == ""))
         return 0
 
 def receive_realtime(in_time=10):
@@ -56,7 +60,7 @@ def receive_realtime(in_time=10):
     timed_out = False
     ser_obj = com.initializeSerial()
     last_time = 0
-    print "Initialized serial object to " + ser_obj.portstr
+    logger.info("Initialized serial object to " + ser_obj.portstr)
     done = False
     line = ""
     t = Timer(in_time, timeout)
@@ -65,13 +69,11 @@ def receive_realtime(in_time=10):
     while not timed_out:
         if ser_obj.inWaiting() > 0:
             new_data = ser_obj.read(ser_obj.inWaiting())
-            #print new_data
             end_time = time.time()
             new_msg = new_data.split(",")
             num_msg = [int_error_check(i) for i in new_msg]
             signal_data = np.append(signal_data, num_msg)
             time_vals = np.linspace(0, end_time - start_time, num=len(signal_data))
-            #print "Signal: " + str(signal_data.size) + "Time: " + str(time_vals.size)
             line = line + new_data
     return line
 
@@ -80,34 +82,23 @@ def dataCall():
     sampRate = int(sampVar.get())
     timeDur = float(timeVar.get())
     message = receive_realtime(timeDur)
-    #print "Message: " + message
     new_msg = message.split(",")
-    #print new_msg
     signal_data = [int_error_check(i) for i in new_msg]
     signal_data = np.array(signal_data[1:-1])
     time_vals = np.linspace(0, timeDur, num=len(signal_data))
-    #print signal_data
-    print "Size: " + str(signal_data.size) + " Time: " + str(time_vals.size)
-    #print time_vals
+    logger.info("Size of signal: " + str(signal_data.size) + " Size of Time: " + str(time_vals.size))
     data = zip(time_vals, signal_data)
-    #q_data = zip(data0,data3,data4)
     header = [("Label", ""),("Time(s)", "CH2")]
-    #print data[0]
-    #print data[1]
     with open("C:/Users/Rohan/Documents/Noncontact-Vital-Sensor-System/Matlab Signal Processing/sample_data.csv", "wb") as outfile:
         out1 = csv.writer(outfile, delimiter=',',quoting=csv.QUOTE_ALL)
         i_data = [data[i] for i in [0,1]];
-        #print i_data
         out1.writerows(header)
         out1.writerows(data)
-        #time, rawSignal, respTrans, heartTrans, respRate, heartRate = eng.processingFunction("sample_data.csv")
-    print "Done with thread"
     return "Hi"
 
 class SampleApp(tk.Tk):
 
     def __init__(self, *args, **kwargs):
-        print "Trying to start App"
         tk.Tk.__init__(self, *args, **kwargs)
 
         # the container is where we'll stack a bunch of frames
@@ -129,9 +120,7 @@ class SampleApp(tk.Tk):
             # will be the one that is visible.
             frame.grid(row=0, column=0, sticky="nsew")
 
-        print "Started App"
         self.show_frame("StartPage")
-        print "Screen should show"
 
     def show_frame(self, page_name):
         '''Show a frame for the given page name'''
@@ -152,44 +141,45 @@ class SampleApp(tk.Tk):
         if page_name == "PageTwo":
             inFrame2 = frame
             thread_cond = False
-            print "Got here"
             update_page_two()
 
 def update_page_two():
     
     global eng, heartRate, respRate
-    print "Got here2"
-    time_excel, rawSignal, respirationTransient, heartRateTransient, respRate, heartRate = eng.processingFunctionNoHeartBeat("sample_data.csv", nargout=6)
+    time_excel, rawSignal, rawTransient, respirationTransient, heartRateTransient, respRate, heartRate = eng.processingFunctionNoHeartBeat("sample_data.csv", nargout=7)
     time_graph = np.asarray(time_excel)
     respTrans = np.asarray(respirationTransient)
     heartTrans = np.asarray(heartRateTransient)
-    for a in time_graph:
-        print a
-        #respTrans = np.concatenate()
-
-    print respTrans
-    print "heart rate:" + str(heartRate) + "resp rate: " + str(respRate)
+    rawTrans = np.asarray(rawTransient)
     tempText1 = "Heart Rate: " + str(heartRate);
     tempText2 = "Respiratory Rate: " + str(respRate);
     tempText = tempText1 + " " + tempText2
-    print tempText
-    print time_graph
-    print heartTrans
     label1 = tk.Label(inFrame2, text=tempText)
     label1.grid(row=2, column = 1)
 
     fig = plt.figure()
-    b = fig.add_subplot(211)
-    c = fig.add_subplot(212)
+    b = fig.add_subplot(313)
+    c = fig.add_subplot(312)
+    d = fig.add_subplot(311)
 
     b.set_title ("Heart Beat Transient", fontsize=16)
     c.set_title ("Respiration Transient", fontsize=16)
+    d.set_title ("Filtered Raw Signal", fontsize=16)
 
     if (heartTrans.size != 0):
+        b.set_xlabel("Time (s)")
+        b.set_ylabel("Voltage (mV)")
         b.plot(time_graph, heartTrans)
 
     if (respTrans.size != 0):
+        c.set_xlabel("Time (s)")
+        c.set_ylabel("Voltage (mV)")
         c.plot(time_graph, respTrans)
+
+    if (rawTrans.size != 0):
+        d.set_xlabel("Time (s)")
+        d.set_ylabel("Voltage (mV)")
+        d.plot(time_graph, rawTrans)
 
     fig.tight_layout()
     canvas = FigureCanvasTkAgg(fig, master=inFrame2)
@@ -226,42 +216,24 @@ class StartPage(tk.Frame):
 
         button1 = tk.Button(self, text="Start Sampling",
                             command=lambda: controller.show_frame("PageOne"))
-        #button2 = tk.Button(self, text="Go to Page Two",
-        #                    command=lambda: controller.show_frame("PageTwo"))
         button1.grid(row=3, column=1, columnspan=2)
-        #button2.grid(row=4, column=2)
 
 def do_a_plot():
 
-    global count, time_vals, signal_data, fig, a, b, c
-    global thread_cond
-    #print time_vals
+    global count, time_vals, signal_data, fig, a, thread_cond
 
     if (count == 0):
-
         fig = plt.figure()
         a = fig.add_subplot(111)  
         fig.tight_layout()
-        # b = fig.add_subplot(312)
-        # c = fig.add_subplot(313)
-
-        #a.set_title ("Raw Signal", fontsize=16)
-        # b.set_title ("Heart Beat Transient", fontsize=16)
-        # c.set_title ("Respiration Transient", fontsize=16)
         count+=1
 
     if (time_vals.size != 0 and time_vals.size == len(signal_data)):
         a.clear()
         a.set_title ("Raw Signal", fontsize=16)
+        a.set_xlabel("Time (s)")
+        a.set_ylabel("Voltage (mV)")
         a.plot(time_vals, signal_data)
-
-    # if (heartTrans.size != 0):
-    #     b.clear()
-    #     b.plot(time_vals, heartTrans)
-
-    # if (respTrans.size != 0):
-    #     c.clear()
-    #     c.plot(time_vals, respTrans)
 
     fig.tight_layout()
     canvas = FigureCanvasTkAgg(fig, master=inFrame)
@@ -270,13 +242,9 @@ def do_a_plot():
 
     toolbar = NavigationToolbar2TkAgg(canvas, inFrame)
     toolbar.grid(row=1,column=1)
-    #fig.clear()
-    #plt.close(fig)
 
     if thread_cond:
         app.after(500, do_a_plot)
-    # if not thread_cond:
-    #     canvas.delete("all")
 
 class PageOne(tk.Frame):
 
@@ -286,33 +254,9 @@ class PageOne(tk.Frame):
         
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        
-        '''
-        fig = plt.figure()
-        a = fig.add_subplot(311)        
-        b = fig.add_subplot(312)
-        c = fig.add_subplot(313)
-
-        a.set_title ("Raw Signal", fontsize=16)
-        b.set_title ("Heart Beat Transient", fontsize=16)
-        c.set_title ("Respiration Transient", fontsize=16)
-
-        canvas = FigureCanvasTkAgg(fig, master=self)
-        canvas.get_tk_widget().grid(row=0,column=1)
-        canvas.draw()
-
-        toolbar = NavigationToolbar2TkAgg(canvas, self)
-        toolbar.grid(row=1,column=1)
-        '''
-
-
         button = tk.Button(self, text="Go to the results page",
                            command=lambda: controller.show_frame("PageTwo"))
         button.grid(row=3,column=1)
-
-        # button1 = tk.Button(self, text="Plot",
-        #                    command=lambda: do_a_plot())
-        # button1.grid(row=0,column=0)
 
 class PageTwo(tk.Frame):
 
@@ -322,24 +266,11 @@ class PageTwo(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
 
+        label = tk.Label(self, text="Signal Analysis Results", font=TITLE_FONT)
+        label.grid(row=0,column=1)
         button = tk.Button(self, text="Go to Start Page",
                            command=lambda: controller.show_frame("StartPage"))
         button.grid(row=3,column=1)
-
-        # global heartRate, respRate
-        # tk.Frame.__init__(self, parent)
-        # self.controller = controller
-        # label = tk.Label(self, text="Signal Analysis Results", font=TITLE_FONT)
-        # label.grid(row=0,column=0)
-        # button = tk.Button(self, text="Go to the start page",
-        #                    command=lambda: controller.show_frame("StartPage"))
-        # button.grid(row=3,column=1)
-        # tempText1 = "Heart Rate: " + str(heartRate);
-        # tempText2 = "Respiratory Rate: " + str(respRate);
-        # tempText = tempText1 + " " + tempText2
-        # label1 = tk.Label(self, text=tempText)
-        # label1.grid(row=2, column = 1)
-        #button.grid(row=3,column=1)
 
 
 if __name__ == "__main__":
