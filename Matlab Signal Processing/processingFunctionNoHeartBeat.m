@@ -1,4 +1,4 @@
-function [time, rawSignal, respirationTransient, heartRateTransient, respirationRate, heartRate ] = processingFunctionNoHeartBeat(fileName)
+function [time, rawSignal, lowPassTransient, respirationTransient, heartRateTransient, respirationRate, heartRate ] = processingFunctionNoHeartBeat(fileName)
 
 %% Configuration Details
 cutoffFreq = 5;          %Highest Frequency to display (Hz)
@@ -19,8 +19,13 @@ fNorm = Fs/2;           %normalized frequency for filter design
 %% Eliminate Linear Shift in Data
 rawSignal = detrend(rawSignal);
 
+%% Lowpass filter
+lowpassDesign = fdesign.lowpass('Fp,Fst,Ap,Ast',25/fNorm,30/fNorm,1,60);
+lowpass = design(lowpassDesign);
+lowPassTransient = filter(lowpass,rawSignal);
+
 %% Take one sided FFT
-fftSig = fft(rawSignal,NFFT)/L;        %FFT of signal
+fftSig = fft(lowPassTransient,NFFT)/L;        %FFT of signal
 f = fNorm*linspace(0,1,NFFT/2+1);            %Frequency Range
 oneSidedDFT = 2*abs(fftSig(1:NFFT/2+1));
 
@@ -45,7 +50,7 @@ heartRate = 0;
 respBandpassDesign = fdesign.bandpass('N,F3dB1,F3dB2',...
     respFilterOrder,(respirationRate - fRespWidth)/fNorm, (respirationRate + fRespWidth)/fNorm);
 respBandpass = design(respBandpassDesign);
-respirationTransient = filter(respBandpass,rawSignal);
+respirationTransient = filter(respBandpass,lowPassTransient);
 
 %% Set heartrate transient to all zeros
 heartRateTransient = zeros(1,length(respirationTransient));
