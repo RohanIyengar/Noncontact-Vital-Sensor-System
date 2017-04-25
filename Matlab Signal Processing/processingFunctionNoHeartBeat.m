@@ -49,5 +49,6 @@ respirationTransient = filter(respBandpass,rawSignal);
 
 %% Set heartrate transient to all zeros
 heartRateTransient = zeros(1,length(respirationTransient));
+heartRateTransient = heartRateTransient';
 
 end
