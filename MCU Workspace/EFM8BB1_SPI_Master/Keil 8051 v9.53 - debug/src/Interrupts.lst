@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:33:57 PAGE 1   
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        05/02/2017 17:26:06 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE INTERRUPTS
@@ -21,192 +21,249 @@ line level    source
    6          // or they will be overwritten!
    7          //=========================================================
    8          
-   9                   
-  10          // USER INCLUDES                        
-  11          #include <SI_EFM8BB1_Register_Enums.h>
-  12          #include "EFM8BB1_SPI0_Master.h"
-  13          
-  14          //-----------------------------------------------------------------------------
-  15          // SPI0_ISR
-  16          //-----------------------------------------------------------------------------
-  17          //
-  18          // SPI0 ISR Content goes here. Remember to clear flag bits:
-  19          // SPI0CN0::MODF (Mode Fault Flag)
-  20          // SPI0CN0::RXOVRN (Receive Overrun Flag)
-  21          // SPI0CN0::SPIF (SPI# Interrupt Flag)
-  22          // SPI0CN0::WCOL (Write Collision Flag)
-  23          //
-  24          //
-  25          // Handles all error checks and single-byte writes.
-  26          //
-  27          // Note: SPI_WRITE_ARRAY is not handled by this ISR in order to take
-  28          // advantage of double-buffering (checking the SPI0CN0_TXBMT flag) using polling.
-  29          //
+   9          // USER INCLUDES                        
+  10          #include <SI_EFM8BB1_Register_Enums.h>
+  11          #include "EFM8BB1_SPI0_Master.h"
+  12          
+  13          extern uint8_t ch0Data[3];
+  14          extern uint8_t ch1Data[3];
+  15          extern uint32_t uartCounter;
+  16          
+  17          uint32_t count;
+  18          //-----------------------------------------------------------------------------
+  19          // SPI0_ISR
+  20          //-----------------------------------------------------------------------------
+  21          //
+  22          // SPI0 ISR Content goes here. Remember to clear flag bits:
+  23          // SPI0CN0::MODF (Mode Fault Flag)
+  24          // SPI0CN0::RXOVRN (Receive Overrun Flag)
+  25          // SPI0CN0::SPIF (SPI# Interrupt Flag)
+  26          // SPI0CN0::WCOL (Write Collision Flag)
+  27          //
+  28          //
+  29          // Handles all error checks and single-byte writes.
   30          //
-  31          // Typical Write:
-  32          //
-  33          //              | 1st sent | 2nd sent | 3rd sent |   ...    | last sent |
-  34          //              ---------------------------------------------------------
-  35          //  Master NSSv | Command  |   Data1  |   Data2  |   ...    |   DataN   |  NSS^
-  36          //  Slave       |   N/A    |    N/A   |    N/A   |   ...    |    N/A    |
-  37          //
-  38          // Typical Read:
-  39          //
-  40          //              | 1st sent | 2nd sent | 3rd sent |   ...    | last sent |
-  41          //              ---------------------------------------------------------
-  42          //  Master NSSv | Command  |   dummy  |   dummy  |   ...    |   dummy   |  NSS^
-  43          //  Slave       |   N/A    |   Data1  |   Data2  |   ...    |   DataN   |
-  44          //
-  45          //-----------------------------------------------------------------------------
-  46          
-  47          SI_INTERRUPT (SPI0_ISR, SPI0_IRQn)
-  48          {
-  49   1         static uint8_t array_index = 0;
-  50   1         static char state = 0;
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:33:57 PAGE 2   
+  31          // Note: SPI_WRITE_ARRAY is not handled by this ISR in order to take
+  32          // advantage of double-buffering (checking the SPI0CN0_TXBMT flag) using polling.
+  33          //
+  34          //
+  35          // Typical Write:
+  36          //
+  37          //              | 1st sent | 2nd sent | 3rd sent |   ...    | last sent |
+  38          //              ---------------------------------------------------------
+  39          //  Master NSSv | Command  |   Data1  |   Data2  |   ...    |   DataN   |  NSS^
+  40          //  Slave       |   N/A    |    N/A   |    N/A   |   ...    |    N/A    |
+  41          //
+  42          // Typical Read:
+  43          //
+  44          //              | 1st sent | 2nd sent | 3rd sent |   ...    | last sent |
+  45          //              ---------------------------------------------------------
+  46          //  Master NSSv | Command  |   dummy  |   dummy  |   ...    |   dummy   |  NSS^
+  47          //  Slave       |   N/A    |   Data1  |   Data2  |   ...    |   DataN   |
+  48          //
+  49          //-----------------------------------------------------------------------------
+  50          
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        05/02/2017 17:26:06 PAGE 2   
 
-  51   1      
-  52   1         if(SPI0CN0_WCOL == 1)
-  53   1         {
-  54   2            // Write collision occurred
-  55   2            SPI0CN0_WCOL = 0;                        // Clear the write collision flag
-  56   2      
-  57   2            Error_Flag = 1;
-  58   2         }
-  59   1         else
-  60   1         {
-  61   2            if(SPI0DAT == ERROR_OCCURRED)
-  62   2            {
-  63   3               // This example recognizes when an error occurs, but does not include
-  64   3               // any error handling.  The transfer can be aborted or rescheduled,
-  65   3               // if desired.
-  66   3               Error_Flag = 1;
-  67   3            }
-  68   2      
-  69   2            // When the Master enters the ISR, the SPI0CN0_SPIF flag should be set from
-  70   2            // sending the Command byte.  This ISR handles the remaining steps of the
-  71   2            // SPI transfer process.
-  72   2            // <state> == 0: writing or reading 1 byte of data
-  73   2            // <state> == 1: for READ commands (first time, only a dummy byte is
-  74   2            //               sent but the second time, the data must be read from
-  75   2            //               SPI0DAT)
-  76   2            // <state> == 2: NSS = 1 to end the transfer, final byte read
-  77   2            //
-  78   2            // Note: SPI_WRITE_BUFFER is not handled here because it's done in
-  79   2            // polled mode
-  80   2            if(state == 0)
-  81   2            {
-  82   3               switch(Command)
-  83   3               {
-  84   4                  case SLAVE_LED_ON:
-  85   4                  case SLAVE_LED_OFF:
-  86   4                     SPI0CN0_NSSMD0 = 1;      // Release the slave (not expecting
-  87   4                                             // data back)
-  88   4      
-  89   4                     break;
-  90   4      
-  91   4                  case SPI_WRITE:
-  92   4                     SPI0DAT = SPI_Data;
-  93   4      
-  94   4                     state = 2;              // Advance to the final state (only
-  95   4                                             // writing one byte)
-  96   4      
-  97   4                     break;
-  98   4      
-  99   4                  case SPI_READ:
- 100   4                     SPI0DAT = 0xFF;         // Send a dummy byte so the Slave can
- 101   4                                             // send the data
+  51          SI_INTERRUPT (SPI0_ISR, SPI0_IRQn)
+  52          {
+  53   1              static uint8_t array_index = 0;
+  54   1              static char state = 0;
+  55   1      
+  56   1              if(SPI0CN0_WCOL == 1)
+  57   1              {
+  58   2                      // Write collision occurred
+  59   2                      SPI0CN0_WCOL = 0;// Clear the write collision flag
+  60   2      
+  61   2                      Error_Flag = 1;
+  62   2              }
+  63   1              else
+  64   1              {
+  65   2                      if(SPI0DAT == ERROR_OCCURRED)
+  66   2                      {
+  67   3                              // This example recognizes when an error occurs, but does not include
+  68   3                              // any error handling.  The transfer can be aborted or rescheduled,
+  69   3                              // if desired.
+  70   3                              Error_Flag = 1;
+  71   3                      }
+  72   2      
+  73   2                      // When the Master enters the ISR, the SPI0CN0_SPIF flag should be set from
+  74   2                      // sending the Command byte.  This ISR handles the remaining steps of the
+  75   2                      // SPI transfer process.
+  76   2                      // <state> == 0: writing or reading 1 byte of data
+  77   2                      // <state> == 1: for READ commands (first time, only a dummy byte is
+  78   2                      //               sent but the second time, the data must be read from
+  79   2                      //               SPI0DAT)
+  80   2                      // <state> == 2: NSS = 1 to end the transfer, final byte read
+  81   2                      //
+  82   2                      // Note: SPI_WRITE_BUFFER is not handled here because it's done in
+  83   2                      // polled mode
+  84   2                      if(state == 0)
+  85   2                      {
+  86   3                              switch(Command)
+  87   3                              {
+  88   4                                      case SLAVE_LED_ON:
+  89   4                                      case SLAVE_LED_OFF:
+  90   4                                      SPI0CN0_NSSMD0 = 1;      // Release the slave (not expecting
+  91   4                                                                                       // data back)
+  92   4      
+  93   4                                      break;
+  94   4      
+  95   4                                      case SPI_WRITE:
+  96   4                                      SPI0DAT = SPI_Data;
+  97   4      
+  98   4                                      state = 2;// Advance to the final state (only
+  99   4                                                        // writing one byte)
+ 100   4      
+ 101   4                                      break;
  102   4      
- 103   4                     state = 2;              // Advance to the final state (only
- 104   4                                             // reading one byte)
- 105   4      
- 106   4                     break;
- 107   4      
- 108   4                  case SPI_READ_BUFFER:
- 109   4                     array_index = 0;        // Clear the data counter
- 110   4      
- 111   4                     SPI0DAT = 0xFF;         // Send a dummy byte so the Slave can
- 112   4                                             // start sending the data
- 113   4      
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:33:57 PAGE 3   
+ 103   4                                      case SPI_READ:
+ 104   4                                      SPI0DAT = 0xFF;// Send a dummy byte so the Slave can
+ 105   4                                                                 // send the data
+ 106   4      
+ 107   4                                      state = 2;// Advance to the final state (only
+ 108   4                                                        // reading one byte)
+ 109   4      
+ 110   4                                      break;
+ 111   4      
+ 112   4                                      case SPI_READ_BUFFER:
+ 113   4                                      array_index = 0;// Clear the data counter
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        05/02/2017 17:26:06 PAGE 3   
 
- 114   4                     state = 1;              // Advance to the next state where the
- 115   4                                             // data can be received
- 116   4                                             // The data from the slave is not
- 117   4                                             // available until after the second
- 118   4                                             // transfer is completed.
- 119   4                                             // The dummy byte allows the slave to
- 120   4                                             // send data, since the Master controls
- 121   4                                             // SCK.
- 122   4      
- 123   4                     break;
- 124   4      
- 125   4                  default:
- 126   4                     state = 2;              // Any errors in the Command parsing
- 127   4                                             // should go to state 2 where SPI0CN0_NSSMD0
- 128   4                                             // is de-asserted
- 129   4               }
- 130   3            }
- 131   2            else if(state == 1)              // This state is for READ_ARRAY
- 132   2            {                                // commands where the data must be read
- 133   3                                             // after the first dummy byte is sent
- 134   3               switch(Command)
- 135   3               {
- 136   4                  case SPI_READ_BUFFER:
- 137   4                     SPI_Data_Array[array_index] = SPI0DAT;
- 138   4                     SPI0DAT = 0xFF;
- 139   4      
- 140   4                     array_index++;
- 141   4      
- 142   4                     if(array_index == (MAX_BUFFER_SIZE-1))
- 143   4                     {
- 144   5                        state = 2;
- 145   5                     }
- 146   4      
- 147   4                     break;
- 148   4                  default:
- 149   4                     state = 2;              // Any errors in the Command parsing
- 150   4                                             // should go to state 2 where NSS0MD0
- 151   4                                             // is de-asserted
- 152   4               }
- 153   3            }
- 154   2            else if(state == 2)
- 155   2            {
- 156   3               switch(Command)
- 157   3               {
- 158   4                  case SPI_READ:
- 159   4                     SPI_Data = SPI0DAT;     // Read the data from the slave
- 160   4      
- 161   4                     break;
- 162   4      
- 163   4                  case SPI_READ_BUFFER:
- 164   4                     SPI_Data_Array[array_index] = SPI0DAT; // Read the last data
- 165   4                     state = 0;                             // without sending a
- 166   4                                                            // dummy byte
- 167   4      
- 168   4                     break;
- 169   4               }
- 170   3      
- 171   3               SPI0CN0_NSSMD0 = 1;            // De-select the Slave
- 172   3      
- 173   3               state = 0;                    // Reset the state
- 174   3            }
- 175   2      
- 176   2            SPI0CN0_SPIF = 0;                 // Clear the SPIF0 flag
-C51 COMPILER V9.53.0.0   INTERRUPTS                                                        04/11/2017 16:33:57 PAGE 4   
+ 114   4      
+ 115   4                                      SPI0DAT = 0xFF;// Send a dummy byte so the Slave can
+ 116   4                                                                 // start sending the data
+ 117   4      
+ 118   4                                      state = 1;// Advance to the next state where the
+ 119   4                                                        // data can be received
+ 120   4                                                        // The data from the slave is not
+ 121   4                                                        // available until after the second
+ 122   4                                                        // transfer is completed.
+ 123   4                                                        // The dummy byte allows the slave to
+ 124   4                                                        // send data, since the Master controls
+ 125   4                                                        // SCK.
+ 126   4      
+ 127   4                                      break;
+ 128   4      
+ 129   4                                      default:
+ 130   4                                      state = 2;// Any errors in the Command parsing
+ 131   4                                                        // should go to state 2 where SPI0CN0_NSSMD0
+ 132   4                                                        // is de-asserted
+ 133   4                              }
+ 134   3                      }
+ 135   2                      else if(state == 1)              // This state is for READ_ARRAY
+ 136   2                      {                                // commands where the data must be read
+ 137   3                                                                                       // after the first dummy byte is sent
+ 138   3                              switch(Command)
+ 139   3                              {
+ 140   4                                      case SPI_READ_BUFFER:
+ 141   4                                      SPI_Data_Array[array_index] = SPI0DAT;
+ 142   4                                      SPI0DAT = 0xFF;
+ 143   4      
+ 144   4                                      array_index++;
+ 145   4      
+ 146   4                                      if(array_index == (MAX_BUFFER_SIZE-1))
+ 147   4                                      {
+ 148   5                                              state = 2;
+ 149   5                                      }
+ 150   4      
+ 151   4                                      break;
+ 152   4                                      default:
+ 153   4                                      state = 2;              // Any errors in the Command parsing
+ 154   4                                                                                      // should go to state 2 where NSS0MD0
+ 155   4                                                                                      // is de-asserted
+ 156   4                              }
+ 157   3                      }
+ 158   2                      else if(state == 2)
+ 159   2                      {
+ 160   3                              switch(Command)
+ 161   3                              {
+ 162   4                                      case SPI_READ:
+ 163   4                                      SPI_Data = SPI0DAT;     // Read the data from the slave
+ 164   4      
+ 165   4                                      break;
+ 166   4      
+ 167   4                                      case SPI_READ_BUFFER:
+ 168   4                                      SPI_Data_Array[array_index] = SPI0DAT;// Read the last data
+ 169   4                                      state = 0;// without sending a
+ 170   4                                                        // dummy byte
+ 171   4      
+ 172   4                                      break;
+ 173   4                              }
+ 174   3      
+ 175   3                              SPI0CN0_NSSMD0 = 1;            // De-select the Slave
+ 176   3      
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        05/02/2017 17:26:06 PAGE 4   
 
- 177   2         }
- 178   1      }
- 179          
- 180          
+ 177   3                              state = 0;// Reset the state
+ 178   3                      }
+ 179   2      
+ 180   2                      SPI0CN0_SPIF = 0;                 // Clear the SPIF0 flag
+ 181   2              }
+ 182   1      }
+ 183          
+ 184          //-----------------------------------------------------------------------------
+ 185          // UART0_ISR
+ 186          //-----------------------------------------------------------------------------
+ 187          //
+ 188          // UART0 ISR Content goes here. Remember to clear flag bits:
+ 189          // SCON0::RI (Receive Interrupt Flag)
+ 190          // SCON0::TI (Transmit Interrupt Flag)
+ 191          //
+ 192          //-----------------------------------------------------------------------------
+ 193          SI_INTERRUPT (UART0_ISR, UART0_IRQn)
+ 194          {
+ 195   1                 if (SCON0_RI == 1)
+ 196   1                 {
+ 197   2                       SCON0_RI = 0;
+ 198   2                 }
+ 199   1      
+ 200   1                 if (SCON0_TI == 1)             // Check if transmit flag is set
+ 201   1                 {
+ 202   2                    SCON0_TI = 0;               // Clear interrupt flag
+ 203   2                    switch (uartCounter)
+ 204   2                    {
+ 205   3                    case 0:
+ 206   3                        //SBUF0 = ch0Data[0];
+ 207   3                        SBUF0 = 0x01;
+ 208   3                        break;
+ 209   3                    case 1:
+ 210   3                        //SBUF0 = ch0Data[1];
+ 211   3                        SBUF0 = 0x23;
+ 212   3                        break;
+ 213   3                    case 2:
+ 214   3                        //SBUF0 = ch0Data[2];
+ 215   3                        SBUF0 = 0x34;
+ 216   3                        break;
+ 217   3                    case 3:
+ 218   3                        //SBUF0 = ch1Data[0];
+ 219   3                        SBUF0 = 0x56;
+ 220   3                        break;
+ 221   3                    case 4:
+ 222   3                        //SBUF0 = ch1Data[1];
+ 223   3                        SBUF0 = 0x78;
+ 224   3                        break;
+ 225   3                    case 5:
+ 226   3                        //SBUF0 = ch1Data[2];
+ 227   3                        SBUF0 = 0x9A;
+ 228   3                        break;
+ 229   3                    }
+ 230   2                 }
+ 231   1      
+ 232   1      
+ 233   1      }
+ 234          
+ 235          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    162    ----
+   CODE SIZE        =    294    ----
+C51 COMPILER V9.53.0.0   INTERRUPTS                                                        05/02/2017 17:26:06 PAGE 5   
+
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      2    ----
+   DATA SIZE        =      6    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----
