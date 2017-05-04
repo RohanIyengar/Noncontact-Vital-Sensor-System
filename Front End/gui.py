@@ -94,7 +94,7 @@ def dataCall():
     header = [("Label", ""),("Time(s)", "CH2")] #, CH3
     with open("C:/Users/Rohan/Documents/Noncontact-Vital-Sensor-System/Matlab Signal Processing/sample_data.csv", "wb") as outfile:
         out1 = csv.writer(outfile, delimiter=',',quoting=csv.QUOTE_ALL)
-        i_data = [data[i] for i in [0,1]]#0,1,2 when second channel is added
+        #i_data = [data[i] for i in [0,1]]#0,1,2 when second channel is added
         out1.writerows(header)
         out1.writerows(data)
     return "Hi" #dummy return
